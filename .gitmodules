@@ -1,0 +1,3 @@
+[submodule "BlocksKit"]
+	path = BlocksKit
+	url = https://github.com/zwaldowski/BlocksKit.git

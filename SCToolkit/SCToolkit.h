@@ -6,16 +6,6 @@
 //  Copyright (c) 2011 Vincent S. Wang. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-#import "NSTimer+Pausing.h"
-#import "NSFileManager+SCAdditions.h"
-#import "NSString+SCAdditions.h"
-
-#import "AMSerialErrors.h"
-#import "AMSerialPort.h"
-#import "AMSerialPortAdditions.h"
-#import "AMSerialPortList.h"
-
 #define IS_RUNNING_LION (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_6)
 #define IS_RUNNING_SNOW_LEOPARD (floor(NSAppKitVersionNumber) == NSAppKitVersionNumber10_6)
 
@@ -39,6 +29,16 @@
 #define DebugLog(x...)
 
 #endif
+
+#import <Cocoa/Cocoa.h>
+#import "NSTimer+Pausing.h"
+#import "NSFileManager+SCAdditions.h"
+#import "NSString+SCAdditions.h"
+
+#import "AMSerialErrors.h"
+#import "AMSerialPort.h"
+#import "AMSerialPortAdditions.h"
+#import "AMSerialPortList.h"
 
 
 /**
