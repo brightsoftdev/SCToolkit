@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA487281484170400B43F2C /* NSTimer+Pausing.h */; };
+		9FA4872B1484170400B43F2C /* NSTimer+Pausing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA487291484170400B43F2C /* NSTimer+Pausing.m */; };
 		9FD5512914840A7400715063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512814840A7400715063 /* Cocoa.framework */; };
 		9FD5513314840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5513114840A7400715063 /* InfoPlist.strings */; };
 		9FD5513714840A7400715063 /* SCToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5513614840A7400715063 /* SCToolkit.m */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9FA487281484170400B43F2C /* NSTimer+Pausing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Pausing.h"; sourceTree = "<group>"; };
+		9FA487291484170400B43F2C /* NSTimer+Pausing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Pausing.m"; sourceTree = "<group>"; };
 		9FD5512514840A7400715063 /* SCToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5512814840A7400715063 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9FD5512B14840A7400715063 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -69,6 +73,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9FA487231484162B00B43F2C /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				9FA487281484170400B43F2C /* NSTimer+Pausing.h */,
+				9FA487291484170400B43F2C /* NSTimer+Pausing.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		9FA487241484162B00B43F2C /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		9FA487251484162B00B43F2C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9FA487261484162B00B43F2C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		9FD5511914840A7400715063 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +145,10 @@
 		9FD5512E14840A7400715063 /* SCToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				9FA487231484162B00B43F2C /* Additions */,
+				9FA487241484162B00B43F2C /* ThirdParty */,
+				9FA487251484162B00B43F2C /* UIKit */,
+				9FA487261484162B00B43F2C /* Utilities */,
 				9FD5513514840A7400715063 /* SCToolkit.h */,
 				9FD5513614840A7400715063 /* SCToolkit.m */,
 				9FD5512F14840A7400715063 /* Supporting Files */,
@@ -155,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FD5517014840EE700715063 /* SCToolkit.h in Headers */,
+				9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FD5513714840A7400715063 /* SCToolkit.m in Sources */,
+				9FA4872B1484170400B43F2C /* NSTimer+Pausing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
