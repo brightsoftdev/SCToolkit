@@ -7,7 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "NSTimer+Pausing.h"
+#import "NSFileManager+SCAdditions.h"
+#import "NSString+SCAdditions.h"
 
 #define IS_RUNNING_LION (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_6)
 #define IS_RUNNING_SNOW_LEOPARD (floor(NSAppKitVersionNumber) == NSAppKitVersionNumber10_6)
@@ -32,6 +34,7 @@
 #define DebugLog(x...)
 
 #endif
+
 
 /**
  A drop-in replacement for NSLog

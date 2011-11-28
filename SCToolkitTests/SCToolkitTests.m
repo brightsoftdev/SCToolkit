@@ -26,7 +26,12 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in SCToolkitTests");
+//    STFail(@"Unit tests are not implemented yet in SCToolkitTests");
+}
+
+- (void)testNewUUIDString
+{
+    NSLog(@"UUID: %@", [NSString newUUIDString]);
 }
 
 @end

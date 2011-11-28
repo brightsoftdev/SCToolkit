@@ -7,6 +7,7 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import <SCToolkit/SCToolkit.h>
 
 @interface SCToolkitTests : SenTestCase
 

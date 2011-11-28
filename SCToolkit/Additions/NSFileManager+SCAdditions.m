@@ -53,5 +53,6 @@
 //    // even when the parent folder is not exist, this function will creat all folder for u!
 //    [fm createDirectoryAtPath:realPath withIntermediateDirectories:YES attributes:nil error:nil];
 //    [fm release];
+    return YES;
 }
 @end

@@ -27,4 +27,3 @@ void _DebugLog(const char *file, int lineNumber, const char *funcName, NSString 
 	}
 	[body release];	
 }
-
