@@ -33,16 +33,16 @@
 		9FD5512B14840A7400715063 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9FD5512C14840A7400715063 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9FD5512D14840A7400715063 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9FD5513014840A7400715063 /* SCToolkit-Info.plist */ = {isa = PBXFileReference; path = "SCToolkit-Info.plist"; sourceTree = "<group>"; };
+		9FD5513014840A7400715063 /* SCToolkit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SCToolkit-Info.plist"; sourceTree = "<group>"; };
 		9FD5513214840A7400715063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9FD5513414840A7400715063 /* SCToolkit-Prefix.pch */ = {isa = PBXFileReference; path = "SCToolkit-Prefix.pch"; sourceTree = "<group>"; };
-		9FD5513514840A7400715063 /* SCToolkit.h */ = {isa = PBXFileReference; path = SCToolkit.h; sourceTree = "<group>"; };
+		9FD5513414840A7400715063 /* SCToolkit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCToolkit-Prefix.pch"; sourceTree = "<group>"; };
+		9FD5513514840A7400715063 /* SCToolkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCToolkit.h; sourceTree = "<group>"; };
 		9FD5513614840A7400715063 /* SCToolkit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCToolkit.m; sourceTree = "<group>"; };
 		9FD5513D14840A7400715063 /* SCToolkitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCToolkitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5513E14840A7400715063 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		9FD5514614840A7400715063 /* SCToolkitTests-Info.plist */ = {isa = PBXFileReference; path = "SCToolkitTests-Info.plist"; sourceTree = "<group>"; };
+		9FD5514614840A7400715063 /* SCToolkitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SCToolkitTests-Info.plist"; sourceTree = "<group>"; };
 		9FD5514814840A7400715063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9FD5514A14840A7400715063 /* SCToolkitTests.h */ = {isa = PBXFileReference; path = SCToolkitTests.h; sourceTree = "<group>"; };
+		9FD5514A14840A7400715063 /* SCToolkitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCToolkitTests.h; sourceTree = "<group>"; };
 		9FD5514B14840A7400715063 /* SCToolkitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCToolkitTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
