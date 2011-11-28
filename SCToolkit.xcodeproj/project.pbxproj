@@ -20,6 +20,9 @@
 		9FA8E83F1484461700EF8E0E /* AMSerialPortAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E8381484461700EF8E0E /* AMSerialPortAdditions.m */; };
 		9FA8E8401484461700EF8E0E /* AMSerialPortList.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E8391484461700EF8E0E /* AMSerialPortList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FA8E8411484461700EF8E0E /* AMSerialPortList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E83A1484461700EF8E0E /* AMSerialPortList.m */; };
+		9FA8E8A514844C8C00EF8E0E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A414844C8C00EF8E0E /* IOKit.framework */; };
+		9FA8E8A814844C9C00EF8E0E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A614844C9C00EF8E0E /* Quartz.framework */; };
+		9FA8E8A914844C9C00EF8E0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */; };
 		9FD5512914840A7400715063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512814840A7400715063 /* Cocoa.framework */; };
 		9FD5513314840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5513114840A7400715063 /* InfoPlist.strings */; };
 		9FD5513714840A7400715063 /* SCToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5513614840A7400715063 /* SCToolkit.m */; };
@@ -55,6 +58,9 @@
 		9FA8E8381484461700EF8E0E /* AMSerialPortAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSerialPortAdditions.m; sourceTree = "<group>"; };
 		9FA8E8391484461700EF8E0E /* AMSerialPortList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSerialPortList.h; sourceTree = "<group>"; };
 		9FA8E83A1484461700EF8E0E /* AMSerialPortList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSerialPortList.m; sourceTree = "<group>"; };
+		9FA8E8A414844C8C00EF8E0E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		9FA8E8A614844C9C00EF8E0E /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9FD5512514840A7400715063 /* SCToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5512814840A7400715063 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9FD5512B14840A7400715063 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -78,6 +84,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA8E8A814844C9C00EF8E0E /* Quartz.framework in Frameworks */,
+				9FA8E8A914844C9C00EF8E0E /* QuartzCore.framework in Frameworks */,
+				9FA8E8A514844C8C00EF8E0E /* IOKit.framework in Frameworks */,
 				9FD5512914840A7400715063 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +156,9 @@
 		9FD5511914840A7400715063 = {
 			isa = PBXGroup;
 			children = (
+				9FA8E8A614844C9C00EF8E0E /* Quartz.framework */,
+				9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */,
+				9FA8E8A414844C8C00EF8E0E /* IOKit.framework */,
 				9FD5512E14840A7400715063 /* SCToolkit */,
 				9FD5514414840A7400715063 /* SCToolkitTests */,
 				9FD5512714840A7400715063 /* Frameworks */,
