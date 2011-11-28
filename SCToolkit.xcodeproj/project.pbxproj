@@ -156,9 +156,6 @@
 		9FD5511914840A7400715063 = {
 			isa = PBXGroup;
 			children = (
-				9FA8E8A614844C9C00EF8E0E /* Quartz.framework */,
-				9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */,
-				9FA8E8A414844C8C00EF8E0E /* IOKit.framework */,
 				9FD5512E14840A7400715063 /* SCToolkit */,
 				9FD5514414840A7400715063 /* SCToolkitTests */,
 				9FD5512714840A7400715063 /* Frameworks */,
@@ -178,6 +175,9 @@
 		9FD5512714840A7400715063 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FA8E8A614844C9C00EF8E0E /* Quartz.framework */,
+				9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */,
+				9FA8E8A414844C8C00EF8E0E /* IOKit.framework */,
 				9FD5512814840A7400715063 /* Cocoa.framework */,
 				9FD5513E14840A7400715063 /* SenTestingKit.framework */,
 				9FD5512A14840A7400715063 /* Other Frameworks */,
