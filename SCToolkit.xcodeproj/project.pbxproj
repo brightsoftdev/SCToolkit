@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FD5512914840A7400715063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512814840A7400715063 /* Cocoa.framework */; };
+		9FD5513314840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5513114840A7400715063 /* InfoPlist.strings */; };
+		9FD5513714840A7400715063 /* SCToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5513614840A7400715063 /* SCToolkit.m */; };
+		9FD5513F14840A7400715063 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5513E14840A7400715063 /* SenTestingKit.framework */; };
+		9FD5514014840A7400715063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512814840A7400715063 /* Cocoa.framework */; };
+		9FD5514314840A7400715063 /* SCToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512514840A7400715063 /* SCToolkit.framework */; };
+		9FD5514914840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5514714840A7400715063 /* InfoPlist.strings */; };
+		9FD5514C14840A7400715063 /* SCToolkitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5514B14840A7400715063 /* SCToolkitTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FD5514114840A7400715063 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FD5511B14840A7400715063 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FD5512414840A7400715063;
+			remoteInfo = SCToolkit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9FD5512514840A7400715063 /* SCToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FD5512814840A7400715063 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9FD5512B14840A7400715063 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9FD5512C14840A7400715063 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9FD5512D14840A7400715063 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9FD5513014840A7400715063 /* SCToolkit-Info.plist */ = {isa = PBXFileReference; path = "SCToolkit-Info.plist"; sourceTree = "<group>"; };
+		9FD5513214840A7400715063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9FD5513414840A7400715063 /* SCToolkit-Prefix.pch */ = {isa = PBXFileReference; path = "SCToolkit-Prefix.pch"; sourceTree = "<group>"; };
+		9FD5513514840A7400715063 /* SCToolkit.h */ = {isa = PBXFileReference; path = SCToolkit.h; sourceTree = "<group>"; };
+		9FD5513614840A7400715063 /* SCToolkit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCToolkit.m; sourceTree = "<group>"; };
+		9FD5513D14840A7400715063 /* SCToolkitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCToolkitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FD5513E14840A7400715063 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9FD5514614840A7400715063 /* SCToolkitTests-Info.plist */ = {isa = PBXFileReference; path = "SCToolkitTests-Info.plist"; sourceTree = "<group>"; };
+		9FD5514814840A7400715063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9FD5514A14840A7400715063 /* SCToolkitTests.h */ = {isa = PBXFileReference; path = SCToolkitTests.h; sourceTree = "<group>"; };
+		9FD5514B14840A7400715063 /* SCToolkitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCToolkitTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FD5512114840A7400715063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FD5512914840A7400715063 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FD5513914840A7400715063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FD5513F14840A7400715063 /* SenTestingKit.framework in Frameworks */,
+				9FD5514014840A7400715063 /* Cocoa.framework in Frameworks */,
+				9FD5514314840A7400715063 /* SCToolkit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FD5511914840A7400715063 = {
+			isa = PBXGroup;
+			children = (
+				9FD5512E14840A7400715063 /* SCToolkit */,
+				9FD5514414840A7400715063 /* SCToolkitTests */,
+				9FD5512714840A7400715063 /* Frameworks */,
+				9FD5512614840A7400715063 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FD5512614840A7400715063 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5512514840A7400715063 /* SCToolkit.framework */,
+				9FD5513D14840A7400715063 /* SCToolkitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FD5512714840A7400715063 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5512814840A7400715063 /* Cocoa.framework */,
+				9FD5513E14840A7400715063 /* SenTestingKit.framework */,
+				9FD5512A14840A7400715063 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FD5512A14840A7400715063 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5512B14840A7400715063 /* AppKit.framework */,
+				9FD5512C14840A7400715063 /* CoreData.framework */,
+				9FD5512D14840A7400715063 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9FD5512E14840A7400715063 /* SCToolkit */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5513514840A7400715063 /* SCToolkit.h */,
+				9FD5513614840A7400715063 /* SCToolkit.m */,
+				9FD5512F14840A7400715063 /* Supporting Files */,
+			);
+			path = SCToolkit;
+			sourceTree = "<group>";
+		};
+		9FD5512F14840A7400715063 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5513014840A7400715063 /* SCToolkit-Info.plist */,
+				9FD5513114840A7400715063 /* InfoPlist.strings */,
+				9FD5513414840A7400715063 /* SCToolkit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FD5514414840A7400715063 /* SCToolkitTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5514A14840A7400715063 /* SCToolkitTests.h */,
+				9FD5514B14840A7400715063 /* SCToolkitTests.m */,
+				9FD5514514840A7400715063 /* Supporting Files */,
+			);
+			path = SCToolkitTests;
+			sourceTree = "<group>";
+		};
+		9FD5514514840A7400715063 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5514614840A7400715063 /* SCToolkitTests-Info.plist */,
+				9FD5514714840A7400715063 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9FD5512214840A7400715063 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9FD5512414840A7400715063 /* SCToolkit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FD5514F14840A7400715063 /* Build configuration list for PBXNativeTarget "SCToolkit" */;
+			buildPhases = (
+				9FD5512014840A7400715063 /* Sources */,
+				9FD5512114840A7400715063 /* Frameworks */,
+				9FD5512214840A7400715063 /* Headers */,
+				9FD5512314840A7400715063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCToolkit;
+			productName = SCToolkit;
+			productReference = 9FD5512514840A7400715063 /* SCToolkit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9FD5513C14840A7400715063 /* SCToolkitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FD5515214840A7400715063 /* Build configuration list for PBXNativeTarget "SCToolkitTests" */;
+			buildPhases = (
+				9FD5513814840A7400715063 /* Sources */,
+				9FD5513914840A7400715063 /* Frameworks */,
+				9FD5513A14840A7400715063 /* Resources */,
+				9FD5513B14840A7400715063 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FD5514214840A7400715063 /* PBXTargetDependency */,
+			);
+			name = SCToolkitTests;
+			productName = SCToolkitTests;
+			productReference = 9FD5513D14840A7400715063 /* SCToolkitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FD5511B14840A7400715063 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Vincent S. Wang";
+			};
+			buildConfigurationList = 9FD5511E14840A7400715063 /* Build configuration list for PBXProject "SCToolkit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9FD5511914840A7400715063;
+			productRefGroup = 9FD5512614840A7400715063 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FD5512414840A7400715063 /* SCToolkit */,
+				9FD5513C14840A7400715063 /* SCToolkitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FD5512314840A7400715063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FD5513314840A7400715063 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FD5513A14840A7400715063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FD5514914840A7400715063 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9FD5513B14840A7400715063 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FD5512014840A7400715063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FD5513714840A7400715063 /* SCToolkit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FD5513814840A7400715063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FD5514C14840A7400715063 /* SCToolkitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FD5514214840A7400715063 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FD5512414840A7400715063 /* SCToolkit */;
+			targetProxy = 9FD5514114840A7400715063 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FD5513114840A7400715063 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FD5513214840A7400715063 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9FD5514714840A7400715063 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FD5514814840A7400715063 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FD5514D14840A7400715063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9FD5514E14840A7400715063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9FD5515014840A7400715063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCToolkit/SCToolkit-Prefix.pch";
+				INFOPLIST_FILE = "SCToolkit/SCToolkit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		9FD5515114840A7400715063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCToolkit/SCToolkit-Prefix.pch";
+				INFOPLIST_FILE = "SCToolkit/SCToolkit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		9FD5515314840A7400715063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCToolkit/SCToolkit-Prefix.pch";
+				INFOPLIST_FILE = "SCToolkitTests/SCToolkitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9FD5515414840A7400715063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCToolkit/SCToolkit-Prefix.pch";
+				INFOPLIST_FILE = "SCToolkitTests/SCToolkitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FD5511E14840A7400715063 /* Build configuration list for PBXProject "SCToolkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FD5514D14840A7400715063 /* Debug */,
+				9FD5514E14840A7400715063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FD5514F14840A7400715063 /* Build configuration list for PBXNativeTarget "SCToolkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FD5515014840A7400715063 /* Debug */,
+				9FD5515114840A7400715063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9FD5515214840A7400715063 /* Build configuration list for PBXNativeTarget "SCToolkitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FD5515314840A7400715063 /* Debug */,
+				9FD5515414840A7400715063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FD5511B14840A7400715063 /* Project object */;
+}
