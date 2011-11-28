@@ -11,13 +11,13 @@
 NSString *kIsPausedKey				= @"BS IsPaused Key";
 NSString *kRemainingTimeIntervalKey	= @"BS RemainingTimeInterval Key";
 
-@interface NSTimer (Pausing_Private)
+@interface NSTimer (SCPausing_Private)
 
 - (NSMutableDictionary *)pauseDictionary;
 
 @end
 
-@implementation NSTimer (Pausing_Private)
+@implementation NSTimer (SCPausing_Private)
 
 - (NSMutableDictionary *)pauseDictionary
 {
@@ -40,9 +40,9 @@ NSString *kRemainingTimeIntervalKey	= @"BS RemainingTimeInterval Key";
 
 @end
 
-@implementation NSTimer (Pausing)
+@implementation NSTimer (SCPausing)
 
-- (void)pause
+- (void)sc_pause
 {
 	// Prevent invalid timers from being paused
 	if(![self isValid])
@@ -66,7 +66,7 @@ NSString *kRemainingTimeIntervalKey	= @"BS RemainingTimeInterval Key";
 	[[self pauseDictionary] setObject:[NSNumber numberWithBool:YES] forKey:kIsPausedKey];
 }
 
-- (void)resume
+- (void)sc_resume
 {
 	// Prevent invalid timers from being resumed
 	if(![self isValid])

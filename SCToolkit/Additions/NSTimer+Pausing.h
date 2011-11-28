@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSTimer (Pausing)
+@interface NSTimer (SCPausing)
 
 /**
  Add pause capability to NSTimer
@@ -17,7 +17,7 @@
  @exception 
  */
 
-- (void)pause;
+- (void)sc_pause;
 
 /**
  As there is pausing available, resuming is a must
@@ -26,6 +26,6 @@
  @exception 
  */
 
-- (void)resume;
+- (void)sc_resume;
 
 @end
