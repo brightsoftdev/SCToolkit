@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA487281484170400B43F2C /* NSTimer+Pausing.h */; };
+		9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA487281484170400B43F2C /* NSTimer+Pausing.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9FA4872B1484170400B43F2C /* NSTimer+Pausing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA487291484170400B43F2C /* NSTimer+Pausing.m */; };
-		9FA4872E148418DC00B43F2C /* NSFileManager+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA4872C148418DC00B43F2C /* NSFileManager+SCAdditions.h */; };
+		9FA4872E148418DC00B43F2C /* NSFileManager+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA4872C148418DC00B43F2C /* NSFileManager+SCAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9FA4872F148418DC00B43F2C /* NSFileManager+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4872D148418DC00B43F2C /* NSFileManager+SCAdditions.m */; };
-		9FA8E82114843A6600EF8E0E /* NSString+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E81F14843A6600EF8E0E /* NSString+SCAdditions.h */; };
+		9FA8E82114843A6600EF8E0E /* NSString+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E81F14843A6600EF8E0E /* NSString+SCAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9FA8E82214843A6600EF8E0E /* NSString+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E82014843A6600EF8E0E /* NSString+SCAdditions.m */; };
 		9FD5512914840A7400715063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512814840A7400715063 /* Cocoa.framework */; };
 		9FD5513314840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5513114840A7400715063 /* InfoPlist.strings */; };
