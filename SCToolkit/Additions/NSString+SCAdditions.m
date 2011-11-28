@@ -10,7 +10,7 @@
 
 @implementation NSString (SCAdditions)
 
-+ (NSString *)newUUIDString
++ (NSString *)sc_newUUIDString
 {
     CFUUIDRef uuid = CFUUIDCreate(kCFAllocatorDefault);
     CFStringRef uuidString = CFUUIDCreateString(kCFAllocatorDefault, uuid);

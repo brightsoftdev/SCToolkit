@@ -13,13 +13,13 @@ NSString *kRemainingTimeIntervalKey	= @"BS RemainingTimeInterval Key";
 
 @interface NSTimer (SCPausing_Private)
 
-- (NSMutableDictionary *)pauseDictionary;
+- (NSMutableDictionary *)_pauseDictionary;
 
 @end
 
 @implementation NSTimer (SCPausing_Private)
 
-- (NSMutableDictionary *)pauseDictionary
+- (NSMutableDictionary *)_pauseDictionary
 {
 	static NSMutableDictionary *globalDictionary = nil;
 	
@@ -49,7 +49,7 @@ NSString *kRemainingTimeIntervalKey	= @"BS RemainingTimeInterval Key";
 		return;
 	
 	// Prevent paused timers from being paused again
-	NSNumber *isPausedNumber = [[self pauseDictionary] objectForKey:kIsPausedKey];
+	NSNumber *isPausedNumber = [[self _pauseDictionary] objectForKey:kIsPausedKey];
 	if(isPausedNumber && YES == [isPausedNumber boolValue])
 		return;
 	
@@ -59,11 +59,11 @@ NSString *kRemainingTimeIntervalKey	= @"BS RemainingTimeInterval Key";
 	NSTimeInterval remainingTimeInterval = [then timeIntervalSinceDate:now];
 	
 	// Store remaining time interval
-	[[self pauseDictionary] setObject:[NSNumber numberWithDouble:remainingTimeInterval] forKey:kRemainingTimeIntervalKey];
+	[[self _pauseDictionary] setObject:[NSNumber numberWithDouble:remainingTimeInterval] forKey:kRemainingTimeIntervalKey];
 	
 	// Pause timer
 	[self setFireDate:[NSDate distantFuture]];
-	[[self pauseDictionary] setObject:[NSNumber numberWithBool:YES] forKey:kIsPausedKey];
+	[[self _pauseDictionary] setObject:[NSNumber numberWithBool:YES] forKey:kIsPausedKey];
 }
 
 - (void)sc_resume
@@ -73,19 +73,19 @@ NSString *kRemainingTimeIntervalKey	= @"BS RemainingTimeInterval Key";
 		return;
 	
 	// Prevent paused timers from being paused again
-	NSNumber *isPausedNumber = [[self pauseDictionary] objectForKey:kIsPausedKey];
+	NSNumber *isPausedNumber = [[self _pauseDictionary] objectForKey:kIsPausedKey];
 	if(!isPausedNumber || NO == [isPausedNumber boolValue])
 		return;
 	
 	// Load remaining time interval
-	NSTimeInterval remainingTimeInterval = [[[self pauseDictionary] objectForKey:kRemainingTimeIntervalKey] doubleValue];
+	NSTimeInterval remainingTimeInterval = [[[self _pauseDictionary] objectForKey:kRemainingTimeIntervalKey] doubleValue];
 	
 	// Calculate new fire date
 	NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:remainingTimeInterval];
 	
 	// Resume timer
 	[self setFireDate:fireDate];
-	[[self pauseDictionary] setObject:[NSNumber numberWithBool:NO] forKey:kIsPausedKey];
+	[[self _pauseDictionary] setObject:[NSNumber numberWithBool:NO] forKey:kIsPausedKey];
 }
 
 @end

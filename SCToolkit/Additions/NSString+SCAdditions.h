@@ -10,6 +10,12 @@
 
 @interface NSString (SCAdditions)
 
-+ (NSString *)newUUIDString;
+/**
+ Generate a Unified Unique ID
+ @param 
+ @returns a UUID NSString object
+ @exception 
+ */
++ (NSString *)sc_newUUIDString;
 
 @end
