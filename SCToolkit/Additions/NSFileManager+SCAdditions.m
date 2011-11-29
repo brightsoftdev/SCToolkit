@@ -71,4 +71,15 @@
     result = [self fileExistsAtPath:path isDirectory:&isDir];    
     return (result && isDir);
 }
+
+- (NSString *)sc_sharedTemporaryFolder:(NSString *)dirName
+{
+	NSString *directoryPath = NSTemporaryDirectory();
+	if (dirName && ![dirName isEqualToString:@""]) {
+		directoryPath = [directoryPath stringByAppendingPathComponent:dirName];
+	}
+	[self createDirectoryAtPath:directoryPath withIntermediateDirectories:YES attributes:nil error:NULL];
+    return directoryPath;
+}
+
 @end

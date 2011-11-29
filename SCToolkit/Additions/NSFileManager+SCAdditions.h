@@ -18,8 +18,7 @@
  */
 + (NSFileManager *)sc_threadSafeManager;
 
-/**
- Check if a given path is hidden. The given path can be either a file or a folder
+/** Check if a given path is hidden. The given path can be either a file or a folder
  @param 
  @returns 
  @exception 
@@ -33,5 +32,12 @@
  @exception 
  */
 - (BOOL)sc_createDirectoryPath:(NSString *)path attributes:(NSDictionary *)attributes;
+
+/** Return (creating if necessary) a path to the shared temporary directory. 
+ @param dirName Pass @"" to get the default temp dir path. If you pass in a subfolder name, that will be created and appended.
+ @returns Return (creating if necessary) a path to the shared temporary directory. 
+ @exception 
+ */
+- (NSString *)sc_sharedTemporaryFolder:(NSString *)dirName;
 
 @end
