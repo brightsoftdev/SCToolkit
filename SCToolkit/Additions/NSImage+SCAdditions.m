@@ -99,17 +99,17 @@
     return rotatedImage;
 }
 
-- (CGFloat)pixelWidth
+- (CGFloat)sc_pixelWidth
 {
    return [[self bestRepresentationForRect:[self alignmentRect] context:nil hints:nil] pixelsWide];
 }
 
-- (CGFloat)pixelHeight
+- (CGFloat)sc_pixelHeight
 {
     return [[self bestRepresentationForRect:[self alignmentRect] context:nil hints:nil] pixelsHigh];
 }
 
-- (NSSize)pixelSize 
+- (NSSize)sc_pixelSize 
 {
     
     /**
@@ -119,8 +119,9 @@
      */
     
     NSSize size = NSZeroSize;
-    size.width = [[self bestRepresentationForRect:[self alignmentRect] context:nil hints:nil] pixelsWide];
-    size.height = [[self bestRepresentationForRect:[self alignmentRect] context:nil hints:nil] pixelsHigh];
+    NSImageRep *rep = [self bestRepresentationForRect:[self alignmentRect] context:nil hints:nil];
+    size.width = [rep pixelsWide];
+    size.height = [rep pixelsHigh];
     return size;
 }
 

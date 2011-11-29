@@ -22,8 +22,8 @@
 
 - (NSImage *)sc_rotateImage90DegreesClockwise:(BOOL)clockwise;
 
-- (CGFloat)pixelWidth;
-- (CGFloat)pixelHeight;
-- (NSSize)pixelSize;
+- (CGFloat)sc_pixelWidth;
+- (CGFloat)sc_pixelHeight;
+- (NSSize)sc_pixelSize;
 
 @end

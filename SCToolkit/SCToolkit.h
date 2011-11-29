@@ -6,20 +6,27 @@
 //  Copyright (c) 2011 Vincent S. Wang. All rights reserved.
 //
 
+// Fundation
 
 #import "NSTimer+Pausing.h"
 #import "NSFileManager+SCAdditions.h"
 #import "NSString+SCAdditions.h"
+#import "NSImage+SCAdditions.h"
+
+// AppKit
 
 #import "NSView+SCAdditions.h"
 #import "NSWindow+SCAdditions.h"
-#import "NSImage+SCAdditions.h"
 
+// Third Party...Start
+
+// AMSerialPort
 #import "AMSerialErrors.h"
 #import "AMSerialPort.h"
 #import "AMSerialPortAdditions.h"
 #import "AMSerialPortList.h"
 
+// Third Party...End
 
 //#import "NSTimer+SCBlocksKit.h"
 //#import "NSObject+SCBlocksKit.h"

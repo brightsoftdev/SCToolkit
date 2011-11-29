@@ -18,4 +18,9 @@
  */
 + (NSString *)sc_newUUIDString;
 
++ (NSString *)sc_stringFromTimeInterval:(NSTimeInterval)interval;
+
+- (BOOL)sc_isDirectory;
+- (BOOL)sc_isFile;
+
 @end
