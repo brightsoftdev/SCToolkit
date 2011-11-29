@@ -10,6 +10,7 @@
 
 #import "NSTimer+Pausing.h"
 #import "NSFileManager+SCAdditions.h"
+#import "NSWorkspace+SCAdditions.h"
 #import "NSString+SCAdditions.h"
 #import "NSImage+SCAdditions.h"
 
