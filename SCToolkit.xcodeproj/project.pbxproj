@@ -23,9 +23,9 @@
 		9FA8E8A514844C8C00EF8E0E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A414844C8C00EF8E0E /* IOKit.framework */; };
 		9FA8E8A814844C9C00EF8E0E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A614844C9C00EF8E0E /* Quartz.framework */; };
 		9FA8E8A914844C9C00EF8E0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */; };
-		9FA8E8DC148458AE00EF8E0E /* NSObject+SCBlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E8DA148458AE00EF8E0E /* NSObject+SCBlocksKit.h */; };
+		9FA8E8DC148458AE00EF8E0E /* NSObject+SCBlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E8DA148458AE00EF8E0E /* NSObject+SCBlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FA8E8DD148458AE00EF8E0E /* NSObject+SCBlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E8DB148458AE00EF8E0E /* NSObject+SCBlocksKit.m */; };
-		9FA8E8E0148458C600EF8E0E /* NSTimer+SCBlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E8DE148458C600EF8E0E /* NSTimer+SCBlocksKit.h */; };
+		9FA8E8E0148458C600EF8E0E /* NSTimer+SCBlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E8DE148458C600EF8E0E /* NSTimer+SCBlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FA8E8E1148458C600EF8E0E /* NSTimer+SCBlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E8DF148458C600EF8E0E /* NSTimer+SCBlocksKit.m */; };
 		9FD5512914840A7400715063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512814840A7400715063 /* Cocoa.framework */; };
 		9FD5513314840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5513114840A7400715063 /* InfoPlist.strings */; };
@@ -261,12 +261,12 @@
 				9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */,
 				9FA4872E148418DC00B43F2C /* NSFileManager+SCAdditions.h in Headers */,
 				9FA8E82114843A6600EF8E0E /* NSString+SCAdditions.h in Headers */,
+				9FA8E8DC148458AE00EF8E0E /* NSObject+SCBlocksKit.h in Headers */,
+				9FA8E8E0148458C600EF8E0E /* NSTimer+SCBlocksKit.h in Headers */,
 				9FA8E83C1484461700EF8E0E /* AMSerialPort.h in Headers */,
 				9FA8E8401484461700EF8E0E /* AMSerialPortList.h in Headers */,
 				9FA8E83B1484461700EF8E0E /* AMSerialErrors.h in Headers */,
 				9FA8E83E1484461700EF8E0E /* AMSerialPortAdditions.h in Headers */,
-				9FA8E8DC148458AE00EF8E0E /* NSObject+SCBlocksKit.h in Headers */,
-				9FA8E8E0148458C600EF8E0E /* NSTimer+SCBlocksKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
