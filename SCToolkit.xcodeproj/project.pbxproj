@@ -43,6 +43,10 @@
 		9FF418541485733A000A83B9 /* NSView+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF418521485733A000A83B9 /* NSView+SCAdditions.m */; };
 		9FF4186214858FEB000A83B9 /* NSWorkspace+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186014858FEB000A83B9 /* NSWorkspace+SCAdditions.h */; };
 		9FF4186314858FEB000A83B9 /* NSWorkspace+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4186114858FEB000A83B9 /* NSWorkspace+SCAdditions.m */; };
+		9FF4186614859CDC000A83B9 /* NSMutableArray+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186414859CDC000A83B9 /* NSMutableArray+SCAdditions.h */; };
+		9FF4186714859CDC000A83B9 /* NSMutableArray+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4186514859CDC000A83B9 /* NSMutableArray+SCAdditions.m */; };
+		9FF4186A14859D44000A83B9 /* NSArray+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186814859D43000A83B9 /* NSArray+SCAdditions.h */; };
+		9FF4186B14859D44000A83B9 /* NSArray+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4186914859D43000A83B9 /* NSArray+SCAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +103,10 @@
 		9FF418521485733A000A83B9 /* NSView+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+SCAdditions.m"; sourceTree = "<group>"; };
 		9FF4186014858FEB000A83B9 /* NSWorkspace+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWorkspace+SCAdditions.h"; sourceTree = "<group>"; };
 		9FF4186114858FEB000A83B9 /* NSWorkspace+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWorkspace+SCAdditions.m"; sourceTree = "<group>"; };
+		9FF4186414859CDC000A83B9 /* NSMutableArray+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SCAdditions.h"; sourceTree = "<group>"; };
+		9FF4186514859CDC000A83B9 /* NSMutableArray+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SCAdditions.m"; sourceTree = "<group>"; };
+		9FF4186814859D43000A83B9 /* NSArray+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SCAdditions.h"; sourceTree = "<group>"; };
+		9FF4186914859D43000A83B9 /* NSArray+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SCAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +151,10 @@
 				9FF418521485733A000A83B9 /* NSView+SCAdditions.m */,
 				9FF4186014858FEB000A83B9 /* NSWorkspace+SCAdditions.h */,
 				9FF4186114858FEB000A83B9 /* NSWorkspace+SCAdditions.m */,
+				9FF4186414859CDC000A83B9 /* NSMutableArray+SCAdditions.h */,
+				9FF4186514859CDC000A83B9 /* NSMutableArray+SCAdditions.m */,
+				9FF4186814859D43000A83B9 /* NSArray+SCAdditions.h */,
+				9FF4186914859D43000A83B9 /* NSArray+SCAdditions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -300,6 +312,8 @@
 				9FF4184F148572EF000A83B9 /* NSWindow+SCAdditions.h in Headers */,
 				9FF418531485733A000A83B9 /* NSView+SCAdditions.h in Headers */,
 				9FF4186214858FEB000A83B9 /* NSWorkspace+SCAdditions.h in Headers */,
+				9FF4186614859CDC000A83B9 /* NSMutableArray+SCAdditions.h in Headers */,
+				9FF4186A14859D44000A83B9 /* NSArray+SCAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +436,8 @@
 				9FF41850148572EF000A83B9 /* NSWindow+SCAdditions.m in Sources */,
 				9FF418541485733A000A83B9 /* NSView+SCAdditions.m in Sources */,
 				9FF4186314858FEB000A83B9 /* NSWorkspace+SCAdditions.m in Sources */,
+				9FF4186714859CDC000A83B9 /* NSMutableArray+SCAdditions.m in Sources */,
+				9FF4186B14859D44000A83B9 /* NSArray+SCAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
