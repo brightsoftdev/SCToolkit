@@ -51,5 +51,4 @@
     return (exists && !isDirectory);
 }
 
-
 @end
