@@ -10,4 +10,6 @@
 
 @interface NSObject (SCBlocksKit)
 
+- (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay;
+
 @end

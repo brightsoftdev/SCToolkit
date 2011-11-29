@@ -10,4 +10,7 @@
 
 @interface NSTimer (SCBlocksKit)
 
++ (id)scheduledTimerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer *timer))block repeats:(BOOL)yesOrNo;
++ (id)timerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer *timer))block repeats:(BOOL)yesOrNo;
+
 @end
