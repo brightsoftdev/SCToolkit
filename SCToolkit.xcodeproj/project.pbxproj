@@ -23,10 +23,6 @@
 		9FA8E8A514844C8C00EF8E0E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A414844C8C00EF8E0E /* IOKit.framework */; };
 		9FA8E8A814844C9C00EF8E0E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A614844C9C00EF8E0E /* Quartz.framework */; };
 		9FA8E8A914844C9C00EF8E0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */; };
-		9FA8E8DC148458AE00EF8E0E /* NSObject+SCBlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E8DA148458AE00EF8E0E /* NSObject+SCBlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9FA8E8DD148458AE00EF8E0E /* NSObject+SCBlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E8DB148458AE00EF8E0E /* NSObject+SCBlocksKit.m */; };
-		9FA8E8E0148458C600EF8E0E /* NSTimer+SCBlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E8DE148458C600EF8E0E /* NSTimer+SCBlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9FA8E8E1148458C600EF8E0E /* NSTimer+SCBlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E8DF148458C600EF8E0E /* NSTimer+SCBlocksKit.m */; };
 		9FD5512914840A7400715063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512814840A7400715063 /* Cocoa.framework */; };
 		9FD5513314840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5513114840A7400715063 /* InfoPlist.strings */; };
 		9FD5513714840A7400715063 /* SCToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5513614840A7400715063 /* SCToolkit.m */; };
@@ -36,6 +32,11 @@
 		9FD5514914840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5514714840A7400715063 /* InfoPlist.strings */; };
 		9FD5514C14840A7400715063 /* SCToolkitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5514B14840A7400715063 /* SCToolkitTests.m */; };
 		9FD5517014840EE700715063 /* SCToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD5513514840A7400715063 /* SCToolkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FF4183B1485533B000A83B9 /* SCGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4183A1485533B000A83B9 /* SCGlobals.h */; };
+		9FF4184714855971000A83B9 /* SCTimerFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4184514855971000A83B9 /* SCTimerFormatter.h */; };
+		9FF4184814855971000A83B9 /* SCTimerFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4184614855971000A83B9 /* SCTimerFormatter.m */; };
+		9FF4184B148559FA000A83B9 /* NSImage+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF41849148559FA000A83B9 /* NSImage+SCAdditions.h */; };
+		9FF4184C148559FA000A83B9 /* NSImage+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4184A148559FA000A83B9 /* NSImage+SCAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +66,6 @@
 		9FA8E8A414844C8C00EF8E0E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		9FA8E8A614844C9C00EF8E0E /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		9FA8E8DA148458AE00EF8E0E /* NSObject+SCBlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SCBlocksKit.h"; sourceTree = "<group>"; };
-		9FA8E8DB148458AE00EF8E0E /* NSObject+SCBlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SCBlocksKit.m"; sourceTree = "<group>"; };
-		9FA8E8DE148458C600EF8E0E /* NSTimer+SCBlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+SCBlocksKit.h"; sourceTree = "<group>"; };
-		9FA8E8DF148458C600EF8E0E /* NSTimer+SCBlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+SCBlocksKit.m"; sourceTree = "<group>"; };
 		9FD5512514840A7400715063 /* SCToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5512814840A7400715063 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9FD5512B14840A7400715063 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -85,6 +82,11 @@
 		9FD5514814840A7400715063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9FD5514A14840A7400715063 /* SCToolkitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCToolkitTests.h; sourceTree = "<group>"; };
 		9FD5514B14840A7400715063 /* SCToolkitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCToolkitTests.m; sourceTree = "<group>"; };
+		9FF4183A1485533B000A83B9 /* SCGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGlobals.h; sourceTree = "<group>"; };
+		9FF4184514855971000A83B9 /* SCTimerFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTimerFormatter.h; sourceTree = "<group>"; };
+		9FF4184614855971000A83B9 /* SCTimerFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTimerFormatter.m; sourceTree = "<group>"; };
+		9FF41849148559FA000A83B9 /* NSImage+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+SCAdditions.h"; sourceTree = "<group>"; };
+		9FF4184A148559FA000A83B9 /* NSImage+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+SCAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,10 +123,8 @@
 				9FA4872D148418DC00B43F2C /* NSFileManager+SCAdditions.m */,
 				9FA8E81F14843A6600EF8E0E /* NSString+SCAdditions.h */,
 				9FA8E82014843A6600EF8E0E /* NSString+SCAdditions.m */,
-				9FA8E8DA148458AE00EF8E0E /* NSObject+SCBlocksKit.h */,
-				9FA8E8DB148458AE00EF8E0E /* NSObject+SCBlocksKit.m */,
-				9FA8E8DE148458C600EF8E0E /* NSTimer+SCBlocksKit.h */,
-				9FA8E8DF148458C600EF8E0E /* NSTimer+SCBlocksKit.m */,
+				9FF41849148559FA000A83B9 /* NSImage+SCAdditions.h */,
+				9FF4184A148559FA000A83B9 /* NSImage+SCAdditions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -147,6 +147,8 @@
 		9FA487261484162B00B43F2C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				9FF4184514855971000A83B9 /* SCTimerFormatter.h */,
+				9FF4184614855971000A83B9 /* SCTimerFormatter.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -210,12 +212,14 @@
 		9FD5512E14840A7400715063 /* SCToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				9FF4183C148554AE000A83B9 /* BlocksKit */,
 				9FA487231484162B00B43F2C /* Additions */,
 				9FA487241484162B00B43F2C /* ThirdParty */,
 				9FA487251484162B00B43F2C /* UIKit */,
 				9FA487261484162B00B43F2C /* Utilities */,
 				9FD5513514840A7400715063 /* SCToolkit.h */,
 				9FD5513614840A7400715063 /* SCToolkit.m */,
+				9FF4183A1485533B000A83B9 /* SCGlobals.h */,
 				9FD5512F14840A7400715063 /* Supporting Files */,
 			);
 			path = SCToolkit;
@@ -250,6 +254,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9FF4183C148554AE000A83B9 /* BlocksKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BlocksKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -261,12 +272,13 @@
 				9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */,
 				9FA4872E148418DC00B43F2C /* NSFileManager+SCAdditions.h in Headers */,
 				9FA8E82114843A6600EF8E0E /* NSString+SCAdditions.h in Headers */,
-				9FA8E8DC148458AE00EF8E0E /* NSObject+SCBlocksKit.h in Headers */,
-				9FA8E8E0148458C600EF8E0E /* NSTimer+SCBlocksKit.h in Headers */,
 				9FA8E83C1484461700EF8E0E /* AMSerialPort.h in Headers */,
 				9FA8E8401484461700EF8E0E /* AMSerialPortList.h in Headers */,
 				9FA8E83B1484461700EF8E0E /* AMSerialErrors.h in Headers */,
 				9FA8E83E1484461700EF8E0E /* AMSerialPortAdditions.h in Headers */,
+				9FF4183B1485533B000A83B9 /* SCGlobals.h in Headers */,
+				9FF4184714855971000A83B9 /* SCTimerFormatter.h in Headers */,
+				9FF4184B148559FA000A83B9 /* NSImage+SCAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,8 +396,8 @@
 				9FA8E83D1484461700EF8E0E /* AMSerialPort.m in Sources */,
 				9FA8E83F1484461700EF8E0E /* AMSerialPortAdditions.m in Sources */,
 				9FA8E8411484461700EF8E0E /* AMSerialPortList.m in Sources */,
-				9FA8E8DD148458AE00EF8E0E /* NSObject+SCBlocksKit.m in Sources */,
-				9FA8E8E1148458C600EF8E0E /* NSTimer+SCBlocksKit.m in Sources */,
+				9FF4184814855971000A83B9 /* SCTimerFormatter.m in Sources */,
+				9FF4184C148559FA000A83B9 /* NSImage+SCAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

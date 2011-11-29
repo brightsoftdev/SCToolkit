@@ -4,6 +4,8 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
+    #import "SCGlobals.h"
+    #import "SCToolkit.h"
+    #import <dispatch/dispatch.h>
+    #import <objc/runtime.h>
 #endif
-
-#import "SCToolkit.h"
