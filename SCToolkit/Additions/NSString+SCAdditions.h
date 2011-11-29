@@ -20,7 +20,12 @@
 
 + (NSString *)sc_stringFromTimeInterval:(NSTimeInterval)interval;
 
+- (NSString )sc_stringByAppendingPathComponent:(NSString *)component;
+
 - (BOOL)sc_isDirectory;
 - (BOOL)sc_isFile;
+
+- (NSData *)sc_MD5;
+- (NSData *)sc_SHA1;
 
 @end

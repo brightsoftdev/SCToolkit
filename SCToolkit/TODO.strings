@@ -1,0 +1,14 @@
+/* 
+  TODO.strings
+  SCToolkit
+
+  Created by Vincent Wang on 11/29/11.
+  Copyright (c) 2011 Vincent S. Wang. All rights reserved.
+*/
+
+[]Migrate all categories and class file form the old SCToolkit project (Volumes/Backup)
+    [x]NSArray
+    [x]NSMutableArray
+    []NSString
+    []NSData
+    [x]NSNumber

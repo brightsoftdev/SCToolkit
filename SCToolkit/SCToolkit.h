@@ -10,11 +10,14 @@ extern NSString *const SCToolkitException;
 
 // Fundation
 
+#import "NSData+SCAdditions.h"
 #import "NSTimer+Pausing.h"
 #import "NSFileManager+SCAdditions.h"
 #import "NSWorkspace+SCAdditions.h"
 #import "NSString+SCAdditions.h"
 #import "NSImage+SCAdditions.h"
+#import "NSArray+SCAdditions.h"
+#import "NSMutableArray+SCAdditions.h"
 
 // AppKit
 

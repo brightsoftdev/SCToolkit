@@ -37,6 +37,12 @@
         return [NSString stringWithFormat:@"%d:%02d", minutes, seconds, nil];
 }
 
+- (NSString )sc_stringByAppendingPathComponent:(NSString *)component
+{
+    NSString *path = [self stringByAppendingPathComponent:component];
+    return [path stringByExpandingTildeInPath];
+}
+
 - (BOOL)sc_isDirectory 
 {
     BOOL isDirectory = NO;
@@ -49,6 +55,18 @@
     BOOL isDirectory = NO;
     BOOL exists = [[NSFileManager sc_threadSafeManager] fileExistsAtPath:self isDirectory:&isDirectory];
     return (exists && !isDirectory);
+}
+
+- (NSData *)sc_MD5 
+{
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+	return [data sc_MD5];
+}
+
+- (NSData *)sc_SHA1 
+{
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+	return [data sc_SHA1];
 }
 
 @end

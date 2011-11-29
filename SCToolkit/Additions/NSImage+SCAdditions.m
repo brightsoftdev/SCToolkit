@@ -48,6 +48,11 @@
 	return imageRef;
 }
 
+- (NSImage *)sc_resizeImage:(NSSize)newSize
+{
+    return nil;
+}
+
 // Rotate an image 90 degrees clockwise or counterclockwise
 // Code from http://swik.net/User:marc/Chipmunk+Ninja+Technical+Articles/Rotating+an+NSImage+object+in+Cocoa/zgha
 

@@ -47,6 +47,13 @@
 		9FF4186714859CDC000A83B9 /* NSMutableArray+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4186514859CDC000A83B9 /* NSMutableArray+SCAdditions.m */; };
 		9FF4186A14859D44000A83B9 /* NSArray+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186814859D43000A83B9 /* NSArray+SCAdditions.h */; };
 		9FF4186B14859D44000A83B9 /* NSArray+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4186914859D43000A83B9 /* NSArray+SCAdditions.m */; };
+		9FF4186E14859E52000A83B9 /* NSData+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186C14859E51000A83B9 /* NSData+SCAdditions.h */; };
+		9FF4186F14859E52000A83B9 /* NSData+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4186D14859E51000A83B9 /* NSData+SCAdditions.m */; };
+		9FF418751485A088000A83B9 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF418731485A07D000A83B9 /* ApplicationServices.framework */; };
+		9FF418761485A08E000A83B9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF418701485A04E000A83B9 /* Security.framework */; };
+		9FF4187C1485A0EB000A83B9 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF4187A1485A0D6000A83B9 /* libcrypto.dylib */; };
+		9FF418801485A343000A83B9 /* NSNumber+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4187E1485A342000A83B9 /* NSNumber+SCAdditions.h */; };
+		9FF418811485A343000A83B9 /* NSNumber+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4187F1485A342000A83B9 /* NSNumber+SCAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +114,14 @@
 		9FF4186514859CDC000A83B9 /* NSMutableArray+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SCAdditions.m"; sourceTree = "<group>"; };
 		9FF4186814859D43000A83B9 /* NSArray+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SCAdditions.h"; sourceTree = "<group>"; };
 		9FF4186914859D43000A83B9 /* NSArray+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SCAdditions.m"; sourceTree = "<group>"; };
+		9FF4186C14859E51000A83B9 /* NSData+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SCAdditions.h"; sourceTree = "<group>"; };
+		9FF4186D14859E51000A83B9 /* NSData+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SCAdditions.m"; sourceTree = "<group>"; };
+		9FF418701485A04E000A83B9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9FF418731485A07D000A83B9 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		9FF4187A1485A0D6000A83B9 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+		9FF4187D1485A2A0000A83B9 /* TODO.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TODO.strings; sourceTree = "<group>"; };
+		9FF4187E1485A342000A83B9 /* NSNumber+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+SCAdditions.h"; sourceTree = "<group>"; };
+		9FF4187F1485A342000A83B9 /* NSNumber+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+SCAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +129,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF4187C1485A0EB000A83B9 /* libcrypto.dylib in Frameworks */,
+				9FF418751485A088000A83B9 /* ApplicationServices.framework in Frameworks */,
+				9FF418761485A08E000A83B9 /* Security.framework in Frameworks */,
 				9FA8E8A814844C9C00EF8E0E /* Quartz.framework in Frameworks */,
 				9FA8E8A914844C9C00EF8E0E /* QuartzCore.framework in Frameworks */,
 				9FA8E8A514844C8C00EF8E0E /* IOKit.framework in Frameworks */,
@@ -155,6 +173,10 @@
 				9FF4186514859CDC000A83B9 /* NSMutableArray+SCAdditions.m */,
 				9FF4186814859D43000A83B9 /* NSArray+SCAdditions.h */,
 				9FF4186914859D43000A83B9 /* NSArray+SCAdditions.m */,
+				9FF4186C14859E51000A83B9 /* NSData+SCAdditions.h */,
+				9FF4186D14859E51000A83B9 /* NSData+SCAdditions.m */,
+				9FF4187E1485A342000A83B9 /* NSNumber+SCAdditions.h */,
+				9FF4187F1485A342000A83B9 /* NSNumber+SCAdditions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -219,6 +241,8 @@
 		9FD5512714840A7400715063 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FF418731485A07D000A83B9 /* ApplicationServices.framework */,
+				9FF418701485A04E000A83B9 /* Security.framework */,
 				9FA8E8A614844C9C00EF8E0E /* Quartz.framework */,
 				9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */,
 				9FA8E8A414844C8C00EF8E0E /* IOKit.framework */,
@@ -232,6 +256,7 @@
 		9FD5512A14840A7400715063 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FF4187A1485A0D6000A83B9 /* libcrypto.dylib */,
 				9FD5512B14840A7400715063 /* AppKit.framework */,
 				9FD5512C14840A7400715063 /* CoreData.framework */,
 				9FD5512D14840A7400715063 /* Foundation.framework */,
@@ -242,6 +267,7 @@
 		9FD5512E14840A7400715063 /* SCToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				9FF4187D1485A2A0000A83B9 /* TODO.strings */,
 				9FF4183C148554AE000A83B9 /* BlocksKit */,
 				9FA487231484162B00B43F2C /* Additions */,
 				9FA487241484162B00B43F2C /* ThirdParty */,
@@ -314,6 +340,8 @@
 				9FF4186214858FEB000A83B9 /* NSWorkspace+SCAdditions.h in Headers */,
 				9FF4186614859CDC000A83B9 /* NSMutableArray+SCAdditions.h in Headers */,
 				9FF4186A14859D44000A83B9 /* NSArray+SCAdditions.h in Headers */,
+				9FF4186E14859E52000A83B9 /* NSData+SCAdditions.h in Headers */,
+				9FF418801485A343000A83B9 /* NSNumber+SCAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +466,8 @@
 				9FF4186314858FEB000A83B9 /* NSWorkspace+SCAdditions.m in Sources */,
 				9FF4186714859CDC000A83B9 /* NSMutableArray+SCAdditions.m in Sources */,
 				9FF4186B14859D44000A83B9 /* NSArray+SCAdditions.m in Sources */,
+				9FF4186F14859E52000A83B9 /* NSData+SCAdditions.m in Sources */,
+				9FF418811485A343000A83B9 /* NSNumber+SCAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
