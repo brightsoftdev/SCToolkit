@@ -11,10 +11,15 @@
 #import "NSFileManager+SCAdditions.h"
 #import "NSString+SCAdditions.h"
 
+#import "NSView+SCAdditions.h"
+#import "NSWindow+SCAdditions.h"
+#import "NSImage+SCAdditions.h"
+
 #import "AMSerialErrors.h"
 #import "AMSerialPort.h"
 #import "AMSerialPortAdditions.h"
 #import "AMSerialPortList.h"
+
 
 //#import "NSTimer+SCBlocksKit.h"
 //#import "NSObject+SCBlocksKit.h"

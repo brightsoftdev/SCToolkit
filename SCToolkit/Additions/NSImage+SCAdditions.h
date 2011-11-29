@@ -18,8 +18,9 @@
 // converting a NSImage to CGImageRef
 - (CGImageRef)sc_cgImageRef;
 
-
 - (NSImage *)sc_resizeImage:(NSSize)newSize;
+
+- (NSImage *)sc_rotateImage90DegreesClockwise:(BOOL)clockwise;
 
 - (CGFloat)pixelWidth;
 - (CGFloat)pixelHeight;
