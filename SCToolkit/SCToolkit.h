@@ -6,6 +6,8 @@
 //  Copyright (c) 2011 Vincent S. Wang. All rights reserved.
 //
 
+extern NSString *const SCToolkitException;
+
 // Fundation
 
 #import "NSTimer+Pausing.h"

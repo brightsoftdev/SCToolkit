@@ -8,6 +8,8 @@
 
 #import "SCToolkit.h"
 
+NSString *const SCToolkitException = @"SCToolkitException";
+
 void _DebugLog(const char *file, int lineNumber, const char *funcName, NSString *format,...) 
 {
     va_list ap;

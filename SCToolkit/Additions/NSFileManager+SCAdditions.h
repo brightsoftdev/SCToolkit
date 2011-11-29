@@ -10,12 +10,11 @@
 
 @interface NSFileManager (SCAdditions)
 
-/**
- Thread Safe NSFileManager
+/** Thread Safe NSFileManager
+ This code is form iMedia framework
  @param 
  @returns NSFileManager instance
  @exception 
- @copyright borrowed form iMedia framework
  */
 + (NSFileManager *)sc_threadSafeManager;
 
@@ -33,6 +32,6 @@
  @returns 
  @exception 
  */
-- (BOOL)sc_createDirectoryRecursively:(NSString *)path error:(NSError **)error;
+- (BOOL)sc_createDirectoryPath:(NSString *)path attributes:(NSDictionary *)attributes;
 
 @end

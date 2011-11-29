@@ -42,17 +42,33 @@
 			(itemInfo.flags & kLSItemInfoIsInvisible));
 }
 
-- (BOOL)sc_createDirectoryRecursively:(NSString *)path error:(NSError **)error
+- (BOOL)sc_createDirectoryPath:(NSString *)path attributes:(NSDictionary *)attributes
 {
-//	// Check Folder  exists
-//	BOOL bRet = NO;
-//	NSString *realPath = [path stringByExpandingTildeInPath];
-//	//TODO: What if file is existed and is not a directory??
-//    // create foler
-//    NSFileManager *fm = [[NSFileManager alloc] init];
-//    // even when the parent folder is not exist, this function will creat all folder for u!
-//    [fm createDirectoryAtPath:realPath withIntermediateDirectories:YES attributes:nil error:nil];
-//    [fm release];
-    return YES;
+    BOOL result;
+    BOOL isDir;
+    
+	if ([path isAbsolutePath]) {
+		NSString *thePath = @"";
+		NSEnumerator *enumerator = [[path pathComponents] objectEnumerator];
+		NSString *component;
+		
+		while ((component = [enumerator nextObject]) != nil) {
+			NSError *eatError = nil;
+			thePath = [thePath stringByAppendingPathComponent:component];
+			if (![self fileExistsAtPath:thePath] &&
+				![self createDirectoryAtPath:thePath 
+				 withIntermediateDirectories:YES
+								  attributes:attributes
+									   error:&eatError]) {
+				[NSException raise:SCToolkitException format:@"createDirectory:attributes: failed at path: %@", path];
+			}
+		}
+	}
+	else {
+		[NSException raise:SCToolkitException format:@"imb_createDirectoryPath:attributes: path not absolute:%@", path];
+	}
+	
+    result = [self fileExistsAtPath:path isDirectory:&isDir];    
+    return (result && isDir);
 }
 @end
