@@ -35,7 +35,8 @@
 #endif
 
 #define IS_RUNNING_LION (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_6)
-#define IS_RUNNING_SNOW_LEOPARD (floor(NSAppKitVersionNumber) == NSAppKitVersionNumber10_6)
+#define IS_RUNNING_SNOW_LEOPARD ((floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_5) && (floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_6))
+#define IS_RUNNING_LEOPARD (floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_5)
 
 #if __has_feature(objc_arc)
 #define SC_PROPERTY_COPY nonatomic, strong
