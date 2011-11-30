@@ -25,19 +25,25 @@
 
 + (NSString *)sc_stringFromTimeInterval:(NSTimeInterval)interval 
 {
-    int ts_ = (int)interval;
+    int ts_;
+    if (interval < 0) 
+        ts_ = -(int)(interval);
+    else if (0 < interval < 1)
+        ts_ = 0;
+    else
+        ts_ = (int)interval;
     int hours = ts_ / 3600;
     ts_ = ts_ % 3600;
     int minutes = ts_ / 60; 
     ts_ = ts_ % 60;
     int seconds = ts_ % 60;
     if (hours > 0)
-        return [NSString stringWithFormat:@"J%2d:%02d:%02d", hours, minutes, seconds, nil];
+        return [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds, nil];
     else
-        return [NSString stringWithFormat:@"%d:%02d", minutes, seconds, nil];
+        return [NSString stringWithFormat:@"%02d:%02d", minutes, seconds, nil];
 }
 
-- (NSString )sc_stringByAppendingPathComponent:(NSString *)component
+- (NSString *)sc_stringByAppendingPathComponent:(NSString *)component
 {
     NSString *path = [self stringByAppendingPathComponent:component];
     return [path stringByExpandingTildeInPath];

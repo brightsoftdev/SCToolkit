@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F9818221486935000D28199 /* NSApplication+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F9818201486935000D28199 /* NSApplication+SCAdditions.h */; };
+		9F9818231486935000D28199 /* NSApplication+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9818211486935000D28199 /* NSApplication+SCAdditions.m */; };
+		9F981827148694E400D28199 /* NSBundle+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F981825148694E400D28199 /* NSBundle+SCAdditions.h */; };
+		9F981828148694E400D28199 /* NSBundle+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F981826148694E400D28199 /* NSBundle+SCAdditions.m */; };
 		9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA487281484170400B43F2C /* NSTimer+Pausing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FA4872B1484170400B43F2C /* NSTimer+Pausing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA487291484170400B43F2C /* NSTimer+Pausing.m */; };
 		9FA4872E148418DC00B43F2C /* NSFileManager+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA4872C148418DC00B43F2C /* NSFileManager+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,7 +34,6 @@
 		9FD5514014840A7400715063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512814840A7400715063 /* Cocoa.framework */; };
 		9FD5514314840A7400715063 /* SCToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512514840A7400715063 /* SCToolkit.framework */; };
 		9FD5514914840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5514714840A7400715063 /* InfoPlist.strings */; };
-		9FD5514C14840A7400715063 /* SCToolkitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5514B14840A7400715063 /* SCToolkitTests.m */; };
 		9FD5517014840EE700715063 /* SCToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD5513514840A7400715063 /* SCToolkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF4183B1485533B000A83B9 /* SCGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4183A1485533B000A83B9 /* SCGlobals.h */; };
 		9FF4184714855971000A83B9 /* SCTimerFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4184514855971000A83B9 /* SCTimerFormatter.h */; };
@@ -54,6 +57,8 @@
 		9FF4187C1485A0EB000A83B9 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF4187A1485A0D6000A83B9 /* libcrypto.dylib */; };
 		9FF418801485A343000A83B9 /* NSNumber+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4187E1485A342000A83B9 /* NSNumber+SCAdditions.h */; };
 		9FF418811485A343000A83B9 /* NSNumber+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4187F1485A342000A83B9 /* NSNumber+SCAdditions.m */; };
+		9FF418921485DA69000A83B9 /* SCMarcos.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF418911485DA68000A83B9 /* SCMarcos.h */; };
+		9FF4189B1485E052000A83B9 /* TestStringFromTimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4189A1485E052000A83B9 /* TestStringFromTimeInterval.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F9818201486935000D28199 /* NSApplication+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+SCAdditions.h"; sourceTree = "<group>"; };
+		9F9818211486935000D28199 /* NSApplication+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+SCAdditions.m"; sourceTree = "<group>"; };
+		9F981825148694E400D28199 /* NSBundle+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SCAdditions.h"; sourceTree = "<group>"; };
+		9F981826148694E400D28199 /* NSBundle+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SCAdditions.m"; sourceTree = "<group>"; };
 		9FA487281484170400B43F2C /* NSTimer+Pausing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Pausing.h"; sourceTree = "<group>"; };
 		9FA487291484170400B43F2C /* NSTimer+Pausing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Pausing.m"; sourceTree = "<group>"; };
 		9FA4872C148418DC00B43F2C /* NSFileManager+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+SCAdditions.h"; sourceTree = "<group>"; };
@@ -97,8 +106,6 @@
 		9FD5513E14840A7400715063 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9FD5514614840A7400715063 /* SCToolkitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SCToolkitTests-Info.plist"; sourceTree = "<group>"; };
 		9FD5514814840A7400715063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9FD5514A14840A7400715063 /* SCToolkitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCToolkitTests.h; sourceTree = "<group>"; };
-		9FD5514B14840A7400715063 /* SCToolkitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCToolkitTests.m; sourceTree = "<group>"; };
 		9FF4183A1485533B000A83B9 /* SCGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGlobals.h; sourceTree = "<group>"; };
 		9FF4184514855971000A83B9 /* SCTimerFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTimerFormatter.h; sourceTree = "<group>"; };
 		9FF4184614855971000A83B9 /* SCTimerFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTimerFormatter.m; sourceTree = "<group>"; };
@@ -122,6 +129,9 @@
 		9FF4187D1485A2A0000A83B9 /* TODO.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TODO.strings; sourceTree = "<group>"; };
 		9FF4187E1485A342000A83B9 /* NSNumber+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+SCAdditions.h"; sourceTree = "<group>"; };
 		9FF4187F1485A342000A83B9 /* NSNumber+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+SCAdditions.m"; sourceTree = "<group>"; };
+		9FF418911485DA68000A83B9 /* SCMarcos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMarcos.h; sourceTree = "<group>"; };
+		9FF418991485E052000A83B9 /* TestStringFromTimeInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestStringFromTimeInterval.h; sourceTree = "<group>"; };
+		9FF4189A1485E052000A83B9 /* TestStringFromTimeInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestStringFromTimeInterval.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +187,10 @@
 				9FF4186D14859E51000A83B9 /* NSData+SCAdditions.m */,
 				9FF4187E1485A342000A83B9 /* NSNumber+SCAdditions.h */,
 				9FF4187F1485A342000A83B9 /* NSNumber+SCAdditions.m */,
+				9F9818201486935000D28199 /* NSApplication+SCAdditions.h */,
+				9F9818211486935000D28199 /* NSApplication+SCAdditions.m */,
+				9F981825148694E400D28199 /* NSBundle+SCAdditions.h */,
+				9F981826148694E400D28199 /* NSBundle+SCAdditions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -268,14 +282,12 @@
 			isa = PBXGroup;
 			children = (
 				9FF4187D1485A2A0000A83B9 /* TODO.strings */,
+				9FF418931485DAAC000A83B9 /* SCToolkit */,
 				9FF4183C148554AE000A83B9 /* BlocksKit */,
 				9FA487231484162B00B43F2C /* Additions */,
 				9FA487241484162B00B43F2C /* ThirdParty */,
 				9FA487251484162B00B43F2C /* UIKit */,
 				9FA487261484162B00B43F2C /* Utilities */,
-				9FD5513514840A7400715063 /* SCToolkit.h */,
-				9FD5513614840A7400715063 /* SCToolkit.m */,
-				9FF4183A1485533B000A83B9 /* SCGlobals.h */,
 				9FD5512F14840A7400715063 /* Supporting Files */,
 			);
 			path = SCToolkit;
@@ -294,9 +306,9 @@
 		9FD5514414840A7400715063 /* SCToolkitTests */ = {
 			isa = PBXGroup;
 			children = (
-				9FD5514A14840A7400715063 /* SCToolkitTests.h */,
-				9FD5514B14840A7400715063 /* SCToolkitTests.m */,
 				9FD5514514840A7400715063 /* Supporting Files */,
+				9FF418991485E052000A83B9 /* TestStringFromTimeInterval.h */,
+				9FF4189A1485E052000A83B9 /* TestStringFromTimeInterval.m */,
 			);
 			path = SCToolkitTests;
 			sourceTree = "<group>";
@@ -315,6 +327,17 @@
 			children = (
 			);
 			path = BlocksKit;
+			sourceTree = "<group>";
+		};
+		9FF418931485DAAC000A83B9 /* SCToolkit */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5513514840A7400715063 /* SCToolkit.h */,
+				9FD5513614840A7400715063 /* SCToolkit.m */,
+				9FF418911485DA68000A83B9 /* SCMarcos.h */,
+				9FF4183A1485533B000A83B9 /* SCGlobals.h */,
+			);
+			name = SCToolkit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +365,9 @@
 				9FF4186A14859D44000A83B9 /* NSArray+SCAdditions.h in Headers */,
 				9FF4186E14859E52000A83B9 /* NSData+SCAdditions.h in Headers */,
 				9FF418801485A343000A83B9 /* NSNumber+SCAdditions.h in Headers */,
+				9FF418921485DA69000A83B9 /* SCMarcos.h in Headers */,
+				9F9818221486935000D28199 /* NSApplication+SCAdditions.h in Headers */,
+				9F981827148694E400D28199 /* NSBundle+SCAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +494,8 @@
 				9FF4186B14859D44000A83B9 /* NSArray+SCAdditions.m in Sources */,
 				9FF4186F14859E52000A83B9 /* NSData+SCAdditions.m in Sources */,
 				9FF418811485A343000A83B9 /* NSNumber+SCAdditions.m in Sources */,
+				9F9818231486935000D28199 /* NSApplication+SCAdditions.m in Sources */,
+				9F981828148694E400D28199 /* NSBundle+SCAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FD5514C14840A7400715063 /* SCToolkitTests.m in Sources */,
+				9FF4189B1485E052000A83B9 /* TestStringFromTimeInterval.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

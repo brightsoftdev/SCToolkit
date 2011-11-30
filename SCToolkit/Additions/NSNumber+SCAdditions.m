@@ -16,7 +16,7 @@
     if (aString && ![aString isEqualToString:@""]) {
         NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
         [f setNumberStyle:NSNumberFormatterDecimalStyle];
-        NSNumber *result = [f numberFromString:aString];
+        result = [f numberFromString:aString];
         [f release];
     }
 	
