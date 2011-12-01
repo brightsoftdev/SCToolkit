@@ -11,6 +11,8 @@
 		9F7A793E1487F72600113680 /* SCWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A793C1487F72600113680 /* SCWindowController.m */; };
 		9F7A79421487F76200113680 /* SCFullScreenWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7A79401487F76200113680 /* SCFullScreenWindowController.h */; };
 		9F7A79431487F76200113680 /* SCFullScreenWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79411487F76200113680 /* SCFullScreenWindowController.m */; };
+		9F7A795F14880A0700113680 /* INAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7A795D14880A0700113680 /* INAppStoreWindow.h */; };
+		9F7A796014880A0700113680 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A795E14880A0700113680 /* INAppStoreWindow.m */; };
 		9F9818221486935000D28199 /* NSApplication+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F9818201486935000D28199 /* NSApplication+SCAdditions.h */; };
 		9F9818231486935000D28199 /* NSApplication+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9818211486935000D28199 /* NSApplication+SCAdditions.m */; };
 		9F981827148694E400D28199 /* NSBundle+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F981825148694E400D28199 /* NSBundle+SCAdditions.h */; };
@@ -80,6 +82,8 @@
 		9F7A793C1487F72600113680 /* SCWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWindowController.m; sourceTree = "<group>"; };
 		9F7A79401487F76200113680 /* SCFullScreenWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFullScreenWindowController.h; sourceTree = "<group>"; };
 		9F7A79411487F76200113680 /* SCFullScreenWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFullScreenWindowController.m; sourceTree = "<group>"; };
+		9F7A795D14880A0700113680 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
+		9F7A795E14880A0700113680 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
 		9F9818201486935000D28199 /* NSApplication+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+SCAdditions.h"; sourceTree = "<group>"; };
 		9F9818211486935000D28199 /* NSApplication+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+SCAdditions.m"; sourceTree = "<group>"; };
 		9F981825148694E400D28199 /* NSBundle+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SCAdditions.h"; sourceTree = "<group>"; };
@@ -170,6 +174,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F7A795C14880A0700113680 /* INAppStoreWindow */ = {
+			isa = PBXGroup;
+			children = (
+				9F7A795D14880A0700113680 /* INAppStoreWindow.h */,
+				9F7A795E14880A0700113680 /* INAppStoreWindow.m */,
+			);
+			path = INAppStoreWindow;
+			sourceTree = "<group>";
+		};
 		9FA487231484162B00B43F2C /* Additions */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +219,7 @@
 		9FA487241484162B00B43F2C /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				9F7A795C14880A0700113680 /* INAppStoreWindow */,
 				9FA8E8331484461700EF8E0E /* AMSerialPort */,
 			);
 			path = ThirdParty;
@@ -382,6 +396,7 @@
 				9F981827148694E400D28199 /* NSBundle+SCAdditions.h in Headers */,
 				9F7A793D1487F72600113680 /* SCWindowController.h in Headers */,
 				9F7A79421487F76200113680 /* SCFullScreenWindowController.h in Headers */,
+				9F7A795F14880A0700113680 /* INAppStoreWindow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +527,7 @@
 				9F981828148694E400D28199 /* NSBundle+SCAdditions.m in Sources */,
 				9F7A793E1487F72600113680 /* SCWindowController.m in Sources */,
 				9F7A79431487F76200113680 /* SCFullScreenWindowController.m in Sources */,
+				9F7A796014880A0700113680 /* INAppStoreWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
