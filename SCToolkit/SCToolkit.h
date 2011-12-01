@@ -8,6 +8,8 @@
 
 extern NSString *const SCToolkitException;
 
+#import "SCGlobals.h"
+
 // Fundation
 
 #import "NSNumber+SCAdditions.h"
