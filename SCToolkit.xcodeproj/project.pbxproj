@@ -7,15 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F7A793D1487F72600113680 /* SCWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7A793B1487F72600113680 /* SCWindowController.h */; };
-		9F7A793E1487F72600113680 /* SCWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A793C1487F72600113680 /* SCWindowController.m */; };
-		9F7A79421487F76200113680 /* SCFullScreenWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7A79401487F76200113680 /* SCFullScreenWindowController.h */; };
-		9F7A79431487F76200113680 /* SCFullScreenWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79411487F76200113680 /* SCFullScreenWindowController.m */; };
-		9F7A795F14880A0700113680 /* INAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7A795D14880A0700113680 /* INAppStoreWindow.h */; };
+		9F7A795F14880A0700113680 /* INAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7A795D14880A0700113680 /* INAppStoreWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F7A796014880A0700113680 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A795E14880A0700113680 /* INAppStoreWindow.m */; };
-		9F9818221486935000D28199 /* NSApplication+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F9818201486935000D28199 /* NSApplication+SCAdditions.h */; };
+		9F9818221486935000D28199 /* NSApplication+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F9818201486935000D28199 /* NSApplication+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F9818231486935000D28199 /* NSApplication+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9818211486935000D28199 /* NSApplication+SCAdditions.m */; };
-		9F981827148694E400D28199 /* NSBundle+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F981825148694E400D28199 /* NSBundle+SCAdditions.h */; };
+		9F981827148694E400D28199 /* NSBundle+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F981825148694E400D28199 /* NSBundle+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F981828148694E400D28199 /* NSBundle+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F981826148694E400D28199 /* NSBundle+SCAdditions.m */; };
 		9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA487281484170400B43F2C /* NSTimer+Pausing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FA4872B1484170400B43F2C /* NSTimer+Pausing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA487291484170400B43F2C /* NSTimer+Pausing.m */; };
@@ -41,29 +37,29 @@
 		9FD5514314840A7400715063 /* SCToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512514840A7400715063 /* SCToolkit.framework */; };
 		9FD5514914840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5514714840A7400715063 /* InfoPlist.strings */; };
 		9FD5517014840EE700715063 /* SCToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD5513514840A7400715063 /* SCToolkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9FF4183B1485533B000A83B9 /* SCGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4183A1485533B000A83B9 /* SCGlobals.h */; };
-		9FF4184714855971000A83B9 /* SCTimerFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4184514855971000A83B9 /* SCTimerFormatter.h */; };
+		9FF4183B1485533B000A83B9 /* SCGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4183A1485533B000A83B9 /* SCGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FF4184714855971000A83B9 /* SCTimerFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4184514855971000A83B9 /* SCTimerFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF4184814855971000A83B9 /* SCTimerFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4184614855971000A83B9 /* SCTimerFormatter.m */; };
-		9FF4184B148559FA000A83B9 /* NSImage+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF41849148559FA000A83B9 /* NSImage+SCAdditions.h */; };
+		9FF4184B148559FA000A83B9 /* NSImage+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF41849148559FA000A83B9 /* NSImage+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF4184C148559FA000A83B9 /* NSImage+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4184A148559FA000A83B9 /* NSImage+SCAdditions.m */; };
-		9FF4184F148572EF000A83B9 /* NSWindow+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4184D148572EF000A83B9 /* NSWindow+SCAdditions.h */; };
+		9FF4184F148572EF000A83B9 /* NSWindow+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4184D148572EF000A83B9 /* NSWindow+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF41850148572EF000A83B9 /* NSWindow+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4184E148572EF000A83B9 /* NSWindow+SCAdditions.m */; };
-		9FF418531485733A000A83B9 /* NSView+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF418511485733A000A83B9 /* NSView+SCAdditions.h */; };
+		9FF418531485733A000A83B9 /* NSView+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF418511485733A000A83B9 /* NSView+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF418541485733A000A83B9 /* NSView+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF418521485733A000A83B9 /* NSView+SCAdditions.m */; };
-		9FF4186214858FEB000A83B9 /* NSWorkspace+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186014858FEB000A83B9 /* NSWorkspace+SCAdditions.h */; };
+		9FF4186214858FEB000A83B9 /* NSWorkspace+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186014858FEB000A83B9 /* NSWorkspace+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF4186314858FEB000A83B9 /* NSWorkspace+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4186114858FEB000A83B9 /* NSWorkspace+SCAdditions.m */; };
-		9FF4186614859CDC000A83B9 /* NSMutableArray+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186414859CDC000A83B9 /* NSMutableArray+SCAdditions.h */; };
+		9FF4186614859CDC000A83B9 /* NSMutableArray+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186414859CDC000A83B9 /* NSMutableArray+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF4186714859CDC000A83B9 /* NSMutableArray+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4186514859CDC000A83B9 /* NSMutableArray+SCAdditions.m */; };
-		9FF4186A14859D44000A83B9 /* NSArray+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186814859D43000A83B9 /* NSArray+SCAdditions.h */; };
+		9FF4186A14859D44000A83B9 /* NSArray+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186814859D43000A83B9 /* NSArray+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF4186B14859D44000A83B9 /* NSArray+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4186914859D43000A83B9 /* NSArray+SCAdditions.m */; };
-		9FF4186E14859E52000A83B9 /* NSData+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186C14859E51000A83B9 /* NSData+SCAdditions.h */; };
+		9FF4186E14859E52000A83B9 /* NSData+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4186C14859E51000A83B9 /* NSData+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF4186F14859E52000A83B9 /* NSData+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4186D14859E51000A83B9 /* NSData+SCAdditions.m */; };
 		9FF418751485A088000A83B9 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF418731485A07D000A83B9 /* ApplicationServices.framework */; };
 		9FF418761485A08E000A83B9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF418701485A04E000A83B9 /* Security.framework */; };
 		9FF4187C1485A0EB000A83B9 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF4187A1485A0D6000A83B9 /* libcrypto.dylib */; };
-		9FF418801485A343000A83B9 /* NSNumber+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4187E1485A342000A83B9 /* NSNumber+SCAdditions.h */; };
+		9FF418801485A343000A83B9 /* NSNumber+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4187E1485A342000A83B9 /* NSNumber+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF418811485A343000A83B9 /* NSNumber+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4187F1485A342000A83B9 /* NSNumber+SCAdditions.m */; };
-		9FF418921485DA69000A83B9 /* SCMarcos.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF418911485DA68000A83B9 /* SCMarcos.h */; };
+		9FF418921485DA69000A83B9 /* SCMarcos.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF418911485DA68000A83B9 /* SCMarcos.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF4189B1485E052000A83B9 /* TestStringFromTimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4189A1485E052000A83B9 /* TestStringFromTimeInterval.m */; };
 /* End PBXBuildFile section */
 
@@ -78,10 +74,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9F7A793B1487F72600113680 /* SCWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWindowController.h; sourceTree = "<group>"; };
-		9F7A793C1487F72600113680 /* SCWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWindowController.m; sourceTree = "<group>"; };
-		9F7A79401487F76200113680 /* SCFullScreenWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFullScreenWindowController.h; sourceTree = "<group>"; };
-		9F7A79411487F76200113680 /* SCFullScreenWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFullScreenWindowController.m; sourceTree = "<group>"; };
 		9F7A795D14880A0700113680 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
 		9F7A795E14880A0700113680 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
 		9F9818201486935000D28199 /* NSApplication+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+SCAdditions.h"; sourceTree = "<group>"; };
@@ -225,17 +217,6 @@
 			path = ThirdParty;
 			sourceTree = "<group>";
 		};
-		9FA487251484162B00B43F2C /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				9F7A793B1487F72600113680 /* SCWindowController.h */,
-				9F7A793C1487F72600113680 /* SCWindowController.m */,
-				9F7A79401487F76200113680 /* SCFullScreenWindowController.h */,
-				9F7A79411487F76200113680 /* SCFullScreenWindowController.m */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
 		9FA487261484162B00B43F2C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,7 +293,6 @@
 				9FF4183C148554AE000A83B9 /* BlocksKit */,
 				9FA487231484162B00B43F2C /* Additions */,
 				9FA487241484162B00B43F2C /* ThirdParty */,
-				9FA487251484162B00B43F2C /* UIKit */,
 				9FA487261484162B00B43F2C /* Utilities */,
 				9FD5512F14840A7400715063 /* Supporting Files */,
 			);
@@ -374,13 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FD5517014840EE700715063 /* SCToolkit.h in Headers */,
-				9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */,
-				9FA4872E148418DC00B43F2C /* NSFileManager+SCAdditions.h in Headers */,
-				9FA8E82114843A6600EF8E0E /* NSString+SCAdditions.h in Headers */,
-				9FA8E83C1484461700EF8E0E /* AMSerialPort.h in Headers */,
-				9FA8E8401484461700EF8E0E /* AMSerialPortList.h in Headers */,
-				9FA8E83B1484461700EF8E0E /* AMSerialErrors.h in Headers */,
-				9FA8E83E1484461700EF8E0E /* AMSerialPortAdditions.h in Headers */,
 				9FF4183B1485533B000A83B9 /* SCGlobals.h in Headers */,
 				9FF4184714855971000A83B9 /* SCTimerFormatter.h in Headers */,
 				9FF4184B148559FA000A83B9 /* NSImage+SCAdditions.h in Headers */,
@@ -394,9 +367,14 @@
 				9FF418921485DA69000A83B9 /* SCMarcos.h in Headers */,
 				9F9818221486935000D28199 /* NSApplication+SCAdditions.h in Headers */,
 				9F981827148694E400D28199 /* NSBundle+SCAdditions.h in Headers */,
-				9F7A793D1487F72600113680 /* SCWindowController.h in Headers */,
-				9F7A79421487F76200113680 /* SCFullScreenWindowController.h in Headers */,
 				9F7A795F14880A0700113680 /* INAppStoreWindow.h in Headers */,
+				9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */,
+				9FA4872E148418DC00B43F2C /* NSFileManager+SCAdditions.h in Headers */,
+				9FA8E82114843A6600EF8E0E /* NSString+SCAdditions.h in Headers */,
+				9FA8E83C1484461700EF8E0E /* AMSerialPort.h in Headers */,
+				9FA8E8401484461700EF8E0E /* AMSerialPortList.h in Headers */,
+				9FA8E83B1484461700EF8E0E /* AMSerialErrors.h in Headers */,
+				9FA8E83E1484461700EF8E0E /* AMSerialPortAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,8 +503,6 @@
 				9FF418811485A343000A83B9 /* NSNumber+SCAdditions.m in Sources */,
 				9F9818231486935000D28199 /* NSApplication+SCAdditions.m in Sources */,
 				9F981828148694E400D28199 /* NSBundle+SCAdditions.m in Sources */,
-				9F7A793E1487F72600113680 /* SCWindowController.m in Sources */,
-				9F7A79431487F76200113680 /* SCFullScreenWindowController.m in Sources */,
 				9F7A796014880A0700113680 /* INAppStoreWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
