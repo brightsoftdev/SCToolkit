@@ -50,7 +50,23 @@
 
 - (NSImage *)sc_resizeImage:(NSSize)newSize
 {
-    return nil;
+    NSImage *sourceImage = self;
+    
+    NSRect scaledRect;
+    scaledRect.origin = NSZeroPoint;
+    scaledRect.size.width = newSize.width;
+    scaledRect.size.height = newSize.height;
+    
+    NSImage *newImage = [[[NSImage alloc] initWithSize:newSize] autorelease];
+    
+    [newImage lockFocus];
+    [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
+    [sourceImage drawInRect:scaledRect
+                   fromRect:NSZeroRect
+                  operation:NSCompositeSourceOver
+                   fraction:1.0];
+    [newImage unlockFocus];
+    return newImage;
 }
 
 // Rotate an image 90 degrees clockwise or counterclockwise
