@@ -28,4 +28,8 @@
 - (NSData *)sc_MD5;
 - (NSData *)sc_SHA1;
 
+- (BOOL)sc_isEmpty;
+- (BOOL)sc_containsSpace;
+- (BOOL)isEmptyOrContainsSpace;
+
 @end

@@ -75,4 +75,23 @@
 	return [data sc_SHA1];
 }
 
+- (BOOL)sc_isEmpty
+{
+	return [self isEqualToString:@""];
+}
+
+- (BOOL)sc_containsSpace
+{
+	NSRange r = [self rangeOfString:@" "];
+	if (!(r.location == NSNotFound)) return YES;
+	return NO;
+}
+
+- (BOOL)isEmptyOrContainsSpace
+{
+	if ([self sc_isEmpty]) return YES;
+	if ([self sc_containsSpace]) return YES;
+	return NO;
+}
+
 @end
