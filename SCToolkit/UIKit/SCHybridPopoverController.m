@@ -9,8 +9,6 @@
 #import "SCHybridPopoverController.h"
 #import "INPopoverController.h"
 
-#define IS_RUNNING_LION (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_6)
-
 @implementation SCHybridPopoverController
 
 @synthesize popover = _popover;
