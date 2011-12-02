@@ -77,7 +77,7 @@
  @param popover the @class INPopoverController object that is controlling the popover
  @returns whether the popover should close or not
  */
-- (BOOL)in_popoverShouldClose:(INPopoverController*)popover
+- (BOOL)in_popoverShouldClose:(INPopoverController *)popover
 {
     BOOL result = YES;
     if ([self.delegate respondsToSelector:@selector(sc_popoverShouldClose:)]) {
@@ -90,7 +90,7 @@
  Invoked right before the popover shows on screen
  @param popover the @class INPopoverController object that is controlling the popover
  */
-- (void)in_popoverWillShow:(INPopoverController*)popover
+- (void)in_popoverWillShow:(INPopoverController *)popover
 {
     if ([self.delegate respondsToSelector:@selector(sc_popoverWillShow:)]) {
         [self.delegate sc_popoverWillShow:popover];
@@ -101,7 +101,7 @@
  Invoked right after the popover shows on screen
  @param popover the @class INPopoverController object that is controlling the popover
  */
-- (void)in_popoverDidShow:(INPopoverController*)popover
+- (void)in_popoverDidShow:(INPopoverController *)popover
 {
     if ([self.delegate respondsToSelector:@selector(sc_popoverDidShow:)]) {
         [self.delegate sc_popoverDidShow:popover];
@@ -112,7 +112,7 @@
  Invoked right before the popover closes
  @param popover the @class INPopoverController object that is controlling the popover
  */
-- (void)in_popoverWillClose:(INPopoverController*)popover
+- (void)in_popoverWillClose:(INPopoverController *)popover
 {
     if ([self.delegate respondsToSelector:@selector(sc_popoverWillClose:)]) {
         [self.delegate sc_popoverWillClose:popover];
@@ -123,7 +123,7 @@
  Invoked right before the popover closes
  @param popover the @class INPopoverController object that is controlling the popover
  */
-- (void)in_popoverDidClose:(INPopoverController*)popover
+- (void)in_popoverDidClose:(INPopoverController *)popover
 {
     if ([self.delegate respondsToSelector:@selector(sc_popoverDidClose:)]) {
         [self.delegate sc_popoverDidClose:popover];
