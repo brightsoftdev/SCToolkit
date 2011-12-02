@@ -28,6 +28,8 @@
 		9FA5684314894BA800707DD6 /* INPopoverWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5683A14894BA800707DD6 /* INPopoverWindow.m */; };
 		9FA5684414894BA800707DD6 /* INPopoverWindowFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA5683B14894BA800707DD6 /* INPopoverWindowFrame.h */; };
 		9FA5684514894BA800707DD6 /* INPopoverWindowFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5683C14894BA800707DD6 /* INPopoverWindowFrame.m */; };
+		9FA5684C14894E5A00707DD6 /* NSUserDefaults+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA5684A14894E5A00707DD6 /* NSUserDefaults+SCAdditions.h */; };
+		9FA5684D14894E5A00707DD6 /* NSUserDefaults+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5684B14894E5A00707DD6 /* NSUserDefaults+SCAdditions.m */; };
 		9FA8E82114843A6600EF8E0E /* NSString+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E81F14843A6600EF8E0E /* NSString+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FA8E82214843A6600EF8E0E /* NSString+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E82014843A6600EF8E0E /* NSString+SCAdditions.m */; };
 		9FA8E83B1484461700EF8E0E /* AMSerialErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E8341484461700EF8E0E /* AMSerialErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -106,6 +108,8 @@
 		9FA5683A14894BA800707DD6 /* INPopoverWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INPopoverWindow.m; sourceTree = "<group>"; };
 		9FA5683B14894BA800707DD6 /* INPopoverWindowFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INPopoverWindowFrame.h; sourceTree = "<group>"; };
 		9FA5683C14894BA800707DD6 /* INPopoverWindowFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INPopoverWindowFrame.m; sourceTree = "<group>"; };
+		9FA5684A14894E5A00707DD6 /* NSUserDefaults+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+SCAdditions.h"; sourceTree = "<group>"; };
+		9FA5684B14894E5A00707DD6 /* NSUserDefaults+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+SCAdditions.m"; sourceTree = "<group>"; };
 		9FA8E81F14843A6600EF8E0E /* NSString+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCAdditions.h"; sourceTree = "<group>"; };
 		9FA8E82014843A6600EF8E0E /* NSString+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCAdditions.m"; sourceTree = "<group>"; };
 		9FA8E8341484461700EF8E0E /* AMSerialErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSerialErrors.h; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 				9F9818211486935000D28199 /* NSApplication+SCAdditions.m */,
 				9F981825148694E400D28199 /* NSBundle+SCAdditions.h */,
 				9F981826148694E400D28199 /* NSBundle+SCAdditions.m */,
+				9FA5684A14894E5A00707DD6 /* NSUserDefaults+SCAdditions.h */,
+				9FA5684B14894E5A00707DD6 /* NSUserDefaults+SCAdditions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -432,6 +438,7 @@
 				9FA5683F14894BA800707DD6 /* INPopoverControllerDefines.h in Headers */,
 				9FA5684214894BA800707DD6 /* INPopoverWindow.h in Headers */,
 				9FA5684414894BA800707DD6 /* INPopoverWindowFrame.h in Headers */,
+				9FA5684C14894E5A00707DD6 /* NSUserDefaults+SCAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +573,7 @@
 				9FA5684114894BA800707DD6 /* INPopoverParentWindow.m in Sources */,
 				9FA5684314894BA800707DD6 /* INPopoverWindow.m in Sources */,
 				9FA5684514894BA800707DD6 /* INPopoverWindowFrame.m in Sources */,
+				9FA5684D14894E5A00707DD6 /* NSUserDefaults+SCAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
