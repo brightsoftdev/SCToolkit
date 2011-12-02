@@ -17,6 +17,17 @@
 		9FA4872B1484170400B43F2C /* NSTimer+Pausing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA487291484170400B43F2C /* NSTimer+Pausing.m */; };
 		9FA4872E148418DC00B43F2C /* NSFileManager+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA4872C148418DC00B43F2C /* NSFileManager+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FA4872F148418DC00B43F2C /* NSFileManager+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4872D148418DC00B43F2C /* NSFileManager+SCAdditions.m */; };
+		9FA5683014894B9C00707DD6 /* SCHybridPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA5682E14894B9C00707DD6 /* SCHybridPopoverController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FA5683114894B9C00707DD6 /* SCHybridPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5682F14894B9C00707DD6 /* SCHybridPopoverController.m */; };
+		9FA5683D14894BA800707DD6 /* INPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA5683414894BA800707DD6 /* INPopoverController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FA5683E14894BA800707DD6 /* INPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5683514894BA800707DD6 /* INPopoverController.m */; };
+		9FA5683F14894BA800707DD6 /* INPopoverControllerDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA5683614894BA800707DD6 /* INPopoverControllerDefines.h */; };
+		9FA5684014894BA800707DD6 /* INPopoverParentWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA5683714894BA800707DD6 /* INPopoverParentWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FA5684114894BA800707DD6 /* INPopoverParentWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5683814894BA800707DD6 /* INPopoverParentWindow.m */; };
+		9FA5684214894BA800707DD6 /* INPopoverWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA5683914894BA800707DD6 /* INPopoverWindow.h */; };
+		9FA5684314894BA800707DD6 /* INPopoverWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5683A14894BA800707DD6 /* INPopoverWindow.m */; };
+		9FA5684414894BA800707DD6 /* INPopoverWindowFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA5683B14894BA800707DD6 /* INPopoverWindowFrame.h */; };
+		9FA5684514894BA800707DD6 /* INPopoverWindowFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5683C14894BA800707DD6 /* INPopoverWindowFrame.m */; };
 		9FA8E82114843A6600EF8E0E /* NSString+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E81F14843A6600EF8E0E /* NSString+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FA8E82214843A6600EF8E0E /* NSString+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8E82014843A6600EF8E0E /* NSString+SCAdditions.m */; };
 		9FA8E83B1484461700EF8E0E /* AMSerialErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA8E8341484461700EF8E0E /* AMSerialErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -84,6 +95,17 @@
 		9FA487291484170400B43F2C /* NSTimer+Pausing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Pausing.m"; sourceTree = "<group>"; };
 		9FA4872C148418DC00B43F2C /* NSFileManager+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+SCAdditions.h"; sourceTree = "<group>"; };
 		9FA4872D148418DC00B43F2C /* NSFileManager+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+SCAdditions.m"; sourceTree = "<group>"; };
+		9FA5682E14894B9C00707DD6 /* SCHybridPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHybridPopoverController.h; sourceTree = "<group>"; };
+		9FA5682F14894B9C00707DD6 /* SCHybridPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHybridPopoverController.m; sourceTree = "<group>"; };
+		9FA5683414894BA800707DD6 /* INPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INPopoverController.h; sourceTree = "<group>"; };
+		9FA5683514894BA800707DD6 /* INPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INPopoverController.m; sourceTree = "<group>"; };
+		9FA5683614894BA800707DD6 /* INPopoverControllerDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INPopoverControllerDefines.h; sourceTree = "<group>"; };
+		9FA5683714894BA800707DD6 /* INPopoverParentWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INPopoverParentWindow.h; sourceTree = "<group>"; };
+		9FA5683814894BA800707DD6 /* INPopoverParentWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INPopoverParentWindow.m; sourceTree = "<group>"; };
+		9FA5683914894BA800707DD6 /* INPopoverWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INPopoverWindow.h; sourceTree = "<group>"; };
+		9FA5683A14894BA800707DD6 /* INPopoverWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INPopoverWindow.m; sourceTree = "<group>"; };
+		9FA5683B14894BA800707DD6 /* INPopoverWindowFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INPopoverWindowFrame.h; sourceTree = "<group>"; };
+		9FA5683C14894BA800707DD6 /* INPopoverWindowFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INPopoverWindowFrame.m; sourceTree = "<group>"; };
 		9FA8E81F14843A6600EF8E0E /* NSString+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCAdditions.h"; sourceTree = "<group>"; };
 		9FA8E82014843A6600EF8E0E /* NSString+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCAdditions.m"; sourceTree = "<group>"; };
 		9FA8E8341484461700EF8E0E /* AMSerialErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSerialErrors.h; sourceTree = "<group>"; };
@@ -212,6 +234,7 @@
 		9FA487241484162B00B43F2C /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				9FA5683314894BA800707DD6 /* INPopoverController */,
 				9F7A795C14880A0700113680 /* INAppStoreWindow */,
 				9FA8E8331484461700EF8E0E /* AMSerialPort */,
 			);
@@ -225,6 +248,31 @@
 				9FF4184614855971000A83B9 /* SCTimerFormatter.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9FA5682D14894B9C00707DD6 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9FA5682E14894B9C00707DD6 /* SCHybridPopoverController.h */,
+				9FA5682F14894B9C00707DD6 /* SCHybridPopoverController.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9FA5683314894BA800707DD6 /* INPopoverController */ = {
+			isa = PBXGroup;
+			children = (
+				9FA5683414894BA800707DD6 /* INPopoverController.h */,
+				9FA5683514894BA800707DD6 /* INPopoverController.m */,
+				9FA5683614894BA800707DD6 /* INPopoverControllerDefines.h */,
+				9FA5683714894BA800707DD6 /* INPopoverParentWindow.h */,
+				9FA5683814894BA800707DD6 /* INPopoverParentWindow.m */,
+				9FA5683914894BA800707DD6 /* INPopoverWindow.h */,
+				9FA5683A14894BA800707DD6 /* INPopoverWindow.m */,
+				9FA5683B14894BA800707DD6 /* INPopoverWindowFrame.h */,
+				9FA5683C14894BA800707DD6 /* INPopoverWindowFrame.m */,
+			);
+			path = INPopoverController;
 			sourceTree = "<group>";
 		};
 		9FA8E8331484461700EF8E0E /* AMSerialPort */ = {
@@ -291,6 +339,7 @@
 			children = (
 				9FF4187D1485A2A0000A83B9 /* TODO.strings */,
 				9FF418931485DAAC000A83B9 /* SCToolkit */,
+				9FA5682D14894B9C00707DD6 /* UIKit */,
 				9FF4183C148554AE000A83B9 /* BlocksKit */,
 				9FA487231484162B00B43F2C /* Additions */,
 				9FA487241484162B00B43F2C /* ThirdParty */,
@@ -357,6 +406,7 @@
 			files = (
 				9FD5517014840EE700715063 /* SCToolkit.h in Headers */,
 				9FF4183B1485533B000A83B9 /* SCGlobals.h in Headers */,
+				9FF418921485DA69000A83B9 /* SCMarcos.h in Headers */,
 				9FF4184714855971000A83B9 /* SCTimerFormatter.h in Headers */,
 				9FF4184B148559FA000A83B9 /* NSImage+SCAdditions.h in Headers */,
 				9FF4184F148572EF000A83B9 /* NSWindow+SCAdditions.h in Headers */,
@@ -366,17 +416,22 @@
 				9FF4186A14859D44000A83B9 /* NSArray+SCAdditions.h in Headers */,
 				9FF4186E14859E52000A83B9 /* NSData+SCAdditions.h in Headers */,
 				9FF418801485A343000A83B9 /* NSNumber+SCAdditions.h in Headers */,
-				9FF418921485DA69000A83B9 /* SCMarcos.h in Headers */,
 				9F9818221486935000D28199 /* NSApplication+SCAdditions.h in Headers */,
 				9F981827148694E400D28199 /* NSBundle+SCAdditions.h in Headers */,
 				9F7A795F14880A0700113680 /* INAppStoreWindow.h in Headers */,
 				9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */,
 				9FA4872E148418DC00B43F2C /* NSFileManager+SCAdditions.h in Headers */,
 				9FA8E82114843A6600EF8E0E /* NSString+SCAdditions.h in Headers */,
+				9FA5683014894B9C00707DD6 /* SCHybridPopoverController.h in Headers */,
+				9FA5683D14894BA800707DD6 /* INPopoverController.h in Headers */,
+				9FA5684014894BA800707DD6 /* INPopoverParentWindow.h in Headers */,
 				9FA8E83C1484461700EF8E0E /* AMSerialPort.h in Headers */,
 				9FA8E8401484461700EF8E0E /* AMSerialPortList.h in Headers */,
 				9FA8E83B1484461700EF8E0E /* AMSerialErrors.h in Headers */,
 				9FA8E83E1484461700EF8E0E /* AMSerialPortAdditions.h in Headers */,
+				9FA5683F14894BA800707DD6 /* INPopoverControllerDefines.h in Headers */,
+				9FA5684214894BA800707DD6 /* INPopoverWindow.h in Headers */,
+				9FA5684414894BA800707DD6 /* INPopoverWindowFrame.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +561,11 @@
 				9F9818231486935000D28199 /* NSApplication+SCAdditions.m in Sources */,
 				9F981828148694E400D28199 /* NSBundle+SCAdditions.m in Sources */,
 				9F7A796014880A0700113680 /* INAppStoreWindow.m in Sources */,
+				9FA5683114894B9C00707DD6 /* SCHybridPopoverController.m in Sources */,
+				9FA5683E14894BA800707DD6 /* INPopoverController.m in Sources */,
+				9FA5684114894BA800707DD6 /* INPopoverParentWindow.m in Sources */,
+				9FA5684314894BA800707DD6 /* INPopoverWindow.m in Sources */,
+				9FA5684514894BA800707DD6 /* INPopoverWindowFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
