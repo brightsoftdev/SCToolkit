@@ -13,4 +13,18 @@
 - (void)sc_setAlignmentCenterInView:(NSView *)aView;
 - (void)sc_setAlignmentCenterInRect:(NSRect)rect;
 
+// Geometry Extensions
+// From TransformedImages Apple online sample
+
+- (void)sc_centerOriginInBounds;
+- (void)sc_centerOriginInFrame;
+- (void)sc_centerOriginInRect:(NSRect)aRect;
+
+/**
+ @param 
+ @returns The result of this, is that "return rect" ends up centered in the view.
+ @exception 
+ */
+- (NSRect)sc_centerRect:(NSRect)aRect onPoint:(NSPoint)aPoint;
+
 @end
