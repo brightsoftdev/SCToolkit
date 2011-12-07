@@ -25,7 +25,8 @@ extern NSString *const SCToolkitException;
 #import "NSApplication+SCAdditions.h"
 
 // AppKit
-
+#import "NSBezierPath+SCAdditions.h"
+#import "NSBezierPath+SCAdditions.h"
 #import "NSView+SCAdditions.h"
 #import "NSWindow+SCAdditions.h"
 

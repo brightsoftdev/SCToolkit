@@ -8,6 +8,7 @@
 
 #import <AppKit/AppKit.h>
 
+
 @interface NSView (SCAdditions)
 
 - (void)sc_setAlignmentCenterInView:(NSView *)aView;
@@ -26,5 +27,15 @@
  @exception 
  */
 - (NSRect)sc_centerRect:(NSRect)aRect onPoint:(NSPoint)aPoint;
+
+
+/** Convert the mouse-down location into the view coordinates
+ @param theEvent NSEvent object passed from mouseDown: mouseUp:
+ @returns NSPoint
+ @exception 
+ */
+- (NSPoint)sc_lastMouseDownLocation:(NSEvent *)theEvent;
+
+- (NSPoint)sc_distanceBetweenPoints:(NSPoint):a anotherPoint(NSPoint):b;
 
 @end

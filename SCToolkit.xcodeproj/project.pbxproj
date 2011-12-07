@@ -42,6 +42,8 @@
 		9FA8E8A514844C8C00EF8E0E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A414844C8C00EF8E0E /* IOKit.framework */; };
 		9FA8E8A814844C9C00EF8E0E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A614844C9C00EF8E0E /* Quartz.framework */; };
 		9FA8E8A914844C9C00EF8E0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */; };
+		9FAFDF1F148FE7260061A69F /* NSBezierPath+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FAFDF1D148FE7260061A69F /* NSBezierPath+SCAdditions.h */; };
+		9FAFDF20148FE7260061A69F /* NSBezierPath+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFDF1E148FE7260061A69F /* NSBezierPath+SCAdditions.m */; };
 		9FD5512914840A7400715063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512814840A7400715063 /* Cocoa.framework */; };
 		9FD5513314840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5513114840A7400715063 /* InfoPlist.strings */; };
 		9FD5513714840A7400715063 /* SCToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5513614840A7400715063 /* SCToolkit.m */; };
@@ -122,6 +124,8 @@
 		9FA8E8A414844C8C00EF8E0E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		9FA8E8A614844C9C00EF8E0E /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9FAFDF1D148FE7260061A69F /* NSBezierPath+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+SCAdditions.h"; sourceTree = "<group>"; };
+		9FAFDF1E148FE7260061A69F /* NSBezierPath+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+SCAdditions.m"; sourceTree = "<group>"; };
 		9FC0F3131488415F003B6638 /* CleanFrameworkHeaders.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CleanFrameworkHeaders.sh; sourceTree = "<group>"; };
 		9FD5512514840A7400715063 /* SCToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5512814840A7400715063 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -233,6 +237,8 @@
 				9F981826148694E400D28199 /* NSBundle+SCAdditions.m */,
 				9FA5684A14894E5A00707DD6 /* NSUserDefaults+SCAdditions.h */,
 				9FA5684B14894E5A00707DD6 /* NSUserDefaults+SCAdditions.m */,
+				9FAFDF1D148FE7260061A69F /* NSBezierPath+SCAdditions.h */,
+				9FAFDF1E148FE7260061A69F /* NSBezierPath+SCAdditions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 				9FA5684214894BA800707DD6 /* INPopoverWindow.h in Headers */,
 				9FA5684414894BA800707DD6 /* INPopoverWindowFrame.h in Headers */,
 				9FA5684C14894E5A00707DD6 /* NSUserDefaults+SCAdditions.h in Headers */,
+				9FAFDF1F148FE7260061A69F /* NSBezierPath+SCAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +581,7 @@
 				9FA5684314894BA800707DD6 /* INPopoverWindow.m in Sources */,
 				9FA5684514894BA800707DD6 /* INPopoverWindowFrame.m in Sources */,
 				9FA5684D14894E5A00707DD6 /* NSUserDefaults+SCAdditions.m in Sources */,
+				9FAFDF20148FE7260061A69F /* NSBezierPath+SCAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
