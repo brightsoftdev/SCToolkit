@@ -60,7 +60,7 @@ static inline float sc_distanceBetweenTwoPoints(NSPoint a, NSPoint b);
     return [self convertPoint:[theEvent locationInWindow] fromView:nil];
 }
 
-- (NSPoint)sc_distanceBetweenPoints:(NSPoint)a anotherPoint(NSPoint)b
+- (NSPoint)sc_distanceBetweenPoints:(NSPoint)a anotherPoint:(NSPoint)b
 {
     return sc_distanceBetweenTwoPoints(a, b);
 }
