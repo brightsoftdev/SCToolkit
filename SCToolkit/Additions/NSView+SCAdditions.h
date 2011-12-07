@@ -36,6 +36,6 @@
  */
 - (NSPoint)sc_lastMouseDownLocation:(NSEvent *)theEvent;
 
-- (NSPoint)sc_distanceBetweenPoints:(NSPoint):a anotherPoint(NSPoint):b;
+- (NSPoint)sc_distanceBetweenPoints:(NSPoint)a anotherPoint:(NSPoint)b;
 
 @end
