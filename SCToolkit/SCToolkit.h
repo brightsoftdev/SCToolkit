@@ -30,6 +30,9 @@ extern NSString *const SCToolkitException;
 #import "NSView+SCAdditions.h"
 #import "NSWindow+SCAdditions.h"
 
+#import "SCSelectionBorder.h"
+#import "SCHybridPopoverController.h"
+
 // Utilities
 #import "SCTimerFormatter.h"
 

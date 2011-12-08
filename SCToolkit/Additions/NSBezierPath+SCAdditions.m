@@ -10,14 +10,16 @@
 
 @implementation NSBezierPath (SCAdditions)
 
-+ (void)sc_drawGridsInRect:(NSRect)aRect verticalLineNumber:(unsigned int)num1 horizontalLineNumber:(unsigned int)num2
++ (void)sc_drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num gridColor:(NSColor *)aColor;
 {
+    [aColor set];
+    
     float w = aRect.size.width;
     float h = aRect.size.height;
     
-    for (int i = 0; i <= 10; i++) {
-        float x = w / 10 * i;
-        float y = h / 10 * i;
+    for (unsigned int i = 1; i <= num; i++) {
+        float x = w / (num + 1) * i; // why plus 1 with num? 
+        float y = h / (num + 1) * i; // example: when you see two vertical lines drawed on the view, literally, the view is divided into 3 pieces.
         [NSBezierPath strokeLineFromPoint:NSMakePoint(0, y) 
                                   toPoint:NSMakePoint(w - 1, y)];
         [NSBezierPath strokeLineFromPoint:NSMakePoint(x, 0) 
@@ -28,6 +30,8 @@
 
 + (void)sc_drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num
 {
+    [[NSColor gridColor] set];
+    
     float w = aRect.size.width;
     float h = aRect.size.height;
     

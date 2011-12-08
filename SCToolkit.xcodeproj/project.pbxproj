@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F435017149139DD0048169B /* SCSelectionBorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F435015149139DC0048169B /* SCSelectionBorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F435018149139DD0048169B /* SCSelectionBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F435016149139DC0048169B /* SCSelectionBorder.m */; };
 		9F7A795F14880A0700113680 /* INAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7A795D14880A0700113680 /* INAppStoreWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F7A796014880A0700113680 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A795E14880A0700113680 /* INAppStoreWindow.m */; };
 		9F9818221486935000D28199 /* NSApplication+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F9818201486935000D28199 /* NSApplication+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -89,6 +91,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F435015149139DC0048169B /* SCSelectionBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSelectionBorder.h; sourceTree = "<group>"; };
+		9F435016149139DC0048169B /* SCSelectionBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSelectionBorder.m; sourceTree = "<group>"; };
 		9F7A795D14880A0700113680 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
 		9F7A795E14880A0700113680 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
 		9F9818201486935000D28199 /* NSApplication+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+SCAdditions.h"; sourceTree = "<group>"; };
@@ -267,6 +271,8 @@
 			children = (
 				9FA5682E14894B9C00707DD6 /* SCHybridPopoverController.h */,
 				9FA5682F14894B9C00707DD6 /* SCHybridPopoverController.m */,
+				9F435015149139DC0048169B /* SCSelectionBorder.h */,
+				9F435016149139DC0048169B /* SCSelectionBorder.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -420,6 +426,8 @@
 				9FF4183B1485533B000A83B9 /* SCGlobals.h in Headers */,
 				9FF418921485DA69000A83B9 /* SCMarcos.h in Headers */,
 				9FF4184714855971000A83B9 /* SCTimerFormatter.h in Headers */,
+				9F435017149139DD0048169B /* SCSelectionBorder.h in Headers */,
+				9FA5683014894B9C00707DD6 /* SCHybridPopoverController.h in Headers */,
 				9FF4184B148559FA000A83B9 /* NSImage+SCAdditions.h in Headers */,
 				9FF4184F148572EF000A83B9 /* NSWindow+SCAdditions.h in Headers */,
 				9FF418531485733A000A83B9 /* NSView+SCAdditions.h in Headers */,
@@ -436,7 +444,6 @@
 				9FA8E82114843A6600EF8E0E /* NSString+SCAdditions.h in Headers */,
 				9FA5684C14894E5A00707DD6 /* NSUserDefaults+SCAdditions.h in Headers */,
 				9FAFDF1F148FE7260061A69F /* NSBezierPath+SCAdditions.h in Headers */,
-				9FA5683014894B9C00707DD6 /* SCHybridPopoverController.h in Headers */,
 				9FA5683D14894BA800707DD6 /* INPopoverController.h in Headers */,
 				9FA5684014894BA800707DD6 /* INPopoverParentWindow.h in Headers */,
 				9FA5683F14894BA800707DD6 /* INPopoverControllerDefines.h in Headers */,
@@ -582,6 +589,7 @@
 				9FA5684514894BA800707DD6 /* INPopoverWindowFrame.m in Sources */,
 				9FA5684D14894E5A00707DD6 /* NSUserDefaults+SCAdditions.m in Sources */,
 				9FAFDF20148FE7260061A69F /* NSBezierPath+SCAdditions.m in Sources */,
+				9F435018149139DD0048169B /* SCSelectionBorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

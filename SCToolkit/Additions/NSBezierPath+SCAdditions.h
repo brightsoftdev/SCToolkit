@@ -10,7 +10,7 @@
 
 @interface NSBezierPath (SCAdditions)
 
-+ (void)sc_drawGridsInRect:(NSRect)aRect verticalLineNumber:(unsigned int)num1 horizontalLineNumber:(unsigned int)num2;
++ (void)sc_drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num gridColor:(NSColor *)aColor;
 + (void)sc_drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num;      
 
 // From Polygons sample code by Apple
