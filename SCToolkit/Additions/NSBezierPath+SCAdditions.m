@@ -31,7 +31,7 @@
     float w = aRect.size.width;
     float h = aRect.size.height;
     
-    for (unsigned int i = 0; i <= num; i++) {
+    for (unsigned int i = 1; i <= num; i++) {
         float x = w / 10 * i;
         float y = h / 10 * i;
         [NSBezierPath strokeLineFromPoint:NSMakePoint(0, y) 
