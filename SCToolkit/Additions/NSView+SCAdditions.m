@@ -19,14 +19,14 @@ static inline float sc_distanceBetweenTwoPoints(NSPoint a, NSPoint b);
 
 @implementation NSView (SCAdditions)
 
-- (void)sc_setAlignmentCenterInView:(NSView *)aView;
+- (void)sc_setCenterAlignmentInView:(NSView *)aView;
 {
     NSRect aRect = aView.bounds;
     [self setFrameOrigin:NSMakePoint((NSWidth(aRect) - NSWidth(self.frame)) / 2, (NSHeight(aRect) - NSHeight(self.frame)) / 2)];
     [self setAutoresizingMask:NSViewMinXMargin | NSViewMaxXMargin | NSViewMinYMargin | NSViewMaxYMargin];
 }
 
-- (void)sc_setAlignmentCenterInRect:(NSRect)aRect
+- (void)sc_setCenterAlignmentInRect:(NSRect)aRect
 {
     [self setFrameOrigin:NSMakePoint((NSWidth(aRect) - NSWidth(self.frame)) / 2, (NSHeight(aRect) - NSHeight(self.frame)) / 2)];
     [self setAutoresizingMask:NSViewMinXMargin | NSViewMaxXMargin | NSViewMinYMargin | NSViewMaxYMargin];
@@ -58,6 +58,12 @@ static inline float sc_distanceBetweenTwoPoints(NSPoint a, NSPoint b);
 - (NSPoint)sc_lastMouseDownLocation:(NSEvent *)theEvent
 {
     return [self convertPoint:[theEvent locationInWindow] fromView:nil];
+}
+
+- (NSPoint)sc_centerPoint
+{
+    return NSMakePoint((self.frame.origin.x + (self.frame.size.width / 2)), 
+                       (self.frame.origin.y + (self.frame.size.height / 2)));
 }
 
 - (CGFloat)sc_distanceBetweenPoints:(NSPoint)a anotherPoint:(NSPoint)b

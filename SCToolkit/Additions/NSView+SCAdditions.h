@@ -11,12 +11,12 @@
 
 @interface NSView (SCAdditions)
 
-- (void)sc_setAlignmentCenterInView:(NSView *)aView;
-- (void)sc_setAlignmentCenterInRect:(NSRect)rect;
+- (void)sc_setCenterAlignmentInView:(NSView *)aView;
+- (void)sc_setCenterAlignmentInRect:(NSRect)rect;
 
 // Geometry Extensions
 // From TransformedImages Apple online sample
-
+// Also can be found in Polygons sample code by Apple
 - (void)sc_centerOriginInBounds;
 - (void)sc_centerOriginInFrame;
 - (void)sc_centerOriginInRect:(NSRect)aRect;
@@ -35,6 +35,14 @@
  @exception 
  */
 - (NSPoint)sc_lastMouseDownLocation:(NSEvent *)theEvent;
+
+
+/** Get the center of a NSView in the form of NSPoint
+ @param 
+ @returns NSPoint
+ @exception 
+ */
+- (NSPoint)sc_centerPoint;
 
 - (CGFloat)sc_distanceBetweenPoints:(NSPoint)a anotherPoint:(NSPoint)b;
 

@@ -11,5 +11,12 @@
 @interface NSBezierPath (SCAdditions)
 
 + (void)sc_drawGridsInRect:(NSRect)aRect verticalLineNumber:(unsigned int)num1 horizontalLineNumber:(unsigned int)num2;
-+ (void)sc_drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num;                      
++ (void)sc_drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num;      
+
+// From Polygons sample code by Apple
++ (NSBezierPath *)sc_polygonWithSides:(unsigned int)sides;
++ (NSBezierPath *)sc_meshedPolygonWithSides:(unsigned int)sides;
+- (void)sc_strokeAtPoint:(NSPoint)where inView:(NSView *)aView;
+- (void)sc_fillAtPoint:(NSPoint)where inView:(NSView *)aView;
+
 @end
