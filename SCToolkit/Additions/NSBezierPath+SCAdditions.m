@@ -32,8 +32,8 @@
     float h = aRect.size.height;
     
     for (unsigned int i = 1; i <= num; i++) {
-        float x = w / (num + 1) * i;
-        float y = h / (num + 1) * i;
+        float x = w / (num + 1) * i; // why plus 1 with num? 
+        float y = h / (num + 1) * i; // example: when you see two vertical lines drawed on the view, literally, the view is divided into 3 pieces.
         [NSBezierPath strokeLineFromPoint:NSMakePoint(0, y) 
                                   toPoint:NSMakePoint(w - 1, y)];
         [NSBezierPath strokeLineFromPoint:NSMakePoint(x, 0) 
