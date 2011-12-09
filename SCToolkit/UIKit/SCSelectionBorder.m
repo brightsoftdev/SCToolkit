@@ -23,6 +23,8 @@ enum {
 - (NSBezierPath *)bezierPathForDrawing;
 - (BOOL)isDrawingHandles;
 - (void)setDrawingHandles:(BOOL)yesOrNo;
+- (NSRect)frameRectForGraphicBounds:(NSRect)rect isLockedAspect:(BOOL)yesOrNo;
+
 @end
 
 @interface SCSelectionBorder ()
@@ -30,6 +32,8 @@ enum {
 //drawing
 - (void)drawHandlesInView:(NSView *)aView;
 - (void)drawHandleInView:(NSView *)aView atPoint:(NSPoint)aPoint;
+//http://en.wikipedia.org/wiki/Schlemiel_the_Painter%27s_algorithm
+//http://stackoverflow.com/questions/2717372/making-a-grid-in-an-nsview
 - (void)drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num;
 
 /** Mostly a simple question of if frame contains point, but also return yes if the point is in one of our selection handles
@@ -59,6 +63,9 @@ enum {
 @synthesize borderColor = _borderColor;
 @synthesize fillColor = _fillColor;
 @synthesize drawingFill = _drawingFill;
+@synthesize aspectRatio = _aspectRatio;
+@synthesize lockAspectRatio = _lockAspectRatio;
+@synthesize minSize = _minSize;
 @synthesize selectedRect = _selectedRect;
 @synthesize lastMouseLocation = _lastMouseLocation;
 @synthesize borderWidth = _borderWidth;
@@ -71,12 +78,15 @@ enum {
     self = [super init];
     if (self) {
         self.selectedRect = NSZeroRect;
+        self.minSize = NSMakeSize(100, 100);
+        self.aspectRatio = NSMakeSize(1, 1);
         [self setColors:[NSColor blueColor]];
         self.gridLineNumber = 2;
         self.drawingGrids = YES;
         self.drawingFill = YES;
         [self setDrawingHandles:YES];
         self.drawingOffView = NO;
+        self.lockAspectRatio = YES;
     }
     
     return self;
@@ -124,14 +134,22 @@ enum {
 {
     // Draw handles at the corners and on the sides.
     NSRect b = self.selectedRect;
-    [self drawHandleInView:aView atPoint:NSMakePoint(NSMinX(b), NSMinY(b))];
-    [self drawHandleInView:aView atPoint:NSMakePoint(NSMidX(b), NSMinY(b))];
-    [self drawHandleInView:aView atPoint:NSMakePoint(NSMaxX(b), NSMinY(b))];
-    [self drawHandleInView:aView atPoint:NSMakePoint(NSMinX(b), NSMidY(b))];
-    [self drawHandleInView:aView atPoint:NSMakePoint(NSMaxX(b), NSMidY(b))];
-    [self drawHandleInView:aView atPoint:NSMakePoint(NSMinX(b), NSMaxY(b))];
-    [self drawHandleInView:aView atPoint:NSMakePoint(NSMidX(b), NSMaxY(b))];
-    [self drawHandleInView:aView atPoint:NSMakePoint(NSMaxX(b), NSMaxY(b))];
+    if (self.canLockAspectRatio) {
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMinX(b), NSMinY(b))];
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMaxX(b), NSMinY(b))];
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMinX(b), NSMaxY(b))];
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMaxX(b), NSMaxY(b))];
+    }
+    else {
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMinX(b), NSMinY(b))];
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMidX(b), NSMinY(b))];
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMaxX(b), NSMinY(b))];
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMinX(b), NSMidY(b))];
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMaxX(b), NSMidY(b))];
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMinX(b), NSMaxY(b))];
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMidX(b), NSMaxY(b))];
+        [self drawHandleInView:aView atPoint:NSMakePoint(NSMaxX(b), NSMaxY(b))];
+    }
 }
 
 - (void)drawHandleInView:(NSView *)aView atPoint:(NSPoint)aPoint 
@@ -174,33 +192,6 @@ enum {
     }
 }
 
-//ST
-//- (NSInteger)handleUnderPoint:(NSPoint)point 
-//{
-//    // Check handles at the corners and on the sides.
-//    NSInteger handle = kSCSelectionBorderHandleNone;
-//    NSRect bounds = self.selectedRect;
-//    if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMinY(bounds))]) {
-//        handle = kSCSelectionBorderUpperLeftHandle;
-//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMidX(bounds), NSMinY(bounds))]) {
-//        handle = kSCSelectionBorderUpperMiddleHandle;
-//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMinY(bounds))]) {
-//        handle = kSCSelectionBorderUpperRightHandle;
-//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMidY(bounds))]) {
-//        handle = kSCSelectionBorderMiddleLeftHandle;
-//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMidY(bounds))]) {
-//        handle = kSCSelectionBorderMiddleRightHandle;
-//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMaxY(bounds))]) {
-//        handle = kSCSelectionBorderLowerLeftHandle;
-//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMidX(bounds), NSMaxY(bounds))]) {
-//        handle = kSCSelectionBorderLowerMiddleHandle;
-//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMaxY(bounds))]) {
-//        handle = kSCSelectionBorderLowerRightHandle;
-//    }
-//    return handle;
-//}
-
-
 // frameRect is the rect of the selection border
 - (BOOL)mouse:(NSPoint)mousePoint isInFrame:(NSRect)frameRect inView:(NSView *)view handle:(SCSelectionBorderHandle *)outHandle
 {
@@ -211,7 +202,6 @@ enum {
     
     // Search through the handles
     SCSelectionBorderHandle handle = (SCSelectionBorderHandle)[self handleAtPoint:mousePoint frameRect:self.selectedRect];
-//    SCSelectionBorderHandle handle = (SCSelectionBorderHandle)[self handleUnderPoint:mousePoint];
     
     if (outHandle) *outHandle = handle;
     
@@ -518,6 +508,15 @@ enum {
 - (void)setDrawingHandles:(BOOL)yesOrNo
 {
     _drawingHandles = yesOrNo;
+}
+
+- (NSRect)frameRectForGraphicBounds:(NSRect)rect isLockedAspect:(BOOL)yesOrNo
+{
+    if (!yesOrNo) return rect;
+    
+    NSRect newRect = NSZeroRect;
+    
+    return NSZeroRect;
 }
 
 @end

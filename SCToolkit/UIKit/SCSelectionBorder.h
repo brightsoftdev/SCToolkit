@@ -40,6 +40,9 @@ enum
     NSColor *_fillColor;
     BOOL _drawingFill;
     CGFloat _borderWidth;
+    NSSize _aspectRatio;
+    BOOL _lockAspectRatio;
+    NSSize _minSize;
     NSRect _selectedRect;
     NSPoint _lastMouseLocation;
     
@@ -53,6 +56,9 @@ enum
 @property(retain) NSColor *borderColor;
 @property(retain) NSColor *fillColor;
 @property(assign, getter = isDrawingFill) BOOL drawingFill;
+@property(assign) NSSize aspectRatio;
+@property(assign, getter = canLockAspectRatio) BOOL lockAspectRatio;
+@property(assign) NSSize minSize;
 @property(nonatomic) NSRect selectedRect;
 @property(nonatomic) NSPoint lastMouseLocation;
 @property(nonatomic) CGFloat borderWidth;
