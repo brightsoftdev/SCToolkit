@@ -88,11 +88,12 @@ enum {
         
         [self.borderColor set];
         [path stroke];
-        
-        if (self.isDrawingGrids) {
-//            //[NSBezierPath sc_drawGridsInRect:rect lineNumber:self.gridLineNumber];
-            [self drawGridsInRect:self.selectedRect lineNumber:2];
-        }
+
+        //Stop drawing grids before I solve the coord issue.
+//        if (self.isDrawingGrids) {
+////            //[NSBezierPath sc_drawGridsInRect:rect lineNumber:self.gridLineNumber];
+//            [self drawGridsInRect:self.selectedRect lineNumber:2];
+//        }
         
         if ([self isDrawingHandles]) {
             [self drawHandlesInView:aView];
@@ -144,6 +145,7 @@ enum {
     float h = aRect.size.height;
     float deltaX = NSMinX(aRect);
     float deltaY = NSMinY(aRect);
+    
     for (unsigned int i = 1; i <= num; i++) {
         float x = w / (num + 1) * i; // why plus 1 with num? 
         float y = h / (num + 1) * i; // example: when you see two vertical lines drawed on the view, literally, the view is divided into 3 pieces.
