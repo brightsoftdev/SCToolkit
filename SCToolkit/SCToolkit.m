@@ -29,3 +29,8 @@ void _DebugLog(const char *file, int lineNumber, const char *funcName, NSString 
 	}
 	[body release];	
 }
+
+inline NSRect _RectFromPoints(NSPoint p1, NSPoint p2)
+{
+    return NSMakeRect(MIN(p1.x, p2.x), MIN(p1.y, p2.y), fabs(p1.x - p2.x), fabs(p1.y - p2.y));
+}

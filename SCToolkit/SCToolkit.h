@@ -59,3 +59,11 @@ extern NSString *const SCToolkitException;
  @url http://www.karlkraft.com/index.php/2009/03/23/114/
  */
 void _DebugLog(const char *file, int lineNumber, const char *funcName, NSString *format,...);
+
+/** Given two corners, make an NSRect.
+ @param p1 NSPoint
+ @param p2 NSPoint
+ @returns 
+ @exception 
+ */
+inline NSRect _RectFromPoints(NSPoint p1, NSPoint p2);

@@ -12,15 +12,15 @@ extern const CGFloat SCSelectionBorderHandleWidth;
 extern const CGFloat SCSelectionBorderHandleHalfWidth;
 
 typedef enum {
-    kSCSelectionBorderNoHandle, 
-    kSCSelectionBorderUpperLeftHandle,
-    kSCSelectionBorderUpperMiddleHandle,
-    kSCSelectionBorderUpperRightHandle,
-    kSCSelectionBorderMiddleLeftHandle,
-    kSCSelectionBorderMiddleRightHandle,
-    kSCSelectionBorderLowerLeftHandle,
-    kSCSelectionBorderLowerMiddleHandle,
-    kSCSelectionBorderLowerRightHandle,
+    kSCSelectionBorderHandleNone        = 0, 
+    kSCSelectionBorderUpperLeftHandle   = 1,
+    kSCSelectionBorderUpperMiddleHandle = 2,
+    kSCSelectionBorderUpperRightHandle  = 3,
+    kSCSelectionBorderMiddleLeftHandle  = 4,
+    kSCSelectionBorderMiddleRightHandle = 5,
+    kSCSelectionBorderLowerLeftHandle   = 6,
+    kSCSelectionBorderLowerMiddleHandle = 7,
+    kSCSelectionBorderLowerRightHandle  = 8,
 } SCSelectionBorderHandle;
 
 enum
@@ -35,7 +35,7 @@ enum
 {
  @private
     
-    unsigned int _resizingMask;
+    //unsigned int _resizingMask;
     NSColor *_borderColor;
     NSColor *_fillColor;
     BOOL _drawingFill;
@@ -43,18 +43,50 @@ enum
     NSRect _selectedRect;
     NSPoint _lastMouseLocation;
     
+    BOOL _drawingHandles;
     BOOL _drawingGrids;
     unsigned int _gridLineNumber;
 
 }
 
-@property(copy) NSColor *borderColor;
-@property(copy) NSColor *fillColor;
+@property(retain) NSColor *borderColor;
+@property(retain) NSColor *fillColor;
 @property(assign, getter = isDrawingFill) BOOL drawingFill;
-@property(assign) NSRect selectedRect;
-@property(assign) NSPoint lastMouseLocation;
-@property(assign) CGFloat borderWidth;
+@property(nonatomic) NSRect selectedRect;
+@property(nonatomic) NSPoint lastMouseLocation;
+@property(nonatomic) CGFloat borderWidth;
 @property(assign) unsigned int gridLineNumber;
 @property(assign, getter = isDrawingGrids) BOOL drawingGrids;
+
+
+- (void)setColors:(NSColor *)aColor;
+
+// Drawing
+- (void)drawContentInView:(NSView *)aView;
+- (void)drawHandlesInView:(NSView *)aView;
+- (void)drawHandleInView:(NSView *)aView atPoint:(NSPoint)aPoint;
+
+// Event Handling
+
+/** Mostly a simple question of if frame contains point, but also return yes if the point is in one of our selection handles
+ @param 
+ @returns 
+ @exception 
+ */
+
+- (BOOL)mouse:(NSPoint)mousePoint
+    isInFrame:(NSRect)frameRect
+       inView:(NSView *)view
+       handle:(SCSelectionBorderHandle *)outHandle;
+
+- (NSInteger)handleAtPoint:(NSPoint)point frameRect:(NSRect)bounds;
+- (NSPoint)locationOfHandle:(SCSelectionBorderHandle)handle frameRect:(NSRect)bounds;
+
+/** // Update the selection and/or move graphics or resize graphics.
+ @param theEvent a NSEvent
+ @returns 
+ @exception 
+ */
+- (void)selectAndTrackMouseWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)mouseLocation inView:(NSView *)view;
 
 @end
