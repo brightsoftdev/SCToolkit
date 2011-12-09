@@ -164,7 +164,7 @@ enum {
 //    result = NSPointInRect(mousePoint, self.selectedRect);
     
     // Search through the handles
-    SCSelectionBorderHandle handle = (SCSelectionBorderHandle)[self handleAtPoint:mousePoint frameRect:frameRect];
+    SCSelectionBorderHandle handle = (SCSelectionBorderHandle)[self handleAtPoint:mousePoint frameRect:self.selectedRect];
     
     if (outHandle) *outHandle = handle;
     
