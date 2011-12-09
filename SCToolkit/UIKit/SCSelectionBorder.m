@@ -383,6 +383,9 @@ enum {
 - (void)moveSelectionBorderWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)where inView:(NSView *)view
 {
     BOOL isMoving = NO;
+//    NSRect selBounds = self.selectedRect;
+//    NSPoint selOriginOffset = NSMakePoint(where.x - selBounds.origin.x, where.y - selBounds.origin.y);
+    
     while ([theEvent type] != NSLeftMouseUp) {
         theEvent = [[view window] nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask)];
         
@@ -394,6 +397,7 @@ enum {
         
         if (!NSEqualPoints(where, currentPoint)) {
             [self translateByX:(currentPoint.x - where.x) y:(currentPoint.y - where.y)];
+            where = currentPoint;
         }
         
         if (isMoving) {
