@@ -45,6 +45,7 @@ enum
     
     BOOL _drawingHandles;
     BOOL _drawingGrids;
+    BOOL _drawingOffView;
     unsigned int _gridLineNumber;
 
 }
@@ -57,6 +58,7 @@ enum
 @property(nonatomic) CGFloat borderWidth;
 @property(assign) unsigned int gridLineNumber;
 @property(assign, getter = isDrawingGrids) BOOL drawingGrids;
+@property(assign, getter = canDrawOffView) BOOL drawingOffView;
 
 
 - (void)setColors:(NSColor *)aColor;

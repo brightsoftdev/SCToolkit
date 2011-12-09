@@ -45,17 +45,19 @@ enum {
 @synthesize borderWidth = _borderWidth;
 @synthesize gridLineNumber = _gridLineNumber;
 @synthesize drawingGrids = _drawingGrids;
-
+@synthesize drawingOffView = _drawingOffView;
 
 - (id)init
 {
     self = [super init];
     if (self) {
+        self.selectedRect = NSZeroRect;
         [self setColors:[NSColor blueColor]];
         self.gridLineNumber = 2;
         self.drawingGrids = YES;
         self.drawingFill = YES;
         [self setDrawingHandles:YES];
+        self.drawingOffView = NO;
     }
     
     return self;
@@ -87,10 +89,10 @@ enum {
         [self.borderColor set];
         [path stroke];
         
-//        if (self.isDrawingGrids) {
+        if (self.isDrawingGrids) {
 //            //[NSBezierPath sc_drawGridsInRect:rect lineNumber:self.gridLineNumber];
-//            [self drawGridsInRect:self.selectedRect lineNumber:2];
-//        }
+            [self drawGridsInRect:self.selectedRect lineNumber:2];
+        }
         
         if ([self isDrawingHandles]) {
             [self drawHandlesInView:aView];
@@ -140,13 +142,14 @@ enum {
     
     float w = aRect.size.width;
     float h = aRect.size.height;
-    
+    float deltaX = NSMinX(aRect);
+    float deltaY = NSMinY(aRect);
     for (unsigned int i = 1; i <= num; i++) {
         float x = w / (num + 1) * i; // why plus 1 with num? 
         float y = h / (num + 1) * i; // example: when you see two vertical lines drawed on the view, literally, the view is divided into 3 pieces.
-        [NSBezierPath strokeLineFromPoint:NSMakePoint(aRect.origin.x, y) 
+        [NSBezierPath strokeLineFromPoint:NSMakePoint(deltaX, y) 
                                   toPoint:NSMakePoint(w - 1, y)];
-        [NSBezierPath strokeLineFromPoint:NSMakePoint(x, aRect.origin.y) 
+        [NSBezierPath strokeLineFromPoint:NSMakePoint(x, deltaY) 
                                   toPoint:NSMakePoint(x, h - 1)];
     }
 }
