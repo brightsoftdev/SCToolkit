@@ -65,6 +65,7 @@ enum
 - (void)drawContentInView:(NSView *)aView;
 - (void)drawHandlesInView:(NSView *)aView;
 - (void)drawHandleInView:(NSView *)aView atPoint:(NSPoint)aPoint;
+- (void)drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num;
 
 // Event Handling
 

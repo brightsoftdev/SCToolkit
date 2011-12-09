@@ -87,9 +87,8 @@ enum {
         [path stroke];
         
         if (self.isDrawingGrids) {
-            NSRect rect = NSZeroRect;
-            rect.size = self.selectedRect.size;
-            [NSBezierPath sc_drawGridsInRect:rect lineNumber:self.gridLineNumber];
+            //[NSBezierPath sc_drawGridsInRect:rect lineNumber:self.gridLineNumber];
+            [self drawGridsInRect:self.selectedRect lineNumber:2];
         }
         
         if ([self isDrawingHandles]) {
@@ -132,6 +131,23 @@ enum {
     [[NSColor knobColor] set];
     NSRectFill(handleBounds);
     
+}
+
++ (void)sc_drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num
+{
+    [[NSColor gridColor] set];
+    
+    float w = aRect.size.width;
+    float h = aRect.size.height;
+    
+    for (unsigned int i = 1; i <= num; i++) {
+        float x = w / (num + 1) * i; // why plus 1 with num? 
+        float y = h / (num + 1) * i; // example: when you see two vertical lines drawed on the view, literally, the view is divided into 3 pieces.
+        [NSBezierPath strokeLineFromPoint:NSMakePoint(aRect.origin.x, y) 
+                                  toPoint:NSMakePoint(w - 1, y)];
+        [NSBezierPath strokeLineFromPoint:NSMakePoint(x, aRect.origin.y) 
+                                  toPoint:NSMakePoint(x, h - 1)];
+    }
 }
 
 //- (void)mouseDown:(NSEvent *)theEvent
