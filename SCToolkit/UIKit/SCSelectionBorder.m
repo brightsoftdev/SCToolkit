@@ -327,18 +327,22 @@ enum {
 - (void)moveSelectionBorderWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)where inView:(NSView *)view
 {
     BOOL isMoving = NO;
-    NSPoint currentPoint = [view convertPoint:[theEvent locationInWindow] fromView:nil];
-    if (!isMoving && ((fabs(currentPoint.x - where.x) >= 2.0) || (fabs(currentPoint.y - where.y) >= 2.0))) {
-        isMoving = YES;
-        [self setDrawingHandles:NO];
-    }
-    
-    if (!NSEqualPoints(where, currentPoint)) {
-        [self translateByX:(currentPoint.x - where.x) y:(currentPoint.y - where.y)];
-    }
-    
-    if (isMoving) {
-        [self setDrawingHandles:YES];
+    while ([theEvent type] != NSLeftMouseUp) {
+        theEvent = [[view window] nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask)];
+        
+        NSPoint currentPoint = [view convertPoint:[theEvent locationInWindow] fromView:nil];
+        if (!isMoving && ((fabs(currentPoint.x - where.x) >= 2.0) || (fabs(currentPoint.y - where.y) >= 2.0))) {
+            isMoving = YES;
+            [self setDrawingHandles:NO];
+        }
+        
+        if (!NSEqualPoints(where, currentPoint)) {
+            [self translateByX:(currentPoint.x - where.x) y:(currentPoint.y - where.y)];
+        }
+        
+        if (isMoving) {
+            [self setDrawingHandles:YES];
+        }
     }
 }
 
