@@ -302,6 +302,7 @@ enum {
         if (!NSEqualPoints(where, currentPoint)) {
             [self translateByX:(currentPoint.x - where.x) y:(currentPoint.y - where.y) inView:view];
             where = currentPoint;
+            [view setNeedsDisplay:YES]; // redraw the view
         }
     }
     
