@@ -31,8 +31,8 @@ enum {
 - (BOOL)isPoint:(NSPoint)point withinHandle:(SCSelectionBorderHandle)handle frameRect:(NSRect)bounds;
 - (BOOL)isPoint:(NSPoint)point withinHandleAtPoint:(NSPoint)handlePoint;
 - (void)translateByX:(CGFloat)deltaX y:(CGFloat)deltaY inView:(NSView *)view;
-- (void)moveSelectionBorderWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)where inView:(NSView *)view;
-- (NSInteger)resizeByMovingHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view;
+- (void)moveWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)where inView:(NSView *)view;
+- (NSInteger)resizeWithEvent:(NSEvent *)theEvent byHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view;
 @end
 
 @implementation SCSelectionBorder
@@ -301,91 +301,30 @@ enum {
 }
 
 #pragma mark - 
-#pragma mark STK ways
-
-//- (BOOL)st_mouse:(NSPoint)mousePoint isInFrame:(NSRect)frameRect inView:(NSView *)view handle:(SCSelectionBorderHandle *)outHandle
-//{
-//    BOOL result = NO;
-//    // Do a quick check to weed out graphics that aren't even in the neighborhood.
-//	if (NSPointInRect(mousePoint, self.selectedRect)) result = YES;
-//    
-//    // Search through the handles
-//    SCSelectionBorderHandle handle = (SCSelectionBorderHandle)[self handleAtPoint:mousePoint frameRect:self.selectedRect];
-//    if (outHandle) *outHandle = handle;
-//
-//    return result;
-//}
-//
-//
-//- (SCSelectionBorderHandle)st_handleUnderPoint:(NSPoint)point {
-//    
-//    // Check handles at the corners and on the sides.
-//    NSInteger handle = kSCSelectionBorderHandleNone;
-//    NSRect bounds = self.selectedRect;
-//    if ([self isHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMinY(bounds)) underPoint:point]) {
-//        handle = kSCSelectionBorderUpperLeftHandle;
-//    } else if ([self isHandleAtPoint:NSMakePoint(NSMidX(bounds), NSMinY(bounds)) underPoint:point]) {
-//        handle = SKTGraphicUpperMiddleHandle;
-//    } else if ([self isHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMinY(bounds)) underPoint:point]) {
-//        handle = SKTGraphicUpperRightHandle;
-//    } else if ([self isHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMidY(bounds)) underPoint:point]) {
-//        handle = SKTGraphicMiddleLeftHandle;
-//    } else if ([self isHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMidY(bounds)) underPoint:point]) {
-//        handle = SKTGraphicMiddleRightHandle;
-//    } else if ([self isHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMaxY(bounds)) underPoint:point]) {
-//        handle = SKTGraphicLowerLeftHandle;
-//    } else if ([self isHandleAtPoint:NSMakePoint(NSMidX(bounds), NSMaxY(bounds)) underPoint:point]) {
-//        handle = SKTGraphicLowerMiddleHandle;
-//    } else if ([self isHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMaxY(bounds)) underPoint:point]) {
-//        handle = SKTGraphicLowerRightHandle;
-//    }
-//    return handle;
-//    
-//}
-//
-//
-//- (BOOL)isHandleAtPoint:(NSPoint)handlePoint underPoint:(NSPoint)point {
-//    
-//    // Check a handle-sized rectangle that's centered on the handle point.
-//    NSRect handleBounds;
-//    handleBounds.origin.x = handlePoint.x - SKTGraphicHandleHalfWidth;
-//    handleBounds.origin.y = handlePoint.y - SKTGraphicHandleHalfWidth;
-//    handleBounds.size.width = SKTGraphicHandleWidth;
-//    handleBounds.size.height = SKTGraphicHandleWidth;
-//    return NSPointInRect(point, handleBounds);
-//    
-//}
-
-#pragma mark - 
 #pragma mark Tracking
 
 - (void)selectAndTrackMouseWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)mouseLocation inView:(NSView *)view
 {
-//    while ([theEvent type] != NSLeftMouseUp) {
-//        theEvent = [[view window] nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask)];
-//    }
-    
     SCSelectionBorderHandle handle;
     BOOL result = [self mouse:mouseLocation isInFrame:self.selectedRect inView:view handle:&handle];
     if (result && handle == kSCSelectionBorderHandleNone) {
         // select + moving
-        [self moveSelectionBorderWithEvent:theEvent atPoint:mouseLocation inView:view];
+        [self moveWithEvent:theEvent atPoint:mouseLocation inView:view];
     }
     else if (result && handle != kSCSelectionBorderHandleNone) {
         // select + resizing
-        [self resizeByMovingHandle:handle atPoint:mouseLocation inView:view];
+        [self resizeWithEvent:theEvent byHandle:handle atPoint:mouseLocation inView:view];
     }
     else {
         // do nothing
     }
 }
 
-- (void)moveSelectionBorderWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)where inView:(NSView *)view
+- (void)moveWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)where inView:(NSView *)view
 {
     BOOL isMoving = NO;
-//    NSRect selBounds = self.selectedRect;
-//    NSPoint selOriginOffset = NSMakePoint(where.x - selBounds.origin.x, where.y - selBounds.origin.y);
     
+    // Keep tracking next mouse event till mouse up
     while ([theEvent type] != NSLeftMouseUp) {
         theEvent = [[view window] nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask)];
         
@@ -416,15 +355,15 @@ enum {
         if (rect.origin.x < 0) rect.origin.x = 0; // left edge
         if (rect.origin.y < 0) rect.origin.y = 0; // bottom edge
         CGFloat w = (rect.origin.x + rect.size.width);
-        if (w > bounds.size.width) rect.origin.x = rect.origin.x - (w - bounds.size.width);
+        if (w > bounds.size.width) rect.origin.x = rect.origin.x - (w - bounds.size.width); // right edge
         CGFloat h = (rect.origin.y + rect.size.height);
-        if (h > bounds.size.height) rect.origin.y = rect.origin.y - (h - bounds.size.height);
+        if (h > bounds.size.height) rect.origin.y = rect.origin.y - (h - bounds.size.height); // top edge
     }
 
     [self setSelectedRect:rect];
 }
 
-- (NSInteger)resizeByMovingHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view
+- (NSInteger)resizeWithEvent:(NSEvent *)theEvent byHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view
 {
     NSInteger newHandle = (NSInteger)handle;
     NSRect rect = self.selectedRect;
