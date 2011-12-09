@@ -23,16 +23,35 @@ enum {
 - (NSBezierPath *)bezierPathForDrawing;
 - (BOOL)isDrawingHandles;
 - (void)setDrawingHandles:(BOOL)yesOrNo;
-
 @end
 
 @interface SCSelectionBorder ()
 
+//drawing
+- (void)drawHandlesInView:(NSView *)aView;
+- (void)drawHandleInView:(NSView *)aView atPoint:(NSPoint)aPoint;
+- (void)drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num;
+
+/** Mostly a simple question of if frame contains point, but also return yes if the point is in one of our selection handles
+ @param 
+ @returns 
+ @exception 
+ */
+
+- (BOOL)mouse:(NSPoint)mousePoint
+    isInFrame:(NSRect)frameRect
+       inView:(NSView *)view
+       handle:(SCSelectionBorderHandle *)outHandle;
+
+//layout
 - (BOOL)isPoint:(NSPoint)point withinHandle:(SCSelectionBorderHandle)handle frameRect:(NSRect)bounds;
 - (BOOL)isPoint:(NSPoint)point withinHandleAtPoint:(NSPoint)handlePoint;
+
+//layout
 - (void)translateByX:(CGFloat)deltaX y:(CGFloat)deltaY inView:(NSView *)view;
 - (void)moveWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)where inView:(NSView *)view;
 - (NSInteger)resizeWithEvent:(NSEvent *)theEvent byHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view;
+- (NSInteger)resizeByMovingHandle:(SCSelectionBorderHandle)handle toPoint:(NSPoint)where inView:(NSView *)view;
 @end
 
 @implementation SCSelectionBorder
@@ -331,7 +350,7 @@ enum {
         if (!NSEqualPoints(where, currentPoint)) {
             [self translateByX:(currentPoint.x - where.x) y:(currentPoint.y - where.y) inView:view];
             where = currentPoint;
-            [view setNeedsDisplay:YES]; // redraw the view
+            [view setNeedsDisplay:YES]; // redraw the view with the changes
         }
     }
     
@@ -355,6 +374,7 @@ enum {
 
     [self setSelectedRect:rect];
 }
+
 - (NSInteger)resizeByMovingHandle:(SCSelectionBorderHandle)handle toPoint:(NSPoint)where inView:(NSView *)view
 {
     NSInteger newHandle = (NSInteger)handle;
@@ -365,7 +385,7 @@ enum {
     if (handle == kSCSelectionBorderUpperLeftHandle || handle == kSCSelectionBorderMiddleLeftHandle || handle == kSCSelectionBorderLowerLeftHandle) {
         
         // Don't go off the bounds of view
-        if (where.x < 0) where.x = 0; // bottom edge
+        if (where.x < 0) where.x = 0; // left edge
         
         
         // Change the left edge of the graphic.
@@ -376,7 +396,7 @@ enum {
     else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderMiddleRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
         
         // Don't go off the bounds of view
-        if (where.x > NSMaxX(bounds)) where.x = NSMaxX(bounds);
+        if (where.x > NSMaxX(bounds)) where.x = NSMaxX(bounds); // right edge
         
         // Change the right edge of the graphic.
         rect.size.width = where.x - rect.origin.x;
@@ -413,7 +433,7 @@ enum {
     if (handle == kSCSelectionBorderUpperLeftHandle || handle == kSCSelectionBorderUpperMiddleHandle || handle == kSCSelectionBorderUpperRightHandle) {
         
         // Don't go off the view bounds
-        if (where.y < 0) where.y = 0;
+        if (where.y < 0) where.y = 0; // bottom edge
         
         // Change the top edge of the graphic.
         rect.size.height = NSMaxY(rect) - where.y;
@@ -423,7 +443,7 @@ enum {
     else if (handle == kSCSelectionBorderLowerLeftHandle || handle == kSCSelectionBorderLowerMiddleHandle || handle == kSCSelectionBorderLowerRightHandle) {
         
         // Don't go off the host view's bounds
-        if (where.y > NSMaxY(bounds)) where.y = NSMaxY(bounds);
+        if (where.y > NSMaxY(bounds)) where.y = NSMaxY(bounds); // top edge
         
         // Change the bottom edge of the graphic.
         rect.size.height = where.y - rect.origin.y;
@@ -460,6 +480,7 @@ enum {
     
     // Done
     self.selectedRect = rect;
+    [view setNeedsDisplay:YES]; // redrawing the changes
     
     return newHandle;
 

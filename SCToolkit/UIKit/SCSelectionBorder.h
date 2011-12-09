@@ -65,27 +65,13 @@ enum
 
 // Drawing
 - (void)drawContentInView:(NSView *)aView;
-- (void)drawHandlesInView:(NSView *)aView;
-- (void)drawHandleInView:(NSView *)aView atPoint:(NSPoint)aPoint;
-- (void)drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num;
 
-// Event Handling
 
-/** Mostly a simple question of if frame contains point, but also return yes if the point is in one of our selection handles
- @param 
- @returns 
- @exception 
- */
-
-- (BOOL)mouse:(NSPoint)mousePoint
-    isInFrame:(NSRect)frameRect
-       inView:(NSView *)view
-       handle:(SCSelectionBorderHandle *)outHandle;
-
+// Handle checking
 - (NSInteger)handleAtPoint:(NSPoint)point frameRect:(NSRect)bounds;
 - (NSPoint)locationOfHandle:(SCSelectionBorderHandle)handle frameRect:(NSRect)bounds;
 
-/** // Update the selection and/or move graphics or resize graphics.
+/**  track mouse event and decide whether to moving or resizing selection border itself
  @param theEvent a NSEvent
  @returns 
  @exception 
