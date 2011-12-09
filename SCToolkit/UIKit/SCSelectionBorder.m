@@ -55,6 +55,7 @@ enum {
         self.gridLineNumber = 2;
         self.drawingGrids = YES;
         self.drawingFill = YES;
+        [self setDrawingHandles:YES];
     }
     
     return self;
@@ -86,10 +87,10 @@ enum {
         [self.borderColor set];
         [path stroke];
         
-        if (self.isDrawingGrids) {
-            //[NSBezierPath sc_drawGridsInRect:rect lineNumber:self.gridLineNumber];
-            [self drawGridsInRect:self.selectedRect lineNumber:2];
-        }
+//        if (self.isDrawingGrids) {
+//            //[NSBezierPath sc_drawGridsInRect:rect lineNumber:self.gridLineNumber];
+//            [self drawGridsInRect:self.selectedRect lineNumber:2];
+//        }
         
         if ([self isDrawingHandles]) {
             [self drawHandlesInView:aView];
