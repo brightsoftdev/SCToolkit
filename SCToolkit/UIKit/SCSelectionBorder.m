@@ -133,7 +133,7 @@ enum {
     
 }
 
-+ (void)sc_drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num
+- (void)drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num
 {
     [[NSColor gridColor] set];
     
