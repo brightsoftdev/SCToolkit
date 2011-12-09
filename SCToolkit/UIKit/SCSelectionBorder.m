@@ -285,6 +285,7 @@ enum {
     BOOL result = [self mouse:mouseLocation isInFrame:self.selectedRect inView:view handle:&handle];
     if (result && handle == kSCSelectionBorderHandleNone) {
         // select + moving
+        [self moveSelectionBorderWithEvent:theEvent atPoint:mouseLocation inView:view];
     }
     else if (result && handle != kSCSelectionBorderHandleNone) {
         // select + resizing
