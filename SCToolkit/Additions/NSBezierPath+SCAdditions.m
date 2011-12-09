@@ -45,6 +45,35 @@
     }
 }
 
+- (void)sc_drawGridsWithPatternsInRect:(NSRect)aRect lineNumber:(unsigned int)num
+{
+    // Set the line dash pattern.
+    float lineDash[6];
+    
+    lineDash[0] = 40.0;
+    lineDash[1] = 12.0;
+    lineDash[2] = 8.0;
+    lineDash[3] = 12.0;
+    lineDash[4] = 8.0;
+    lineDash[5] = 12.0;
+    [self setLineDash:lineDash count:6 phase:0.0];
+    
+    [[NSColor gridColor] set];
+    float w = aRect.size.width;
+    float h = aRect.size.height;
+    
+    for (unsigned int i = 1; i <= num; i++) {
+        float x = w / (num + 1) * i; // why plus 1 with num? 
+        float y = h / (num + 1) * i; // example: when you see two vertical lines drawed on the view, literally, the view is divided into 3 pieces.
+        [self moveToPoint:NSMakePoint(0, y)];  
+        [self lineToPoint:NSMakePoint(w - 1, y)];
+        [self moveToPoint:NSMakePoint(x, 0)];  
+        [self lineToPoint:NSMakePoint(x, h - 1)];
+    }
+    
+    [self stroke];
+}
+
 // Returns a regular polygon, inscribed in the unit circle with the given number of sides.
 + (NSBezierPath *)sc_polygonWithSides:(unsigned int)sides
 {

@@ -12,7 +12,7 @@
 
 + (void)sc_drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num gridColor:(NSColor *)aColor;
 + (void)sc_drawGridsInRect:(NSRect)aRect lineNumber:(unsigned int)num;      
-
+- (void)sc_drawGridsWithPatternsInRect:(NSRect)aRect lineNumber:(unsigned int)num;
 // From Polygons sample code by Apple
 + (NSBezierPath *)sc_polygonWithSides:(unsigned int)sides;
 + (NSBezierPath *)sc_meshedPolygonWithSides:(unsigned int)sides;
