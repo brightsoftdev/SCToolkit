@@ -293,12 +293,68 @@ enum {
 {
     // Check a handle-sized rectangle that's centered on the handle point.
     NSRect handleBounds;
-    handleBounds.origin.x = point.x - SCSelectionBorderHandleHalfWidth;
-    handleBounds.origin.y = point.y - SCSelectionBorderHandleHalfWidth;
+    handleBounds.origin.x = handlePoint.x - SCSelectionBorderHandleHalfWidth;
+    handleBounds.origin.y = handlePoint.y - SCSelectionBorderHandleHalfWidth;
     handleBounds.size.width = SCSelectionBorderHandleWidth;
     handleBounds.size.height = SCSelectionBorderHandleWidth;
     return NSPointInRect(point, handleBounds);
 }
+
+#pragma mark - 
+#pragma mark STK ways
+
+//- (BOOL)st_mouse:(NSPoint)mousePoint isInFrame:(NSRect)frameRect inView:(NSView *)view handle:(SCSelectionBorderHandle *)outHandle
+//{
+//    BOOL result = NO;
+//    // Do a quick check to weed out graphics that aren't even in the neighborhood.
+//	if (NSPointInRect(mousePoint, self.selectedRect)) result = YES;
+//    
+//    // Search through the handles
+//    SCSelectionBorderHandle handle = (SCSelectionBorderHandle)[self handleAtPoint:mousePoint frameRect:self.selectedRect];
+//    if (outHandle) *outHandle = handle;
+//
+//    return result;
+//}
+//
+//
+//- (SCSelectionBorderHandle)st_handleUnderPoint:(NSPoint)point {
+//    
+//    // Check handles at the corners and on the sides.
+//    NSInteger handle = kSCSelectionBorderHandleNone;
+//    NSRect bounds = self.selectedRect;
+//    if ([self isHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMinY(bounds)) underPoint:point]) {
+//        handle = kSCSelectionBorderUpperLeftHandle;
+//    } else if ([self isHandleAtPoint:NSMakePoint(NSMidX(bounds), NSMinY(bounds)) underPoint:point]) {
+//        handle = SKTGraphicUpperMiddleHandle;
+//    } else if ([self isHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMinY(bounds)) underPoint:point]) {
+//        handle = SKTGraphicUpperRightHandle;
+//    } else if ([self isHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMidY(bounds)) underPoint:point]) {
+//        handle = SKTGraphicMiddleLeftHandle;
+//    } else if ([self isHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMidY(bounds)) underPoint:point]) {
+//        handle = SKTGraphicMiddleRightHandle;
+//    } else if ([self isHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMaxY(bounds)) underPoint:point]) {
+//        handle = SKTGraphicLowerLeftHandle;
+//    } else if ([self isHandleAtPoint:NSMakePoint(NSMidX(bounds), NSMaxY(bounds)) underPoint:point]) {
+//        handle = SKTGraphicLowerMiddleHandle;
+//    } else if ([self isHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMaxY(bounds)) underPoint:point]) {
+//        handle = SKTGraphicLowerRightHandle;
+//    }
+//    return handle;
+//    
+//}
+//
+//
+//- (BOOL)isHandleAtPoint:(NSPoint)handlePoint underPoint:(NSPoint)point {
+//    
+//    // Check a handle-sized rectangle that's centered on the handle point.
+//    NSRect handleBounds;
+//    handleBounds.origin.x = handlePoint.x - SKTGraphicHandleHalfWidth;
+//    handleBounds.origin.y = handlePoint.y - SKTGraphicHandleHalfWidth;
+//    handleBounds.size.width = SKTGraphicHandleWidth;
+//    handleBounds.size.height = SKTGraphicHandleWidth;
+//    return NSPointInRect(point, handleBounds);
+//    
+//}
 
 #pragma mark - 
 #pragma mark Tracking
