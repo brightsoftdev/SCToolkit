@@ -117,7 +117,6 @@ enum {
 
 - (void)drawHandleInView:(NSView *)aView atPoint:(NSPoint)aPoint 
 {
-    
     // Figure out a rectangle that's centered on the point but lined up with device pixels.
     NSRect handleBounds;
     handleBounds.origin.x = aPoint.x - SCSelectionBorderHandleHalfWidth;
@@ -156,28 +155,6 @@ enum {
     }
 }
 
-//- (void)mouseDown:(NSEvent *)theEvent
-//{
-    // TODO
-    // 1. Determine the mouse location is inside selected rect or not
-    // NO: do nothing
-    // YES: do selecting and go to #2
-    //BOOL result = - (BOOL)mouse:(NSPoint)mousePoint isInFrame:(NSRect)frameRect inView:(NSView *)view handle:(SCSelectionBorderHandle *)outHandle
-    
-    // 2. Check mouse location is on handle
-    // NO: do moving
-    // YES: do resizing
-//    if (result) {
-//        if (handle != none)
-//            //resizing
-//        else
-//            //moving
-//    }
-//}
-
-/*  Mostly a simple question of if frame contains point, but also return yes if the point is in one of our selection handles
- */
-
 // frameRect is the rect of the selection border
 - (BOOL)mouse:(NSPoint)mousePoint isInFrame:(NSRect)frameRect inView:(NSView *)view handle:(SCSelectionBorderHandle *)outHandle
 {
@@ -201,36 +178,28 @@ enum {
 {
     // Check handles at the corners and on the sides.
     NSInteger result = kSCSelectionBorderHandleNone;
-    if ([self isPoint:point withinHandle:kSCSelectionBorderUpperLeftHandle frameRect:bounds])
-    {
+    if ([self isPoint:point withinHandle:kSCSelectionBorderUpperLeftHandle frameRect:bounds]) {
         result = kSCSelectionBorderUpperLeftHandle;
     }
-    else if ([self isPoint:point withinHandle:kSCSelectionBorderUpperMiddleHandle frameRect:bounds])
-    {
+    else if ([self isPoint:point withinHandle:kSCSelectionBorderUpperMiddleHandle frameRect:bounds]) {
         result = kSCSelectionBorderUpperMiddleHandle;
     }
-    else if ([self isPoint:point withinHandle:kSCSelectionBorderUpperRightHandle frameRect:bounds])
-    {
+    else if ([self isPoint:point withinHandle:kSCSelectionBorderUpperRightHandle frameRect:bounds]) {
         result = kSCSelectionBorderUpperRightHandle;
     }
-    else if ([self isPoint:point withinHandle:kSCSelectionBorderMiddleLeftHandle frameRect:bounds])
-    {
+    else if ([self isPoint:point withinHandle:kSCSelectionBorderMiddleLeftHandle frameRect:bounds]) {
         result = kSCSelectionBorderMiddleLeftHandle;
     }
-    else if ([self isPoint:point withinHandle:kSCSelectionBorderMiddleRightHandle frameRect:bounds])
-    {
+    else if ([self isPoint:point withinHandle:kSCSelectionBorderMiddleRightHandle frameRect:bounds]) {
         result = kSCSelectionBorderMiddleRightHandle;
     }
-    else if ([self isPoint:point withinHandle:kSCSelectionBorderLowerLeftHandle frameRect:bounds])
-    {
+    else if ([self isPoint:point withinHandle:kSCSelectionBorderLowerLeftHandle frameRect:bounds]) {
         result = kSCSelectionBorderLowerLeftHandle;
     }
-    else if ([self isPoint:point withinHandle:kSCSelectionBorderLowerMiddleHandle frameRect:bounds])
-    {
+    else if ([self isPoint:point withinHandle:kSCSelectionBorderLowerMiddleHandle frameRect:bounds]) {
         result = kSCSelectionBorderLowerMiddleHandle;
     }
-    else if ([self isPoint:point withinHandle:kSCSelectionBorderLowerRightHandle frameRect:bounds])
-    {
+    else if ([self isPoint:point withinHandle:kSCSelectionBorderLowerRightHandle frameRect:bounds]) {
         result = kSCSelectionBorderLowerRightHandle;
     }
     
@@ -313,6 +282,7 @@ enum {
     }
     else if (result && handle != kSCSelectionBorderHandleNone) {
         // select + resizing
+        NSLog(@"Resizing with handle: %d", handle);
         [self resizeWithEvent:theEvent byHandle:handle atPoint:mouseLocation inView:view];
     }
     else {
@@ -322,27 +292,18 @@ enum {
 
 - (void)moveWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)where inView:(NSView *)view
 {
-//    BOOL isMoving = NO;
     [self setDrawingHandles:NO];
+    
     // Keep tracking next mouse event till mouse up
     while ([theEvent type] != NSLeftMouseUp) {
         theEvent = [[view window] nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask)];
-        
         NSPoint currentPoint = [view convertPoint:[theEvent locationInWindow] fromView:nil];
-//        if (!isMoving && ((fabs(currentPoint.x - where.x) >= 2.0) || (fabs(currentPoint.y - where.y) >= 2.0))) {
-//            isMoving = YES;
-//            [self setDrawingHandles:NO];
-//        }
         
         if (!NSEqualPoints(where, currentPoint)) {
             [self translateByX:(currentPoint.x - where.x) y:(currentPoint.y - where.y) inView:view];
             where = currentPoint;
         }
     }
-    
-//    if (isMoving) {
-//        [self setDrawingHandles:YES];
-//    }
     
     [self setDrawingHandles:YES];
 }
