@@ -83,12 +83,18 @@ enum {
             [path fill];
         }
         
-        if (self.isDrawingGrids) {
-            [NSBezierPath sc_drawGridsInRect:self.selectedRect lineNumber:self.gridLineNumber];
-        }
-        
         [self.borderColor set];
         [path stroke];
+        
+        if (self.isDrawingGrids) {
+            NSRect rect = NSZeroRect;
+            rect.size = self.selectedRect.size;
+            [NSBezierPath sc_drawGridsInRect:rect lineNumber:self.gridLineNumber];
+        }
+        
+        if ([self isDrawingHandles]) {
+            [self drawHandlesInView:aView];
+        }
     }
 }
 
