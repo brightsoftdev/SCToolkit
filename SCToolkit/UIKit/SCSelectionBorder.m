@@ -408,15 +408,18 @@ enum {
 
 - (void)translateByX:(CGFloat)deltaX y:(CGFloat)deltaY inView:(NSView *)view
 {
-    NSRect bounds = view.bounds;
     NSRect rect = NSOffsetRect(self.selectedRect, deltaX, deltaY);
-    // Don't go off the bounds of view
-    if (rect.origin.x < 0) rect.origin.x = 0; // left edge
-    if (rect.origin.y < 0) rect.origin.y = 0; // bottom edge
-    CGFloat w = (rect.origin.x + rect.size.width);
-    if (w > bounds.size.width) rect.origin.x = rect.origin.x - (w - bounds.size.width);
-    CGFloat h = (rect.origin.y + rect.size.height);
-    if (h > bounds.size.height) rect.origin.y = rect.origin.y - (h - bounds.size.height);
+ 
+    if (!self.canDrawOffView) {
+        // we don't want the border going off the bounds of view
+        NSRect bounds = view.bounds;
+        if (rect.origin.x < 0) rect.origin.x = 0; // left edge
+        if (rect.origin.y < 0) rect.origin.y = 0; // bottom edge
+        CGFloat w = (rect.origin.x + rect.size.width);
+        if (w > bounds.size.width) rect.origin.x = rect.origin.x - (w - bounds.size.width);
+        CGFloat h = (rect.origin.y + rect.size.height);
+        if (h > bounds.size.height) rect.origin.y = rect.origin.y - (h - bounds.size.height);
+    }
 
     [self setSelectedRect:rect];
 }
