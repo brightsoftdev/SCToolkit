@@ -326,8 +326,7 @@ enum {
 
     [self setSelectedRect:rect];
 }
-
-- (NSInteger)resizeWithEvent:(NSEvent *)theEvent byHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view
+- (NSInteger)resizeByMovingHandle:(SCSelectionBorderHandle)handle toPoint:(NSPoint)where inView:(NSView *)view
 {
     NSInteger newHandle = (NSInteger)handle;
     NSRect rect = self.selectedRect;
@@ -338,7 +337,7 @@ enum {
         
         // Don't go off the bounds of view
         if (where.x < 0) where.x = 0;
-
+        
         
         // Change the left edge of the graphic.
         rect.size.width = NSMaxX(rect) - where.x;
@@ -434,7 +433,20 @@ enum {
     self.selectedRect = rect;
     
     return newHandle;
+
 }
+
+- (NSInteger)resizeWithEvent:(NSEvent *)theEvent byHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view
+{
+    NSInteger newHandle = 0;
+    while ([theEvent type] != NSLeftMouseUp) {
+        theEvent = [[view window] nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask)];
+        NSPoint currentPoint = [view convertPoint:[theEvent locationInWindow] fromView:nil];
+        newHandle = [self resizeByMovingHandle:handle toPoint:currentPoint inView:view];
+    }
+    
+    return newHandle;
+ }
 
 @end
 
