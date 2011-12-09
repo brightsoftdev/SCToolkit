@@ -396,10 +396,6 @@ enum {
         }
         
         if (!NSEqualPoints(where, currentPoint)) {
-            // Don't go off the bounds of view
-            if (where.x < 0) where.x = 0;
-            // Don't go off the bounds of view
-            if (where.y < 0) where.y = 0;
             [self translateByX:(currentPoint.x - where.x) y:(currentPoint.y - where.y)];
             where = currentPoint;
         }
@@ -412,8 +408,14 @@ enum {
 
 - (void)translateByX:(CGFloat)deltaX y:(CGFloat)deltaY
 {
-    NSRect rect = self.selectedRect;
-    [self setSelectedRect:NSOffsetRect(rect, deltaX, deltaY)];
+//    NSRect rect = self.selectedRect;
+    
+    NSRect rect = NSOffsetRect(self.selectedRect, deltaX, deltaY);
+    // Don't go off the bounds of view
+    if (rect.origin.x < 0) rect.origin.x = 0;
+    // Don't go off the bounds of view
+    if (rect.origin.y < 0) rect.origin.y = 0;
+    [self setSelectedRect:rect];
 }
 
 - (NSInteger)resizeByMovingHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view
