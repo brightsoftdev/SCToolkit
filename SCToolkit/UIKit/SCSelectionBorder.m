@@ -178,7 +178,7 @@ enum {
 /*  Mostly a simple question of if frame contains point, but also return yes if the point is in one of our selection handles
  */
 
-// frameRect the the rect of current selection border in the view
+// frameRect is the rect of the selection border
 - (BOOL)mouse:(NSPoint)mousePoint isInFrame:(NSRect)frameRect inView:(NSView *)view handle:(SCSelectionBorderHandle *)outHandle
 {
     BOOL result;
@@ -322,27 +322,29 @@ enum {
 
 - (void)moveWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)where inView:(NSView *)view
 {
-    BOOL isMoving = NO;
-    
+//    BOOL isMoving = NO;
+    [self setDrawingHandles:NO];
     // Keep tracking next mouse event till mouse up
     while ([theEvent type] != NSLeftMouseUp) {
         theEvent = [[view window] nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask)];
         
         NSPoint currentPoint = [view convertPoint:[theEvent locationInWindow] fromView:nil];
-        if (!isMoving && ((fabs(currentPoint.x - where.x) >= 2.0) || (fabs(currentPoint.y - where.y) >= 2.0))) {
-            isMoving = YES;
-            [self setDrawingHandles:NO];
-        }
+//        if (!isMoving && ((fabs(currentPoint.x - where.x) >= 2.0) || (fabs(currentPoint.y - where.y) >= 2.0))) {
+//            isMoving = YES;
+//            [self setDrawingHandles:NO];
+//        }
         
         if (!NSEqualPoints(where, currentPoint)) {
             [self translateByX:(currentPoint.x - where.x) y:(currentPoint.y - where.y) inView:view];
             where = currentPoint;
         }
-        
-        if (isMoving) {
-            [self setDrawingHandles:YES];
-        }
     }
+    
+//    if (isMoving) {
+//        [self setDrawingHandles:YES];
+//    }
+    
+    [self setDrawingHandles:YES];
 }
 
 - (void)translateByX:(CGFloat)deltaX y:(CGFloat)deltaY inView:(NSView *)view
