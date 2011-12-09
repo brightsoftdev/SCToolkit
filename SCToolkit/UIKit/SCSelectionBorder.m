@@ -396,6 +396,10 @@ enum {
         }
         
         if (!NSEqualPoints(where, currentPoint)) {
+            // Don't go off the bounds of view
+            if (where.x < 0) where.x = 0;
+            // Don't go off the bounds of view
+            if (where.y < 0) where.y = 0;
             [self translateByX:(currentPoint.x - where.x) y:(currentPoint.y - where.y)];
             where = currentPoint;
         }
