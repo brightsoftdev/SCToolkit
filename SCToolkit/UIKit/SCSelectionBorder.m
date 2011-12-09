@@ -156,30 +156,30 @@ enum {
 }
 
 //ST
-- (NSInteger)handleUnderPoint:(NSPoint)point 
-{
-    // Check handles at the corners and on the sides.
-    NSInteger handle = kSCSelectionBorderHandleNone;
-    NSRect bounds = [self selectedRect];
-    if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMinY(bounds))]) {
-        handle = kSCSelectionBorderUpperLeftHandle;
-    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMidX(bounds), NSMinY(bounds))]) {
-        handle = kSCSelectionBorderUpperMiddleHandle;
-    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMinY(bounds))]) {
-        handle = kSCSelectionBorderUpperRightHandle;
-    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMidY(bounds))]) {
-        handle = kSCSelectionBorderMiddleLeftHandle;
-    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMidY(bounds))]) {
-        handle = kSCSelectionBorderMiddleRightHandle;
-    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMaxY(bounds))]) {
-        handle = kSCSelectionBorderLowerLeftHandle;
-    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMidX(bounds), NSMaxY(bounds))]) {
-        handle = kSCSelectionBorderLowerMiddleHandle;
-    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMaxY(bounds))]) {
-        handle = kSCSelectionBorderLowerRightHandle;
-    }
-    return handle;
-}
+//- (NSInteger)handleUnderPoint:(NSPoint)point 
+//{
+//    // Check handles at the corners and on the sides.
+//    NSInteger handle = kSCSelectionBorderHandleNone;
+//    NSRect bounds = self.selectedRect;
+//    if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMinY(bounds))]) {
+//        handle = kSCSelectionBorderUpperLeftHandle;
+//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMidX(bounds), NSMinY(bounds))]) {
+//        handle = kSCSelectionBorderUpperMiddleHandle;
+//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMinY(bounds))]) {
+//        handle = kSCSelectionBorderUpperRightHandle;
+//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMidY(bounds))]) {
+//        handle = kSCSelectionBorderMiddleLeftHandle;
+//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMidY(bounds))]) {
+//        handle = kSCSelectionBorderMiddleRightHandle;
+//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMinX(bounds), NSMaxY(bounds))]) {
+//        handle = kSCSelectionBorderLowerLeftHandle;
+//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMidX(bounds), NSMaxY(bounds))]) {
+//        handle = kSCSelectionBorderLowerMiddleHandle;
+//    } else if ([self isPoint:point withinHandleAtPoint:NSMakePoint(NSMaxX(bounds), NSMaxY(bounds))]) {
+//        handle = kSCSelectionBorderLowerRightHandle;
+//    }
+//    return handle;
+//}
 
 
 // frameRect is the rect of the selection border
@@ -191,8 +191,8 @@ enum {
 //    result = NSPointInRect(mousePoint, self.selectedRect);
     
     // Search through the handles
-//    SCSelectionBorderHandle handle = (SCSelectionBorderHandle)[self handleAtPoint:mousePoint frameRect:self.selectedRect];
-    SCSelectionBorderHandle handle = (SCSelectionBorderHandle)[self handleUnderPoint:mousePoint];
+    SCSelectionBorderHandle handle = (SCSelectionBorderHandle)[self handleAtPoint:mousePoint frameRect:self.selectedRect];
+//    SCSelectionBorderHandle handle = (SCSelectionBorderHandle)[self handleUnderPoint:mousePoint];
     
     if (outHandle) *outHandle = handle;
     
@@ -314,7 +314,8 @@ enum {
         [self resizeWithEvent:theEvent byHandle:handle atPoint:mouseLocation inView:view];
     }
     else {
-        // do nothing
+        // instead of do nothing, we let the user resize the border...this can increase the senstivity...
+        [self resizeWithEvent:theEvent byHandle:handle atPoint:mouseLocation inView:view];
     }
 }
 
