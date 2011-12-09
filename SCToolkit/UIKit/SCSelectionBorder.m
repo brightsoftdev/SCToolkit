@@ -30,7 +30,7 @@ enum {
 
 - (BOOL)isPoint:(NSPoint)point withinHandle:(SCSelectionBorderHandle)handle frameRect:(NSRect)bounds;
 - (BOOL)isPoint:(NSPoint)point withinHandleAtPoint:(NSPoint)handlePoint;
-- (void)translateByX:(CGFloat)deltaX y:(CGFloat)deltaY;
+- (void)translateByX:(CGFloat)deltaX y:(CGFloat)deltaY inView:(NSView *)view;
 - (void)moveSelectionBorderWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)where inView:(NSView *)view;
 - (NSInteger)resizeByMovingHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view;
 @end
@@ -396,7 +396,7 @@ enum {
         }
         
         if (!NSEqualPoints(where, currentPoint)) {
-            [self translateByX:(currentPoint.x - where.x) y:(currentPoint.y - where.y)];
+            [self translateByX:(currentPoint.x - where.x) y:(currentPoint.y - where.y) inView:view];
             where = currentPoint;
         }
         
@@ -406,15 +406,18 @@ enum {
     }
 }
 
-- (void)translateByX:(CGFloat)deltaX y:(CGFloat)deltaY
+- (void)translateByX:(CGFloat)deltaX y:(CGFloat)deltaY inView:(NSView *)view
 {
-//    NSRect rect = self.selectedRect;
-    
+    NSRect bounds = view.bounds;
     NSRect rect = NSOffsetRect(self.selectedRect, deltaX, deltaY);
     // Don't go off the bounds of view
-    if (rect.origin.x < 0) rect.origin.x = 0;
-    // Don't go off the bounds of view
-    if (rect.origin.y < 0) rect.origin.y = 0;
+    if (rect.origin.x < 0) rect.origin.x = 0; // left edge
+    if (rect.origin.y < 0) rect.origin.y = 0; // bottom edge
+    CGFloat w = (rect.origin.x + rect.size.width);
+    if (w > bounds.size.width) rect.origin.x = rect.origin.x - (w - bounds.size.width);
+    CGFloat h = (rect.origin.y + rect.size.height);
+    if (h > bounds.size.height) rect.origin.y = rect.origin.y - (h - bounds.size.height);
+
     [self setSelectedRect:rect];
 }
 
