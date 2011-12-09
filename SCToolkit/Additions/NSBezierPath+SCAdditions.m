@@ -45,10 +45,11 @@
     }
 }
 
+// causing crash....
 - (void)sc_drawGridsWithPatternsInRect:(NSRect)aRect lineNumber:(unsigned int)num
 {
     // Set the line dash pattern.
-    float lineDash[6];
+    CGFloat lineDash[6];
     
     lineDash[0] = 40.0;
     lineDash[1] = 12.0;
