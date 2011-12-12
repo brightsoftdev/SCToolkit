@@ -379,7 +379,6 @@ enum {
         // Don't go off the bounds of view
         if (where.x < 0) where.x = 0; // left edge
         
-        
         // Change the left edge of the graphic.
         rect.size.width = NSMaxX(rect) - where.x;
         rect.origin.x = where.x;
@@ -549,7 +548,13 @@ enum {
 //            rect.origin.x = 
 //        }
     }
-    else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle || handle == kSCSelectionBorderUpperLeftHandle) {
+    else if (handle == kSCSelectionBorderUpperLeftHandle) {
+        CGFloat x = self.selectedRect.origin.x;
+        CGFloat y = self.selectedRect.origin.y;
+        
+        
+    }
+    else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
         rect.size.width = rect.size.height * ratio;
     }
     else {
