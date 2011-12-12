@@ -549,10 +549,15 @@ enum {
 //        }
     }
     else if (handle == kSCSelectionBorderUpperLeftHandle) {
-        CGFloat x = self.selectedRect.origin.x;
-        CGFloat y = self.selectedRect.origin.y;
+        rect.size.height = rect.size.width / ratio;
         
+        NSPoint point = NSZeroPoint;
+        CGFloat deltaY = NSMaxX(self.selectedRect) - NSMaxY(rect);
+        CGFloat deltaX = (NSMaxX(self.selectedRect) - NSMaxX(rect)) * ratio;
+        point.x = self.selectedRect.origin.x - deltaX;
+        point.y = self.selectedRect.origin.y - deltaY;
         
+        rect.origin = point;
     }
     else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
         rect.size.width = rect.size.height * ratio;
