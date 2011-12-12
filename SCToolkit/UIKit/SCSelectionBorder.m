@@ -529,7 +529,7 @@ enum {
     
     CGFloat ratio = self.aspectRatio.width / self.aspectRatio.height;
     
-    rect.size.width = ratio * rect.size.height;
+    rect.size.height = rect.size.height / ratio;
     
     return rect;
 }
