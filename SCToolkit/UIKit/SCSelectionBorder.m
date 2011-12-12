@@ -546,30 +546,13 @@ enum {
     
     if (handle == kSCSelectionBorderLowerLeftHandle) {
         rect.size.height = rect.size.width / ratio;
-        
-        // don't draw off view
-//        if (NSMaxY(rect) > NSHeight(view.bounds)) {
-//            rect.size.height = rect.size.height - (NSMaxY(rect) - NSHeight(view.bounds));
-//            rect.size.width = rect.size.height * ratio;
-//        }
     }
     else if (handle == kSCSelectionBorderUpperLeftHandle) {
         rect.size.height = rect.size.width / ratio;
         rect.origin.y = NSMaxY(self.selectedRect) - rect.size.height;
-        
-        // don't draw off view
-//        if (rect.origin.y < 0) {
-//            rect.origin.y = 0;
-//        }
     }
     else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
         rect.size.width = rect.size.height * ratio;
-        
-        // don't draw off view
-//        if (NSMaxX(rect) > NSWidth(view.bounds)) {
-//            rect.size.width = rect.size.width - (NSMaxX(rect) - NSWidth(view.bounds));
-//            rect.size.height = rect.size.width / ratio;
-//        }
     }
     else {
         rect.size.width = rect.size.height * ratio;
@@ -577,15 +560,18 @@ enum {
     }
     
     if (!self.canDrawOffView) {
+        //kSCSelectionBorderLowerLeftHandle
         if (NSMaxY(rect) > NSHeight(view.bounds)) {
             rect.size.height = rect.size.height - (NSMaxY(rect) - NSHeight(view.bounds));
             rect.size.width = rect.size.height * ratio;
         }
         
+        //kSCSelectionBorderUpperLeftHandle
         if (rect.origin.y < 0) {
             rect.origin.y = 0;
         }
         
+        //kSCSelectionBorderUpperRightHandle || kSCSelectionBorderLowerRightHandle
         if (NSMaxX(rect) > NSWidth(view.bounds)) {
             rect.size.width = rect.size.width - (NSMaxX(rect) - NSWidth(view.bounds));
             rect.size.height = rect.size.width / ratio;
