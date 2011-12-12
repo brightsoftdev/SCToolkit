@@ -468,7 +468,7 @@ enum {
     }
     
     // Done
-    self.selectedRect = [self frameRectForGraphicBounds:rect isLockedAspect:self.canLockAspectRatio usingHandle:newHandle];
+    self.selectedRect = [self frameRectForGraphicBounds:rect isLockedAspect:self.canLockAspectRatio usingHandle:(SCSelectionBorderHandle)newHandle];
 
     // Done
     //self.selectedRect = rect;
