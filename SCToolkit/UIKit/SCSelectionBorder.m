@@ -560,11 +560,26 @@ enum {
             rect.origin.y = 0;
         }
     }
-    else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
+    else if (handle == kSCSelectionBorderLowerRightHandle) {
         rect.size.width = rect.size.height * ratio;
+        
+        // don't draw off view
+        if (NSMaxX(rect) > NSWidth(view.bounds)) {
+            rect.size.width = rect.size.width - (NSMaxX(rect) - NSWidth(view.bounds));
+            rect.size.height = rect.size.width / ratio;
+        }
+    }
+    else if (handle == kSCSelectionBorderUpperRightHandle) {
+        rect.size.width = rect.size.height * ratio;
+        
+        // don't draw off view
+        if (rect.origin.x < 0) {
+            rect.origin.x = 0;
+        }
     }
     else {
         rect.size.width = rect.size.height * ratio;
+        
     }
     
     NSLog(@"X: %f", rect.origin.x);
