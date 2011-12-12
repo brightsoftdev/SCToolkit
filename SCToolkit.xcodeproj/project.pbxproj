@@ -46,6 +46,8 @@
 		9FA8E8A914844C9C00EF8E0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */; };
 		9FAFDF1F148FE7260061A69F /* NSBezierPath+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FAFDF1D148FE7260061A69F /* NSBezierPath+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FAFDF20148FE7260061A69F /* NSBezierPath+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFDF1E148FE7260061A69F /* NSBezierPath+SCAdditions.m */; };
+		9FBDC815149332C400242925 /* ESCursors.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBDC813149332C400242925 /* ESCursors.h */; };
+		9FBDC816149332C400242925 /* ESCursors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBDC814149332C400242925 /* ESCursors.m */; };
 		9FD5512914840A7400715063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512814840A7400715063 /* Cocoa.framework */; };
 		9FD5513314840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5513114840A7400715063 /* InfoPlist.strings */; };
 		9FD5513714840A7400715063 /* SCToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5513614840A7400715063 /* SCToolkit.m */; };
@@ -130,6 +132,8 @@
 		9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9FAFDF1D148FE7260061A69F /* NSBezierPath+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+SCAdditions.h"; sourceTree = "<group>"; };
 		9FAFDF1E148FE7260061A69F /* NSBezierPath+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+SCAdditions.m"; sourceTree = "<group>"; };
+		9FBDC813149332C400242925 /* ESCursors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCursors.h; sourceTree = "<group>"; };
+		9FBDC814149332C400242925 /* ESCursors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCursors.m; sourceTree = "<group>"; };
 		9FC0F3131488415F003B6638 /* CleanFrameworkHeaders.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CleanFrameworkHeaders.sh; sourceTree = "<group>"; };
 		9FD5512514840A7400715063 /* SCToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5512814840A7400715063 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -250,6 +254,7 @@
 		9FA487241484162B00B43F2C /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				9FBDC812149332C400242925 /* ESCursors */,
 				9FA5683314894BA800707DD6 /* INPopoverController */,
 				9F7A795C14880A0700113680 /* INAppStoreWindow */,
 				9FA8E8331484461700EF8E0E /* AMSerialPort */,
@@ -305,6 +310,15 @@
 				9FA8E83A1484461700EF8E0E /* AMSerialPortList.m */,
 			);
 			path = AMSerialPort;
+			sourceTree = "<group>";
+		};
+		9FBDC812149332C400242925 /* ESCursors */ = {
+			isa = PBXGroup;
+			children = (
+				9FBDC813149332C400242925 /* ESCursors.h */,
+				9FBDC814149332C400242925 /* ESCursors.m */,
+			);
+			path = ESCursors;
 			sourceTree = "<group>";
 		};
 		9FD5511914840A7400715063 = {
@@ -453,6 +467,7 @@
 				9FA8E8401484461700EF8E0E /* AMSerialPortList.h in Headers */,
 				9FA8E83B1484461700EF8E0E /* AMSerialErrors.h in Headers */,
 				9FA8E83E1484461700EF8E0E /* AMSerialPortAdditions.h in Headers */,
+				9FBDC815149332C400242925 /* ESCursors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +605,7 @@
 				9FA5684D14894E5A00707DD6 /* NSUserDefaults+SCAdditions.m in Sources */,
 				9FAFDF20148FE7260061A69F /* NSBezierPath+SCAdditions.m in Sources */,
 				9F435018149139DD0048169B /* SCSelectionBorder.m in Sources */,
+				9FBDC816149332C400242925 /* ESCursors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

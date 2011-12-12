@@ -7,6 +7,7 @@
 //
 
 #import "SCSelectionBorder.h"
+#import "ESCursors.h"
 
 // The handles that graphics draw on themselves are 10 point by 10 point rectangles.
 const CGFloat SCSelectionBorderHandleWidth = 10.0f;
@@ -54,7 +55,7 @@ enum {
 //layout
 - (void)translateByX:(CGFloat)deltaX y:(CGFloat)deltaY inView:(NSView *)view;
 - (void)moveWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)where inView:(NSView *)view;
-- (NSInteger)resizeWithEvent:(NSEvent *)theEvent byHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view;
+- (void)resizeWithEvent:(NSEvent *)theEvent byHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view;
 - (NSInteger)resizeByMovingHandle:(SCSelectionBorderHandle)handle toPoint:(NSPoint)where inView:(NSView *)view;
 @end
 
@@ -415,8 +416,7 @@ enum {
         rect.size.width = 0.0f - rect.size.width;
         rect.origin.x -= rect.size.width;
         
-        // Tell interested subclass/object code what just happened.
-        //[self flipHorizontally];
+        // flip horizontally
     }
     
     // Is the user changing the height of the graphic?
@@ -464,8 +464,7 @@ enum {
         rect.size.height = 0.0f - rect.size.height;
         rect.origin.y -= rect.size.height;
         
-        // Tell interested subclass/object code what just happened.
-        //[self flipVertically];
+        // flip vertically
     }
     
     // Done
@@ -476,17 +475,16 @@ enum {
 
 }
 
-- (NSInteger)resizeWithEvent:(NSEvent *)theEvent byHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view
+- (void)resizeWithEvent:(NSEvent *)theEvent byHandle:(SCSelectionBorderHandle)handle atPoint:(NSPoint)where inView:(NSView *)view
 {
-    NSInteger newHandle = 0;
+    // continuously tracking mouse event and resizing while left mouse button is not up
     while ([theEvent type] != NSLeftMouseUp) {
         theEvent = [[view window] nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask)];
         NSPoint currentPoint = [view convertPoint:[theEvent locationInWindow] fromView:nil];
-        newHandle = [self resizeByMovingHandle:handle toPoint:currentPoint inView:view];
+        // Start resizing and tracking if the selection border is flipping vertically or horizontally
+        handle = (SCSelectionBorderHandle)[self resizeByMovingHandle:handle toPoint:currentPoint inView:view];
     }
-    
-    return newHandle;
- }
+}
 
 @end
 
