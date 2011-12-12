@@ -13,13 +13,6 @@
 const CGFloat SCSelectionBorderHandleWidth = 10.0f;
 const CGFloat SCSelectionBorderHandleHalfWidth = 10.0f / 2.0f;
 
-enum {
-    kSCSelectionBorderTrackingNone      = 0,
-    kSCSelectionBorderTrackingSelecting = 1,
-    kSCSelectionBorderTrackingResizing  = 2,
-    kSCSelectionBorderTrackingMoving    = 3,
-};
-
 @interface SCSelectionBorder (SCSelectionBorderPrivate)
 - (NSBezierPath *)bezierPathForDrawing;
 - (BOOL)isDrawingHandles;
@@ -428,14 +421,6 @@ enum {
         // Change the top edge of the graphic.
         rect.size.height = NSMaxY(rect) - where.y;
         rect.origin.y = where.y;
-        
-        // This works but cannot handle flipping (up)
-//        if (self.canLockAspectRatio) {
-//            CGFloat ratio = self.aspectRatio.width / self.aspectRatio.height;
-//            rect.size.height = rect.size.width / ratio;
-//            rect.origin.y = NSMaxY(self.selectedRect) - rect.size.height;
-//        }
-        
     }
     else if (handle == kSCSelectionBorderLowerLeftHandle || handle == kSCSelectionBorderLowerMiddleHandle || handle == kSCSelectionBorderLowerRightHandle) {
         
@@ -515,7 +500,6 @@ enum {
     NSBezierPath *path = [NSBezierPath bezierPathWithRect:self.selectedRect];
     [path setLineWidth:self.borderWidth];
     return path;
-    
 }
 
 - (BOOL)isDrawingHandles
