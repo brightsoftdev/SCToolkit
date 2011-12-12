@@ -541,18 +541,12 @@ enum {
     
     if (handle == kSCSelectionBorderLowerLeftHandle) {
         rect.size.height = rect.size.width / ratio;
-        
-//        if (handle == kSCSelectionBorderUpperLeftHandle) {
-//            CGFloat x = NSMaxX(self.selectedRect);
-//            CGFloat y = NSMaxY(self.selectedRect);
-//            rect.origin.x = 
-//        }
     }
     else if (handle == kSCSelectionBorderUpperLeftHandle) {
         rect.size.height = rect.size.width / ratio;
         
         NSPoint point = NSZeroPoint;
-        CGFloat deltaY = NSMaxX(self.selectedRect) - NSMaxY(rect);
+        CGFloat deltaY = NSMaxY(self.selectedRect) - NSMaxY(rect);
         CGFloat deltaX = (NSMaxX(self.selectedRect) - NSMaxX(rect)) * ratio;
         point.x = self.selectedRect.origin.x - deltaX;
         point.y = self.selectedRect.origin.y - deltaY;
