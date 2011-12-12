@@ -562,6 +562,14 @@ const CGFloat SCSelectionBorderHandleHalfWidth = 10.0f / 2.0f;
         }
     }
     
+    NSLog(@"X: %f", rect.origin.x);
+    NSLog(@"Y: %f", rect.origin.y);
+    NSLog(@"max x: %f", NSMaxX(rect));
+    NSLog(@"max y: %f", NSMaxY(rect));
+    NSLog(@"width: %f", rect.size.width);
+    NSLog(@"height: %f", rect.size.height);
+    NSLog(@"ratio: %f", rect.size.width / rect.size.height);
+    
     return rect;
 }
 
