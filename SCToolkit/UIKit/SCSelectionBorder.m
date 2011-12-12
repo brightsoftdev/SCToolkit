@@ -468,7 +468,11 @@ enum {
     }
     
     // Done
-    self.selectedRect = rect;
+    self.selectedRect = [self frameRectForGraphicBounds:rect isLockedAspect:self.canLockAspectRatio];
+
+    // Done
+    //self.selectedRect = rect;
+
     [view setNeedsDisplay:YES]; // redrawing the changes
     
     return newHandle;
@@ -512,9 +516,11 @@ enum {
 {
     if (!yesOrNo) return rect;
     
-    NSRect newRect = NSZeroRect;
+    CGFloat ratio = self.aspectRatio.width / self.aspectRatio.height;
     
-    return NSZeroRect;
+    rect.size.width = ratio * rect.size.height;
+    
+    return rect;
 }
 
 @end
