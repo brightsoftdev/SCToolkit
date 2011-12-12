@@ -543,7 +543,7 @@ enum {
     if (handle == kSCSelectionBorderUpperLeftHandle || handle == kSCSelectionBorderLowerLeftHandle) {
         rect.size.height = rect.size.width / ratio;
     }
-    else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
+    else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle || kSCSelectionBorderUpperLeftHandle) {
         rect.size.width = rect.size.height * ratio;
     }
     else {
