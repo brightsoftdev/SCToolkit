@@ -373,29 +373,25 @@ enum {
     NSRect rect = self.selectedRect;
     NSRect bounds = view.bounds;
     
-    // Don't go off the bounds of view
-    if (where.x < 0) where.x = 0; // left edge
-    // Don't go off the bounds of view
-    if (where.x > NSMaxX(bounds)) where.x = NSMaxX(bounds); // right edge
-    // Don't go off the view bounds
-    if (where.y < 0) where.y = 0; // bottom edge
-    // Don't go off the host view's bounds
-    if (where.y > NSMaxY(bounds)) where.y = NSMaxY(bounds); // top edge
+    if (!self.canDrawOffView) {
+        // Don't go off the bounds of view
+        if (where.x < 0) where.x = 0; // left edge
+        // Don't go off the bounds of view
+        if (where.x > NSMaxX(bounds)) where.x = NSMaxX(bounds); // right edge
+        // Don't go off the view bounds
+        if (where.y < 0) where.y = 0; // bottom edge
+        // Don't go off the host view's bounds
+        if (where.y > NSMaxY(bounds)) where.y = NSMaxY(bounds); // top edge
+    }
     
     // Is the user changing the width of the graphic?
     if (handle == kSCSelectionBorderUpperLeftHandle || handle == kSCSelectionBorderMiddleLeftHandle || handle == kSCSelectionBorderLowerLeftHandle) {
-        
-        // Don't go off the bounds of view
-        if (where.x < 0) where.x = 0; // left edge
         
         // Change the left edge of the graphic.
         rect.size.width = NSMaxX(rect) - where.x;
         rect.origin.x = where.x;
     }
     else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderMiddleRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
-        
-        // Don't go off the bounds of view
-        if (where.x > NSMaxX(bounds)) where.x = NSMaxX(bounds); // right edge
         
         // Change the right edge of the graphic.
         rect.size.width = where.x - rect.origin.x;
@@ -430,9 +426,6 @@ enum {
     // Is the user changing the height of the graphic?
     if (handle == kSCSelectionBorderUpperLeftHandle || handle == kSCSelectionBorderUpperMiddleHandle || handle == kSCSelectionBorderUpperRightHandle) {
         
-        // Don't go off the view bounds
-        if (where.y < 0) where.y = 0; // bottom edge
-        
         // Change the top edge of the graphic.
         rect.size.height = NSMaxY(rect) - where.y;
         rect.origin.y = where.y;
@@ -446,9 +439,6 @@ enum {
         
     }
     else if (handle == kSCSelectionBorderLowerLeftHandle || handle == kSCSelectionBorderLowerMiddleHandle || handle == kSCSelectionBorderLowerRightHandle) {
-        
-        // Don't go off the host view's bounds
-        if (where.y > NSMaxY(bounds)) where.y = NSMaxY(bounds); // top edge
         
         // Change the bottom edge of the graphic.
         rect.size.height = where.y - rect.origin.y;
@@ -556,7 +546,6 @@ enum {
     
     if (handle == kSCSelectionBorderLowerLeftHandle) {
         rect.size.height = rect.size.width / ratio;
-
     }
     else if (handle == kSCSelectionBorderUpperLeftHandle) {
         rect.size.height = rect.size.width / ratio;
