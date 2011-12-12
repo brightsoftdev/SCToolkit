@@ -87,7 +87,7 @@ enum {
         self.drawingFill = YES;
         [self setDrawingHandles:YES];
         self.drawingOffView = NO;
-        self.lockAspectRatio = YES;
+        self.lockAspectRatio = NO;
     }
     
     return self;
@@ -487,6 +487,17 @@ enum {
         NSPoint currentPoint = [view convertPoint:[theEvent locationInWindow] fromView:nil];
         // Start resizing and tracking if the selection border is flipping vertically or horizontally
         handle = (SCSelectionBorderHandle)[self resizeByMovingHandle:handle toPoint:currentPoint inView:view];
+    }
+}
+
+#pragma mark -
+#pragma mark Accessors
+
+- (void)setLockAspectRatio:(BOOL)yesOrNo
+{
+    _lockAspectRatio = yesOrNo;
+    if (_lockAspectRatio) {
+        self.selectedRect = [self frameRectForGraphicBounds:self.selectedRect isLockedAspect:YES];
     }
 }
 

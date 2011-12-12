@@ -57,7 +57,7 @@ enum
 @property(retain) NSColor *fillColor;
 @property(assign, getter = isDrawingFill) BOOL drawingFill;
 @property(assign) NSSize aspectRatio;
-@property(assign, getter = canLockAspectRatio) BOOL lockAspectRatio;
+@property(readonly, getter = canLockAspectRatio) BOOL lockAspectRatio;
 @property(assign) NSSize minSize;
 @property(nonatomic) NSRect selectedRect;
 @property(nonatomic) NSPoint lastMouseLocation;
@@ -83,5 +83,6 @@ enum
  @exception 
  */
 - (void)selectAndTrackMouseWithEvent:(NSEvent *)theEvent atPoint:(NSPoint)mouseLocation inView:(NSView *)view;
+- (void)setLockAspectRatio:(BOOL)yesOrNo;
 
 @end
