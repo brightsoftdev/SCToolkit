@@ -501,6 +501,7 @@ enum {
 {
     _lockAspectRatio = yesOrNo;
     if (_lockAspectRatio) {
+        // TODO: prevent the size change causing selection border been drawing off view
         self.selectedRect = [self frameRectForGraphicBounds:self.selectedRect isLockedAspect:YES];
     }
 }
@@ -547,54 +548,50 @@ enum {
         rect.size.height = rect.size.width / ratio;
         
         // don't draw off view
-        if (NSMaxY(rect) > NSHeight(view.bounds)) {
-            rect.size.height = rect.size.height - (NSMaxY(rect) - NSHeight(view.bounds));
-            rect.size.width = rect.size.height * ratio;
-        }
+//        if (NSMaxY(rect) > NSHeight(view.bounds)) {
+//            rect.size.height = rect.size.height - (NSMaxY(rect) - NSHeight(view.bounds));
+//            rect.size.width = rect.size.height * ratio;
+//        }
     }
     else if (handle == kSCSelectionBorderUpperLeftHandle) {
         rect.size.height = rect.size.width / ratio;
         rect.origin.y = NSMaxY(self.selectedRect) - rect.size.height;
         
-        if (rect.origin.y < 0) {
-            rect.origin.y = 0;
-        }
-    }
-    else if (handle == kSCSelectionBorderLowerRightHandle) {
-        rect.size.width = rect.size.height * ratio;
-        
         // don't draw off view
-        if (NSMaxX(rect) > NSWidth(view.bounds)) {
-            rect.size.width = rect.size.width - (NSMaxX(rect) - NSWidth(view.bounds));
-            rect.size.height = rect.size.width / ratio;
-        }
-    }
-    else if (handle == kSCSelectionBorderUpperRightHandle) {
-        rect.size.width = rect.size.height * ratio;
-        
-        // don't draw off view
-//        if (rect.origin.x < 0) {
-//            rect.origin.x = 0;
+//        if (rect.origin.y < 0) {
+//            rect.origin.y = 0;
 //        }
+    }
+    else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
+        rect.size.width = rect.size.height * ratio;
         
         // don't draw off view
-        if (NSMaxX(rect) > NSWidth(view.bounds)) {
-            rect.size.width = rect.size.width - (NSMaxX(rect) - NSWidth(view.bounds));
-            rect.size.height = rect.size.width / ratio;
-        }
+//        if (NSMaxX(rect) > NSWidth(view.bounds)) {
+//            rect.size.width = rect.size.width - (NSMaxX(rect) - NSWidth(view.bounds));
+//            rect.size.height = rect.size.width / ratio;
+//        }
     }
     else {
         rect.size.width = rect.size.height * ratio;
         
     }
     
-    NSLog(@"X: %f", rect.origin.x);
-    NSLog(@"Y: %f", rect.origin.y);
-    NSLog(@"max x: %f", NSMaxX(rect));
-    NSLog(@"max y: %f", NSMaxY(rect));
-    NSLog(@"width: %f", rect.size.width);
-    NSLog(@"height: %f", rect.size.height);
-    NSLog(@"ratio: %f", rect.size.width / rect.size.height);
+    if (!self.canDrawOffView) {
+        if (NSMaxY(rect) > NSHeight(view.bounds)) {
+            rect.size.height = rect.size.height - (NSMaxY(rect) - NSHeight(view.bounds));
+            rect.size.width = rect.size.height * ratio;
+        }
+        
+        if (rect.origin.y < 0) {
+            rect.origin.y = 0;
+        }
+        
+        if (NSMaxX(rect) > NSWidth(view.bounds)) {
+            rect.size.width = rect.size.width - (NSMaxX(rect) - NSWidth(view.bounds));
+            rect.size.height = rect.size.width / ratio;
+        }
+    }
+    
     return rect;
 }
 
