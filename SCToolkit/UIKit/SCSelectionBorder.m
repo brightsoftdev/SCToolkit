@@ -373,6 +373,15 @@ enum {
     NSRect rect = self.selectedRect;
     NSRect bounds = view.bounds;
     
+    // Don't go off the bounds of view
+    if (where.x < 0) where.x = 0; // left edge
+    // Don't go off the bounds of view
+    if (where.x > NSMaxX(bounds)) where.x = NSMaxX(bounds); // right edge
+    // Don't go off the view bounds
+    if (where.y < 0) where.y = 0; // bottom edge
+    // Don't go off the host view's bounds
+    if (where.y > NSMaxY(bounds)) where.y = NSMaxY(bounds); // top edge
+    
     // Is the user changing the width of the graphic?
     if (handle == kSCSelectionBorderUpperLeftHandle || handle == kSCSelectionBorderMiddleLeftHandle || handle == kSCSelectionBorderLowerLeftHandle) {
         
@@ -547,6 +556,7 @@ enum {
     
     if (handle == kSCSelectionBorderLowerLeftHandle) {
         rect.size.height = rect.size.width / ratio;
+
     }
     else if (handle == kSCSelectionBorderUpperLeftHandle) {
         rect.size.height = rect.size.width / ratio;
@@ -561,4 +571,5 @@ enum {
     
     return rect;
 }
+
 @end
