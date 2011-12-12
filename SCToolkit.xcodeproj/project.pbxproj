@@ -46,7 +46,7 @@
 		9FA8E8A914844C9C00EF8E0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8E8A714844C9C00EF8E0E /* QuartzCore.framework */; };
 		9FAFDF1F148FE7260061A69F /* NSBezierPath+SCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FAFDF1D148FE7260061A69F /* NSBezierPath+SCAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FAFDF20148FE7260061A69F /* NSBezierPath+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFDF1E148FE7260061A69F /* NSBezierPath+SCAdditions.m */; };
-		9FBDC815149332C400242925 /* ESCursors.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBDC813149332C400242925 /* ESCursors.h */; };
+		9FBDC815149332C400242925 /* ESCursors.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBDC813149332C400242925 /* ESCursors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FBDC816149332C400242925 /* ESCursors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBDC814149332C400242925 /* ESCursors.m */; };
 		9FD5512914840A7400715063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD5512814840A7400715063 /* Cocoa.framework */; };
 		9FD5513314840A7400715063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5513114840A7400715063 /* InfoPlist.strings */; };
@@ -440,6 +440,7 @@
 				9FF4183B1485533B000A83B9 /* SCGlobals.h in Headers */,
 				9FF418921485DA69000A83B9 /* SCMarcos.h in Headers */,
 				9FF4184714855971000A83B9 /* SCTimerFormatter.h in Headers */,
+				9FBDC815149332C400242925 /* ESCursors.h in Headers */,
 				9F435017149139DD0048169B /* SCSelectionBorder.h in Headers */,
 				9FA5683014894B9C00707DD6 /* SCHybridPopoverController.h in Headers */,
 				9FF4184B148559FA000A83B9 /* NSImage+SCAdditions.h in Headers */,
@@ -467,7 +468,6 @@
 				9FA8E8401484461700EF8E0E /* AMSerialPortList.h in Headers */,
 				9FA8E83B1484461700EF8E0E /* AMSerialErrors.h in Headers */,
 				9FA8E83E1484461700EF8E0E /* AMSerialPortAdditions.h in Headers */,
-				9FBDC815149332C400242925 /* ESCursors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
