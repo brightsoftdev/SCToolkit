@@ -26,7 +26,7 @@ enum {
 - (void)setDrawingHandles:(BOOL)yesOrNo;
 - (NSRect)frameRectForGraphicBounds:(NSRect)rect isLockedAspect:(BOOL)yesOrNo;
 - (NSRect)frameRectForGraphicBounds:(NSRect)rect isLockedAspect:(BOOL)yesOrNo usingHandle:(SCSelectionBorderHandle)handle;
-
+- (NSRect)frameRectForGraphicBounds:(NSRect)rect isLockedAspect:(BOOL)yesOrNo usingHandle:(SCSelectionBorderHandle)handle inView:(NSView *)view;
 @end
 
 @interface SCSelectionBorder ()
@@ -473,7 +473,7 @@ enum {
     }
     
     // Done
-    self.selectedRect = [self frameRectForGraphicBounds:rect isLockedAspect:self.canLockAspectRatio usingHandle:(SCSelectionBorderHandle)newHandle];
+    self.selectedRect = [self frameRectForGraphicBounds:rect isLockedAspect:self.canLockAspectRatio usingHandle:(SCSelectionBorderHandle)newHandle inView:view];
 
     // Done
     //self.selectedRect = rect;
@@ -557,8 +557,39 @@ enum {
     else {
         rect.size.width = rect.size.height * ratio;
     }
-    
+        
     return rect;
 }
 
+- (NSRect)frameRectForGraphicBounds:(NSRect)rect isLockedAspect:(BOOL)yesOrNo usingHandle:(SCSelectionBorderHandle)handle inView:(NSView *)view
+{
+    if (!yesOrNo) return rect;
+    
+    CGFloat ratio = self.aspectRatio.width / self.aspectRatio.height;
+    
+    if (!self.canDrawOffView) {
+        // Don't go off the bounds of view
+        if (rect.origin.x < 0) rect.origin.x = 0; // left edge
+        // Don't go off the bounds of view
+        if (NSMaxX(rect) > NSMaxX(view.bounds)) NSLog(@"Hit NSMaxX"); // right edge
+        // Don't go off the view bounds
+        if (rect.origin.y < 0) rect.origin.y = 0; // bottom edge
+        // Don't go off the host view's bounds
+        if (NSMaxY(rect) > NSMaxY(view.bounds)) NSLog(@"Hit NSMaxY"); // top edge
+    }
+    
+    if (handle == kSCSelectionBorderLowerLeftHandle) {
+        rect.size.height = rect.size.width / ratio;
+    }
+    else if (handle == kSCSelectionBorderUpperLeftHandle) {
+        rect.size.height = rect.size.width / ratio;
+        rect.origin.y = NSMaxY(self.selectedRect) - rect.size.height;
+    }
+    else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
+        rect.size.width = rect.size.height * ratio;
+    }
+    else {
+        rect.size.width = rect.size.height * ratio;
+    }
+}
 @end
