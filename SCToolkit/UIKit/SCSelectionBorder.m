@@ -382,7 +382,6 @@ enum {
         // Change the left edge of the graphic.
         rect.size.width = NSMaxX(rect) - where.x;
         rect.origin.x = where.x;
-        
     }
     else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderMiddleRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
         
@@ -428,6 +427,12 @@ enum {
         // Change the top edge of the graphic.
         rect.size.height = NSMaxY(rect) - where.y;
         rect.origin.y = where.y;
+        
+        if (self.canLockAspectRatio) {
+            CGFloat ratio = self.aspectRatio.width / self.aspectRatio.height;
+            rect.size.height = rect.size.width / ratio;
+            rect.origin.y = NSMaxY(self.selectedRect) - rect.size.height;
+        }
         
     }
     else if (handle == kSCSelectionBorderLowerLeftHandle || handle == kSCSelectionBorderLowerMiddleHandle || handle == kSCSelectionBorderLowerRightHandle) {
@@ -543,15 +548,15 @@ enum {
         rect.size.height = rect.size.width / ratio;
     }
     else if (handle == kSCSelectionBorderUpperLeftHandle) {
-        rect.size.height = rect.size.width / ratio;
-        
-        NSPoint point = NSZeroPoint;
-        CGFloat deltaY = NSMaxY(self.selectedRect) - NSMaxY(rect);
-        CGFloat deltaX = (NSMaxX(self.selectedRect) - NSMaxX(rect)) * ratio;
-        point.x = self.selectedRect.origin.x - deltaX;
-        point.y = self.selectedRect.origin.y - deltaY;
-        
-        rect.origin = point;
+//        rect.size.height = rect.size.width / ratio;
+//        
+//        NSPoint point = NSZeroPoint;
+//        CGFloat deltaY = NSMaxY(self.selectedRect) - NSMaxY(rect);
+//        CGFloat deltaX = (NSMaxX(self.selectedRect) - NSMaxX(rect)) * ratio;
+//        point.x = self.selectedRect.origin.x - deltaX;
+//        point.y = self.selectedRect.origin.y - deltaY;
+//        
+//        rect.origin.x = point.x;
     }
     else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
         rect.size.width = rect.size.height * ratio;
