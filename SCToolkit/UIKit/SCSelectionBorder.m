@@ -573,8 +573,14 @@ enum {
         rect.size.width = rect.size.height * ratio;
         
         // don't draw off view
-        if (rect.origin.x < 0) {
-            rect.origin.x = 0;
+//        if (rect.origin.x < 0) {
+//            rect.origin.x = 0;
+//        }
+        
+        // don't draw off view
+        if (NSMaxX(rect) > NSWidth(view.bounds)) {
+            rect.size.width = rect.size.width - (NSMaxX(rect) - NSWidth(view.bounds));
+            rect.size.height = rect.size.width / ratio;
         }
     }
     else {
