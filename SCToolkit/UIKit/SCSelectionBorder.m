@@ -540,10 +540,16 @@ enum {
     
     CGFloat ratio = self.aspectRatio.width / self.aspectRatio.height;
     
-    if (handle == kSCSelectionBorderUpperLeftHandle || handle == kSCSelectionBorderLowerLeftHandle) {
+    if (handle == kSCSelectionBorderLowerLeftHandle) {
         rect.size.height = rect.size.width / ratio;
+        
+//        if (handle == kSCSelectionBorderUpperLeftHandle) {
+//            CGFloat x = NSMaxX(self.selectedRect);
+//            CGFloat y = NSMaxY(self.selectedRect);
+//            rect.origin.x = 
+//        }
     }
-    else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle || kSCSelectionBorderUpperLeftHandle) {
+    else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle || handle == kSCSelectionBorderUpperLeftHandle) {
         rect.size.width = rect.size.height * ratio;
     }
     else {
