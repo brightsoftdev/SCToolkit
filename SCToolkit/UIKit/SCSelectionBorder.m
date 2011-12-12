@@ -546,6 +546,7 @@ enum {
     if (handle == kSCSelectionBorderLowerLeftHandle) {
         rect.size.height = rect.size.width / ratio;
         
+        // don't draw off view
         if (NSMaxY(rect) > NSHeight(view.bounds)) {
             rect.size.height = rect.size.height - (NSMaxY(rect) - NSHeight(view.bounds));
             rect.size.width = rect.size.height * ratio;
@@ -554,6 +555,10 @@ enum {
     else if (handle == kSCSelectionBorderUpperLeftHandle) {
         rect.size.height = rect.size.width / ratio;
         rect.origin.y = NSMaxY(self.selectedRect) - rect.size.height;
+        
+        if (rect.origin.y < 0) {
+            rect.origin.y = 0;
+        }
     }
     else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
         rect.size.width = rect.size.height * ratio;
