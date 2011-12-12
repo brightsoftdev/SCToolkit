@@ -25,6 +25,7 @@ enum {
 - (BOOL)isDrawingHandles;
 - (void)setDrawingHandles:(BOOL)yesOrNo;
 - (NSRect)frameRectForGraphicBounds:(NSRect)rect isLockedAspect:(BOOL)yesOrNo;
+- (NSRect)frameRectForGraphicBounds:(NSRect)rect isLockedAspect:(BOOL)yesOrNo usingHandle:(SCSelectionBorderHandle)handle;
 
 @end
 
@@ -468,7 +469,7 @@ enum {
     }
     
     // Done
-    self.selectedRect = [self frameRectForGraphicBounds:rect isLockedAspect:self.canLockAspectRatio];
+    self.selectedRect = [self frameRectForGraphicBounds:rect isLockedAspect:self.canLockAspectRatio usingHandle:newHandle];
 
     // Done
     //self.selectedRect = rect;
@@ -528,12 +529,27 @@ enum {
     if (!yesOrNo) return rect;
     
     CGFloat ratio = self.aspectRatio.width / self.aspectRatio.height;
-    
-    // To be noticed, we do not modify width here, since
-
-    rect.size.height = rect.size.width / ratio;
+    rect.size.width = rect.size.height * ratio;
     
     return rect;
 }
 
+- (NSRect)frameRectForGraphicBounds:(NSRect)rect isLockedAspect:(BOOL)yesOrNo usingHandle:(SCSelectionBorderHandle)handle
+{
+    if (!yesOrNo) return rect;
+    
+    CGFloat ratio = self.aspectRatio.width / self.aspectRatio.height;
+    
+    if (handle == kSCSelectionBorderUpperLeftHandle || handle == kSCSelectionBorderLowerLeftHandle) {
+        rect.size.height = rect.size.width / ratio;
+    }
+    else if (handle == kSCSelectionBorderUpperRightHandle || handle == kSCSelectionBorderLowerRightHandle) {
+        rect.size.width = rect.size.height * ratio;
+    }
+    else {
+        rect.size.width = rect.size.height * ratio;
+    }
+    
+    return rect;
+}
 @end
