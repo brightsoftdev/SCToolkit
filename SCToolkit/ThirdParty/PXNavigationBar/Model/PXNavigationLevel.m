@@ -64,11 +64,24 @@
 #pragma mark -
 #pragma mark Item Handling
 
+//https://github.com/mattgallagher/AudioStreamer/issues/25
 - (void)setCurrentItem:(PXNavigationItem*)item
 {
-	if([_items containsObject:item]) {
-		_currentItem = item;
-	}
+    @synchronized(self) {
+        if([_items containsObject:item]) {
+            _currentItem = item;
+        }
+    }
+}
+
+//https://github.com/mattgallagher/AudioStreamer/issues/25
+- (PXNavigationItem*)currentItem
+{
+    PXNavigationItem *ret;
+    @synchronized(self) {
+        ret = _currentItem;
+    }
+    return ret;
 }
 
 - (NSInteger)currentItemIndex

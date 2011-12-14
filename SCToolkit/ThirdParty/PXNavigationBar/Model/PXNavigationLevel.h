@@ -18,7 +18,7 @@
 }
 
 @property (readonly) NSArray *items;
-@property (readwrite, assign) PXNavigationItem *currentItem;
+@property (nonatomic, readwrite, assign) PXNavigationItem *currentItem;
 @property (readwrite) NSInteger currentItemIndex;
 @property (assign) id representedObject;
 
