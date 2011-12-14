@@ -36,6 +36,9 @@
     NSColor *dashColor;
     NSColor *gradientStartColor;
     NSColor *gradientEndColor;
+    
+    NSInteger state;
+    NSString *title;
 }
 
 @property (assign, nonatomic) id<JUInspectorViewHeaderDelegate> delegate;

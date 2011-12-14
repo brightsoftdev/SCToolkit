@@ -34,6 +34,8 @@ extern NSString *const SCToolkitException;
 #import "NSObject+JAExtensions.h"
 #import "JAViewController.h"
 
+#import "PXNavigationBar.h"
+
 #import "AMSerialErrors.h"
 #import "AMSerialPort.h"
 #import "AMSerialPortAdditions.h"

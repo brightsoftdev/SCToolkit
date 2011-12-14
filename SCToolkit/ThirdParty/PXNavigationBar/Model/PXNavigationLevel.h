@@ -13,7 +13,7 @@
 @interface PXNavigationLevel : NSObject <NSCopying> {
 	NSMutableArray *_items;
 	PXNavigationItem *_currentItem;
-	
+
 	id _representedObject;
 }
 

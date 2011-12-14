@@ -21,6 +21,30 @@
 		9F1F85B3149827FC0090ABBC /* JUInspectorViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F85AB149827FC0090ABBC /* JUInspectorViewContainer.m */; };
 		9F1F85B4149827FC0090ABBC /* JUInspectorViewHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F85AC149827FC0090ABBC /* JUInspectorViewHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F1F85B5149827FC0090ABBC /* JUInspectorViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F85AD149827FC0090ABBC /* JUInspectorViewHeader.m */; };
+		9F1F85DD14982DC20090ABBC /* PXBackButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F85C114982DC20090ABBC /* PXBackButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F85DE14982DC20090ABBC /* PXBackButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F85C214982DC20090ABBC /* PXBackButtonCell.m */; };
+		9F1F85DF14982DC20090ABBC /* PXNavigationButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F85C314982DC20090ABBC /* PXNavigationButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F85E014982DC20090ABBC /* PXNavigationButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F85C414982DC20090ABBC /* PXNavigationButtonCell.m */; };
+		9F1F85E114982DC20090ABBC /* BackButtonNormalLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85C714982DC20090ABBC /* BackButtonNormalLeft.png */; };
+		9F1F85E214982DC20090ABBC /* BackButtonNormalMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85C814982DC20090ABBC /* BackButtonNormalMiddle.png */; };
+		9F1F85E314982DC20090ABBC /* BackButtonNormalRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85C914982DC20090ABBC /* BackButtonNormalRight.png */; };
+		9F1F85E414982DC20090ABBC /* BackButtonPressedLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85CA14982DC20090ABBC /* BackButtonPressedLeft.png */; };
+		9F1F85E514982DC20090ABBC /* BackButtonPressedMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85CB14982DC20090ABBC /* BackButtonPressedMiddle.png */; };
+		9F1F85E614982DC20090ABBC /* BackButtonPressedRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85CC14982DC20090ABBC /* BackButtonPressedRight.png */; };
+		9F1F85E714982DC20090ABBC /* LeftNavButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85CE14982DC20090ABBC /* LeftNavButton.png */; };
+		9F1F85E814982DC20090ABBC /* LeftNavButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85CF14982DC20090ABBC /* LeftNavButtonPressed.png */; };
+		9F1F85E914982DC20090ABBC /* NavButtonLeftArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85D014982DC20090ABBC /* NavButtonLeftArrow.png */; };
+		9F1F85EA14982DC20090ABBC /* NavButtonRightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85D114982DC20090ABBC /* NavButtonRightArrow.png */; };
+		9F1F85EB14982DC20090ABBC /* RightNavButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85D214982DC20090ABBC /* RightNavButton.png */; };
+		9F1F85EC14982DC20090ABBC /* RightNavButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85D314982DC20090ABBC /* RightNavButtonPressed.png */; };
+		9F1F85ED14982DC20090ABBC /* navBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85D414982DC20090ABBC /* navBar.png */; };
+		9F1F85EE14982DC20090ABBC /* navbar.psd in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F85D514982DC20090ABBC /* navbar.psd */; };
+		9F1F85EF14982DC20090ABBC /* PXNavigationItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F85D714982DC20090ABBC /* PXNavigationItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F85F014982DC20090ABBC /* PXNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F85D814982DC20090ABBC /* PXNavigationItem.m */; };
+		9F1F85F114982DC20090ABBC /* PXNavigationLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F85D914982DC20090ABBC /* PXNavigationLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F85F214982DC20090ABBC /* PXNavigationLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F85DA14982DC20090ABBC /* PXNavigationLevel.m */; };
+		9F1F85F314982DC20090ABBC /* PXNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F85DB14982DC20090ABBC /* PXNavigationBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F85F414982DC20090ABBC /* PXNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F85DC14982DC20090ABBC /* PXNavigationBar.m */; };
 		9F435017149139DD0048169B /* SCSelectionBorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F435015149139DC0048169B /* SCSelectionBorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F435018149139DD0048169B /* SCSelectionBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F435016149139DC0048169B /* SCSelectionBorder.m */; };
 		9F7A795F14880A0700113680 /* INAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7A795D14880A0700113680 /* INAppStoreWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -121,6 +145,30 @@
 		9F1F85AB149827FC0090ABBC /* JUInspectorViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUInspectorViewContainer.m; sourceTree = "<group>"; };
 		9F1F85AC149827FC0090ABBC /* JUInspectorViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUInspectorViewHeader.h; sourceTree = "<group>"; };
 		9F1F85AD149827FC0090ABBC /* JUInspectorViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUInspectorViewHeader.m; sourceTree = "<group>"; };
+		9F1F85C114982DC20090ABBC /* PXBackButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXBackButtonCell.h; sourceTree = "<group>"; };
+		9F1F85C214982DC20090ABBC /* PXBackButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXBackButtonCell.m; sourceTree = "<group>"; };
+		9F1F85C314982DC20090ABBC /* PXNavigationButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXNavigationButtonCell.h; sourceTree = "<group>"; };
+		9F1F85C414982DC20090ABBC /* PXNavigationButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXNavigationButtonCell.m; sourceTree = "<group>"; };
+		9F1F85C714982DC20090ABBC /* BackButtonNormalLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButtonNormalLeft.png; sourceTree = "<group>"; };
+		9F1F85C814982DC20090ABBC /* BackButtonNormalMiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButtonNormalMiddle.png; sourceTree = "<group>"; };
+		9F1F85C914982DC20090ABBC /* BackButtonNormalRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButtonNormalRight.png; sourceTree = "<group>"; };
+		9F1F85CA14982DC20090ABBC /* BackButtonPressedLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButtonPressedLeft.png; sourceTree = "<group>"; };
+		9F1F85CB14982DC20090ABBC /* BackButtonPressedMiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButtonPressedMiddle.png; sourceTree = "<group>"; };
+		9F1F85CC14982DC20090ABBC /* BackButtonPressedRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButtonPressedRight.png; sourceTree = "<group>"; };
+		9F1F85CE14982DC20090ABBC /* LeftNavButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftNavButton.png; sourceTree = "<group>"; };
+		9F1F85CF14982DC20090ABBC /* LeftNavButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftNavButtonPressed.png; sourceTree = "<group>"; };
+		9F1F85D014982DC20090ABBC /* NavButtonLeftArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavButtonLeftArrow.png; sourceTree = "<group>"; };
+		9F1F85D114982DC20090ABBC /* NavButtonRightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavButtonRightArrow.png; sourceTree = "<group>"; };
+		9F1F85D214982DC20090ABBC /* RightNavButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RightNavButton.png; sourceTree = "<group>"; };
+		9F1F85D314982DC20090ABBC /* RightNavButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RightNavButtonPressed.png; sourceTree = "<group>"; };
+		9F1F85D414982DC20090ABBC /* navBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBar.png; sourceTree = "<group>"; };
+		9F1F85D514982DC20090ABBC /* navbar.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = navbar.psd; sourceTree = "<group>"; };
+		9F1F85D714982DC20090ABBC /* PXNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXNavigationItem.h; sourceTree = "<group>"; };
+		9F1F85D814982DC20090ABBC /* PXNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXNavigationItem.m; sourceTree = "<group>"; };
+		9F1F85D914982DC20090ABBC /* PXNavigationLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXNavigationLevel.h; sourceTree = "<group>"; };
+		9F1F85DA14982DC20090ABBC /* PXNavigationLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXNavigationLevel.m; sourceTree = "<group>"; };
+		9F1F85DB14982DC20090ABBC /* PXNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXNavigationBar.h; sourceTree = "<group>"; };
+		9F1F85DC14982DC20090ABBC /* PXNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXNavigationBar.m; sourceTree = "<group>"; };
 		9F435015149139DC0048169B /* SCSelectionBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSelectionBorder.h; sourceTree = "<group>"; };
 		9F435016149139DC0048169B /* SCSelectionBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSelectionBorder.m; sourceTree = "<group>"; };
 		9F7A795D14880A0700113680 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
@@ -261,6 +309,77 @@
 			path = JUInspectorView;
 			sourceTree = "<group>";
 		};
+		9F1F85BF14982DC20090ABBC /* PXNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				9F1F85DB14982DC20090ABBC /* PXNavigationBar.h */,
+				9F1F85DC14982DC20090ABBC /* PXNavigationBar.m */,
+				9F1F85D614982DC20090ABBC /* Model */,
+				9F1F85C014982DC20090ABBC /* Custom Cells */,
+				9F1F85C514982DC20090ABBC /* Images */,
+			);
+			path = PXNavigationBar;
+			sourceTree = "<group>";
+		};
+		9F1F85C014982DC20090ABBC /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F1F85C114982DC20090ABBC /* PXBackButtonCell.h */,
+				9F1F85C214982DC20090ABBC /* PXBackButtonCell.m */,
+				9F1F85C314982DC20090ABBC /* PXNavigationButtonCell.h */,
+				9F1F85C414982DC20090ABBC /* PXNavigationButtonCell.m */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		9F1F85C514982DC20090ABBC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9F1F85C614982DC20090ABBC /* Back Button */,
+				9F1F85CD14982DC20090ABBC /* Nav Buttons */,
+				9F1F85D414982DC20090ABBC /* navBar.png */,
+				9F1F85D514982DC20090ABBC /* navbar.psd */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		9F1F85C614982DC20090ABBC /* Back Button */ = {
+			isa = PBXGroup;
+			children = (
+				9F1F85C714982DC20090ABBC /* BackButtonNormalLeft.png */,
+				9F1F85C814982DC20090ABBC /* BackButtonNormalMiddle.png */,
+				9F1F85C914982DC20090ABBC /* BackButtonNormalRight.png */,
+				9F1F85CA14982DC20090ABBC /* BackButtonPressedLeft.png */,
+				9F1F85CB14982DC20090ABBC /* BackButtonPressedMiddle.png */,
+				9F1F85CC14982DC20090ABBC /* BackButtonPressedRight.png */,
+			);
+			path = "Back Button";
+			sourceTree = "<group>";
+		};
+		9F1F85CD14982DC20090ABBC /* Nav Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9F1F85CE14982DC20090ABBC /* LeftNavButton.png */,
+				9F1F85CF14982DC20090ABBC /* LeftNavButtonPressed.png */,
+				9F1F85D014982DC20090ABBC /* NavButtonLeftArrow.png */,
+				9F1F85D114982DC20090ABBC /* NavButtonRightArrow.png */,
+				9F1F85D214982DC20090ABBC /* RightNavButton.png */,
+				9F1F85D314982DC20090ABBC /* RightNavButtonPressed.png */,
+			);
+			path = "Nav Buttons";
+			sourceTree = "<group>";
+		};
+		9F1F85D614982DC20090ABBC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F1F85D714982DC20090ABBC /* PXNavigationItem.h */,
+				9F1F85D814982DC20090ABBC /* PXNavigationItem.m */,
+				9F1F85D914982DC20090ABBC /* PXNavigationLevel.h */,
+				9F1F85DA14982DC20090ABBC /* PXNavigationLevel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9F7A795C14880A0700113680 /* INAppStoreWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +429,7 @@
 		9FA487241484162B00B43F2C /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				9F1F85BF14982DC20090ABBC /* PXNavigationBar */,
 				9F1F85A5149827FC0090ABBC /* JUInspectorView */,
 				9F1F8593149820580090ABBC /* JAViewController */,
 				9FBDC812149332C400242925 /* ESCursors */,
@@ -518,6 +638,11 @@
 				9FF418801485A343000A83B9 /* NSNumber+SCAdditions.h in Headers */,
 				9F9818221486935000D28199 /* NSApplication+SCAdditions.h in Headers */,
 				9F981827148694E400D28199 /* NSBundle+SCAdditions.h in Headers */,
+				9F1F85DD14982DC20090ABBC /* PXBackButtonCell.h in Headers */,
+				9F1F85DF14982DC20090ABBC /* PXNavigationButtonCell.h in Headers */,
+				9F1F85EF14982DC20090ABBC /* PXNavigationItem.h in Headers */,
+				9F1F85F114982DC20090ABBC /* PXNavigationLevel.h in Headers */,
+				9F1F85F314982DC20090ABBC /* PXNavigationBar.h in Headers */,
 				9F7A795F14880A0700113680 /* INAppStoreWindow.h in Headers */,
 				9FA4872A1484170400B43F2C /* NSTimer+Pausing.h in Headers */,
 				9FA4872E148418DC00B43F2C /* NSFileManager+SCAdditions.h in Headers */,
@@ -609,6 +734,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FD5513314840A7400715063 /* InfoPlist.strings in Resources */,
+				9F1F85E114982DC20090ABBC /* BackButtonNormalLeft.png in Resources */,
+				9F1F85E214982DC20090ABBC /* BackButtonNormalMiddle.png in Resources */,
+				9F1F85E314982DC20090ABBC /* BackButtonNormalRight.png in Resources */,
+				9F1F85E414982DC20090ABBC /* BackButtonPressedLeft.png in Resources */,
+				9F1F85E514982DC20090ABBC /* BackButtonPressedMiddle.png in Resources */,
+				9F1F85E614982DC20090ABBC /* BackButtonPressedRight.png in Resources */,
+				9F1F85E714982DC20090ABBC /* LeftNavButton.png in Resources */,
+				9F1F85E814982DC20090ABBC /* LeftNavButtonPressed.png in Resources */,
+				9F1F85E914982DC20090ABBC /* NavButtonLeftArrow.png in Resources */,
+				9F1F85EA14982DC20090ABBC /* NavButtonRightArrow.png in Resources */,
+				9F1F85EB14982DC20090ABBC /* RightNavButton.png in Resources */,
+				9F1F85EC14982DC20090ABBC /* RightNavButtonPressed.png in Resources */,
+				9F1F85ED14982DC20090ABBC /* navBar.png in Resources */,
+				9F1F85EE14982DC20090ABBC /* navbar.psd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +817,11 @@
 				9F1F85B1149827FC0090ABBC /* JUInspectorView.m in Sources */,
 				9F1F85B3149827FC0090ABBC /* JUInspectorViewContainer.m in Sources */,
 				9F1F85B5149827FC0090ABBC /* JUInspectorViewHeader.m in Sources */,
+				9F1F85DE14982DC20090ABBC /* PXBackButtonCell.m in Sources */,
+				9F1F85E014982DC20090ABBC /* PXNavigationButtonCell.m in Sources */,
+				9F1F85F014982DC20090ABBC /* PXNavigationItem.m in Sources */,
+				9F1F85F214982DC20090ABBC /* PXNavigationLevel.m in Sources */,
+				9F1F85F414982DC20090ABBC /* PXNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

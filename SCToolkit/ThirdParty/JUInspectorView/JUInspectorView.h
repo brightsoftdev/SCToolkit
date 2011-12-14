@@ -23,7 +23,8 @@
 @interface JUInspectorView : JUInspectorBaseView<JUInspectorViewHeaderDelegate>
 {
     BOOL expanded;
-    
+ 
+    NSString *name;
     NSInteger index;
     NSView *body;
     
