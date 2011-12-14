@@ -13,6 +13,14 @@
 		9F1F859D149820580090ABBC /* NSObject+JAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F8597149820580090ABBC /* NSObject+JAExtensions.m */; };
 		9F1F859E149820580090ABBC /* NSView+JAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F8598149820580090ABBC /* NSView+JAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F1F859F149820580090ABBC /* NSView+JAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F8599149820580090ABBC /* NSView+JAExtensions.m */; };
+		9F1F85AE149827FC0090ABBC /* JUInspectorBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F85A6149827FC0090ABBC /* JUInspectorBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F85AF149827FC0090ABBC /* JUInspectorBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F85A7149827FC0090ABBC /* JUInspectorBaseView.m */; };
+		9F1F85B0149827FC0090ABBC /* JUInspectorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F85A8149827FC0090ABBC /* JUInspectorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F85B1149827FC0090ABBC /* JUInspectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F85A9149827FC0090ABBC /* JUInspectorView.m */; };
+		9F1F85B2149827FC0090ABBC /* JUInspectorViewContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F85AA149827FC0090ABBC /* JUInspectorViewContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F85B3149827FC0090ABBC /* JUInspectorViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F85AB149827FC0090ABBC /* JUInspectorViewContainer.m */; };
+		9F1F85B4149827FC0090ABBC /* JUInspectorViewHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F85AC149827FC0090ABBC /* JUInspectorViewHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F85B5149827FC0090ABBC /* JUInspectorViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F85AD149827FC0090ABBC /* JUInspectorViewHeader.m */; };
 		9F435017149139DD0048169B /* SCSelectionBorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F435015149139DC0048169B /* SCSelectionBorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F435018149139DD0048169B /* SCSelectionBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F435016149139DC0048169B /* SCSelectionBorder.m */; };
 		9F7A795F14880A0700113680 /* INAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7A795D14880A0700113680 /* INAppStoreWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -105,6 +113,14 @@
 		9F1F8597149820580090ABBC /* NSObject+JAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JAExtensions.m"; sourceTree = "<group>"; };
 		9F1F8598149820580090ABBC /* NSView+JAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+JAExtensions.h"; sourceTree = "<group>"; };
 		9F1F8599149820580090ABBC /* NSView+JAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+JAExtensions.m"; sourceTree = "<group>"; };
+		9F1F85A6149827FC0090ABBC /* JUInspectorBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUInspectorBaseView.h; sourceTree = "<group>"; };
+		9F1F85A7149827FC0090ABBC /* JUInspectorBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUInspectorBaseView.m; sourceTree = "<group>"; };
+		9F1F85A8149827FC0090ABBC /* JUInspectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUInspectorView.h; sourceTree = "<group>"; };
+		9F1F85A9149827FC0090ABBC /* JUInspectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUInspectorView.m; sourceTree = "<group>"; };
+		9F1F85AA149827FC0090ABBC /* JUInspectorViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUInspectorViewContainer.h; sourceTree = "<group>"; };
+		9F1F85AB149827FC0090ABBC /* JUInspectorViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUInspectorViewContainer.m; sourceTree = "<group>"; };
+		9F1F85AC149827FC0090ABBC /* JUInspectorViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUInspectorViewHeader.h; sourceTree = "<group>"; };
+		9F1F85AD149827FC0090ABBC /* JUInspectorViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUInspectorViewHeader.m; sourceTree = "<group>"; };
 		9F435015149139DC0048169B /* SCSelectionBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSelectionBorder.h; sourceTree = "<group>"; };
 		9F435016149139DC0048169B /* SCSelectionBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSelectionBorder.m; sourceTree = "<group>"; };
 		9F7A795D14880A0700113680 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
@@ -230,6 +246,21 @@
 			path = JAViewController;
 			sourceTree = "<group>";
 		};
+		9F1F85A5149827FC0090ABBC /* JUInspectorView */ = {
+			isa = PBXGroup;
+			children = (
+				9F1F85A6149827FC0090ABBC /* JUInspectorBaseView.h */,
+				9F1F85A7149827FC0090ABBC /* JUInspectorBaseView.m */,
+				9F1F85A8149827FC0090ABBC /* JUInspectorView.h */,
+				9F1F85A9149827FC0090ABBC /* JUInspectorView.m */,
+				9F1F85AA149827FC0090ABBC /* JUInspectorViewContainer.h */,
+				9F1F85AB149827FC0090ABBC /* JUInspectorViewContainer.m */,
+				9F1F85AC149827FC0090ABBC /* JUInspectorViewHeader.h */,
+				9F1F85AD149827FC0090ABBC /* JUInspectorViewHeader.m */,
+			);
+			path = JUInspectorView;
+			sourceTree = "<group>";
+		};
 		9F7A795C14880A0700113680 /* INAppStoreWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +310,7 @@
 		9FA487241484162B00B43F2C /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				9F1F85A5149827FC0090ABBC /* JUInspectorView */,
 				9F1F8593149820580090ABBC /* JAViewController */,
 				9FBDC812149332C400242925 /* ESCursors */,
 				9FA5683314894BA800707DD6 /* INPopoverController */,
@@ -469,6 +501,10 @@
 				9F1F859C149820580090ABBC /* NSObject+JAExtensions.h in Headers */,
 				9F1F859E149820580090ABBC /* NSView+JAExtensions.h in Headers */,
 				9FF4184714855971000A83B9 /* SCTimerFormatter.h in Headers */,
+				9F1F85AE149827FC0090ABBC /* JUInspectorBaseView.h in Headers */,
+				9F1F85B0149827FC0090ABBC /* JUInspectorView.h in Headers */,
+				9F1F85B2149827FC0090ABBC /* JUInspectorViewContainer.h in Headers */,
+				9F1F85B4149827FC0090ABBC /* JUInspectorViewHeader.h in Headers */,
 				9FBDC815149332C400242925 /* ESCursors.h in Headers */,
 				9F435017149139DD0048169B /* SCSelectionBorder.h in Headers */,
 				9FA5683014894B9C00707DD6 /* SCHybridPopoverController.h in Headers */,
@@ -638,6 +674,10 @@
 				9F1F859B149820580090ABBC /* JAViewController.m in Sources */,
 				9F1F859D149820580090ABBC /* NSObject+JAExtensions.m in Sources */,
 				9F1F859F149820580090ABBC /* NSView+JAExtensions.m in Sources */,
+				9F1F85AF149827FC0090ABBC /* JUInspectorBaseView.m in Sources */,
+				9F1F85B1149827FC0090ABBC /* JUInspectorView.m in Sources */,
+				9F1F85B3149827FC0090ABBC /* JUInspectorViewContainer.m in Sources */,
+				9F1F85B5149827FC0090ABBC /* JUInspectorViewHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
