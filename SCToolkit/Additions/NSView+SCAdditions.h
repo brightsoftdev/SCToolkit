@@ -46,4 +46,7 @@
 
 - (CGFloat)sc_distanceBetweenPoints:(NSPoint)a anotherPoint:(NSPoint)b;
 
+
+// layout
+
 @end

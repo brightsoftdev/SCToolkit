@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1F859A149820580090ABBC /* JAViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F8594149820580090ABBC /* JAViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F859B149820580090ABBC /* JAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F8595149820580090ABBC /* JAViewController.m */; };
+		9F1F859C149820580090ABBC /* NSObject+JAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F8596149820580090ABBC /* NSObject+JAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F859D149820580090ABBC /* NSObject+JAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F8597149820580090ABBC /* NSObject+JAExtensions.m */; };
+		9F1F859E149820580090ABBC /* NSView+JAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1F8598149820580090ABBC /* NSView+JAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1F859F149820580090ABBC /* NSView+JAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F8599149820580090ABBC /* NSView+JAExtensions.m */; };
 		9F435017149139DD0048169B /* SCSelectionBorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F435015149139DC0048169B /* SCSelectionBorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F435018149139DD0048169B /* SCSelectionBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F435016149139DC0048169B /* SCSelectionBorder.m */; };
 		9F7A795F14880A0700113680 /* INAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7A795D14880A0700113680 /* INAppStoreWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +99,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F1F8594149820580090ABBC /* JAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAViewController.h; sourceTree = "<group>"; };
+		9F1F8595149820580090ABBC /* JAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAViewController.m; sourceTree = "<group>"; };
+		9F1F8596149820580090ABBC /* NSObject+JAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JAExtensions.h"; sourceTree = "<group>"; };
+		9F1F8597149820580090ABBC /* NSObject+JAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JAExtensions.m"; sourceTree = "<group>"; };
+		9F1F8598149820580090ABBC /* NSView+JAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+JAExtensions.h"; sourceTree = "<group>"; };
+		9F1F8599149820580090ABBC /* NSView+JAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+JAExtensions.m"; sourceTree = "<group>"; };
 		9F435015149139DC0048169B /* SCSelectionBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSelectionBorder.h; sourceTree = "<group>"; };
 		9F435016149139DC0048169B /* SCSelectionBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSelectionBorder.m; sourceTree = "<group>"; };
 		9F7A795D14880A0700113680 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
@@ -205,6 +217,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F1F8593149820580090ABBC /* JAViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9F1F8594149820580090ABBC /* JAViewController.h */,
+				9F1F8595149820580090ABBC /* JAViewController.m */,
+				9F1F8596149820580090ABBC /* NSObject+JAExtensions.h */,
+				9F1F8597149820580090ABBC /* NSObject+JAExtensions.m */,
+				9F1F8598149820580090ABBC /* NSView+JAExtensions.h */,
+				9F1F8599149820580090ABBC /* NSView+JAExtensions.m */,
+			);
+			path = JAViewController;
+			sourceTree = "<group>";
+		};
 		9F7A795C14880A0700113680 /* INAppStoreWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +279,7 @@
 		9FA487241484162B00B43F2C /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				9F1F8593149820580090ABBC /* JAViewController */,
 				9FBDC812149332C400242925 /* ESCursors */,
 				9FA5683314894BA800707DD6 /* INPopoverController */,
 				9F7A795C14880A0700113680 /* INAppStoreWindow */,
@@ -439,6 +465,9 @@
 				9FD5517014840EE700715063 /* SCToolkit.h in Headers */,
 				9FF4183B1485533B000A83B9 /* SCGlobals.h in Headers */,
 				9FF418921485DA69000A83B9 /* SCMarcos.h in Headers */,
+				9F1F859A149820580090ABBC /* JAViewController.h in Headers */,
+				9F1F859C149820580090ABBC /* NSObject+JAExtensions.h in Headers */,
+				9F1F859E149820580090ABBC /* NSView+JAExtensions.h in Headers */,
 				9FF4184714855971000A83B9 /* SCTimerFormatter.h in Headers */,
 				9FBDC815149332C400242925 /* ESCursors.h in Headers */,
 				9F435017149139DD0048169B /* SCSelectionBorder.h in Headers */,
@@ -606,6 +635,9 @@
 				9FAFDF20148FE7260061A69F /* NSBezierPath+SCAdditions.m in Sources */,
 				9F435018149139DD0048169B /* SCSelectionBorder.m in Sources */,
 				9FBDC816149332C400242925 /* ESCursors.m in Sources */,
+				9F1F859B149820580090ABBC /* JAViewController.m in Sources */,
+				9F1F859D149820580090ABBC /* NSObject+JAExtensions.m in Sources */,
+				9F1F859F149820580090ABBC /* NSView+JAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

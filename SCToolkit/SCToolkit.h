@@ -30,6 +30,10 @@ extern NSString *const SCToolkitException;
 #import "INAppStoreWindow.h"
 #import "ESCursors.h"
 
+#import "NSView+JAExtensions.h"
+#import "NSObject+JAExtensions.h"
+#import "JAViewController.h"
+
 #import "AMSerialErrors.h"
 #import "AMSerialPort.h"
 #import "AMSerialPortAdditions.h"

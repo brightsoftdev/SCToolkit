@@ -44,7 +44,6 @@ enum
     BOOL _lockAspectRatio;
     NSSize _minSize;
     NSRect _selectedRect;
-    NSPoint _lastMouseLocation;
     
     BOOL _drawingHandles;
     BOOL _drawingGrids;
@@ -60,7 +59,6 @@ enum
 @property(readonly, getter = canLockAspectRatio) BOOL lockAspectRatio;
 @property(assign) NSSize minSize;
 @property(nonatomic) NSRect selectedRect;
-@property(nonatomic) NSPoint lastMouseLocation;
 @property(nonatomic) CGFloat borderWidth;
 @property(assign) unsigned int gridLineNumber;
 @property(assign, getter = isDrawingGrids) BOOL drawingGrids;
